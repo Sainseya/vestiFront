@@ -1,0 +1,31 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.log-space{
+    flex-direction: column;
+}
+
+.nav-bar{
+    background-color: #BE99FF;
+    height: 5em;
+}
+.logo{
+    height: 50px;
+}
+img{
+    width: 150px;
+    margin: auto;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+section {
+    display: table;
+    margin: 8px 8px 8px 0;
+}
+.button-size{
+    height: 2.5em;
+    width: 6em;
+    /* color: #fdf785; */
+}
