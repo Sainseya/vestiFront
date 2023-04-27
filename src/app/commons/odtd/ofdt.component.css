@@ -1,0 +1,7 @@
+/* title of the OUTFIT OF THE DAY page */
+
+.oftd-img-clothes{
+    display: flex;
+    display: grid;
+    width: 50px;
+}
