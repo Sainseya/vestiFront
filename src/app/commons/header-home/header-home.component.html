@@ -1,0 +1,22 @@
+<div class="container">
+
+  <button mat-raised-button class="burger-menu-button">
+    <img class="burger-menu-button-image" src="../assets/home-header/button-menu.png" alt="">
+  </button>
+  <img id="logo-header" alt="logo-vesti" src="../assets/home-header/vesti.png">
+
+  <div class="button-end">
+
+    <input class="input-recherche" placeholder="Rechercher...">
+
+
+    <button class="button-dressing-choice" mat-raised-button color="primary" [matMenuTriggerFor]="menu">Dressing</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Mon Dressing</button>
+      <button mat-menu-item>Cosplay</button>
+    </mat-menu>
+
+
+
+
+  </div>

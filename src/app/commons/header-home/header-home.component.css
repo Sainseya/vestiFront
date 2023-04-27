@@ -1,0 +1,40 @@
+#logo-header {
+  width: 15rem;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+}
+
+.burger-menu-button {
+  width: 3rem;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.burger-menu-button-image {
+  width: 2rem;
+}
+
+.button-end {
+  position: absolute;
+  display: flex;
+  right: 60px;
+  top: 30px;
+  padding: 10px;
+}
+
+.input-recherche {
+  margin: 10px;
+  height: 30px;
+  position: relative;
+  top: -10px;
+}
+
+.button-dressing-choice {
+  background-color: #be99ff;
+}
