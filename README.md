@@ -1,4 +1,4 @@
-# Vesti
+"Vesti, the connected wardrobe, allows you to organize your wardrobe and generate outfits with your own clothes according to your taste, preferences, weather, seasons, and much more ..."
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
