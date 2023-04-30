@@ -1,6 +1,20 @@
 <div class="container">
-<app-header-home></app-header-home>
+<app-header-home [drawer]="drawer"></app-header-home>
 <hr>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+
+  </mat-drawer>
+
+
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+
+
+</mat-drawer-container>
+
     <app-dressing></app-dressing>
 </div>
 

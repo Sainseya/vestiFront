@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-home',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-home.component.css']
 })
 export class HeaderHomeComponent {
+
+  @Input() drawer:any;
 
 }

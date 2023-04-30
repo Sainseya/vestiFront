@@ -1,10 +1,9 @@
 <div class="container">
-  <div id="list" *ngFor="let item of listClothes">
-    <mat-card   >
-      <mat-card-content>T-shirt nike</mat-card-content>
-      <img class="img-card" [src]="item.img" >
-    </mat-card>
 
+  <div class="list">
+    <div  *ngFor="let item of listClothes">
+      <app-card-clothe [item]="item"></app-card-clothe>
+    </div>
   </div>
 
 </div>

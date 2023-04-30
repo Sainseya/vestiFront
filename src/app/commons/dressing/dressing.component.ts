@@ -14,7 +14,7 @@ export class DressingComponent {
     },
     {
       id : 2,
-      img: "../assets/img/dressing/t-shirt-nike.png"
+      img: "../assets/img/dressing/pantalon-beige.png"
     },
     {
       id : 3,
