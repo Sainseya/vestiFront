@@ -1,12 +1,13 @@
 .container{
   display: flex;
-  
+
 }
 
 .list{
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
-  margin-left: 200px;
+  margin-left: 2rem;
+  margin-top: 2rem;
 
   background-color: rgb(253, 200, 200);
   padding: 1rem;

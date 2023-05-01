@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-header-home',
@@ -8,5 +9,17 @@ import { Component, Input } from '@angular/core';
 export class HeaderHomeComponent {
 
   @Input() drawer:any;
+
+  toggleControl = new FormControl(false);
+
+  @HostBinding('class') className = '';
+
+
+  ngOnInit(): void {
+    this.toggleControl.valueChanges.subscribe((darkMode) => {
+      const darkClassName = 'darkMode';
+      this.className = darkMode ? darkClassName : '';
+    });
+}
 
 }

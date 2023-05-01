@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 
 @NgModule({
@@ -21,7 +25,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     HomePageComponent,
     HeaderHomeComponent,
     DressingComponent,
-    CardClotheComponent
+    CardClotheComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -32,8 +37,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MatSlideToggleModule
 
+
+  ],
+  schemas :[
+    CUSTOM_ELEMENTS_SCHEMA
 
   ],
   providers: [],

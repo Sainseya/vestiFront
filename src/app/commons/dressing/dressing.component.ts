@@ -23,6 +23,10 @@ export class DressingComponent {
     {
       id : 4,
       img: "../assets/img/dressing/t-shirt-nike.png"
+    },
+    {
+      id : 4,
+      img: "../assets/img/dressing/t-shirt-nike.png"
     }
 
   ]
