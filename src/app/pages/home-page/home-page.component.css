@@ -1,0 +1,25 @@
+.container{
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
+}
+
+.side-nav-link{
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.side-nav-link-text{
+  margin-left: 0.3rem;
+  position: relative;
+  top: 0.2rem;
+
+}
+
+
+
+

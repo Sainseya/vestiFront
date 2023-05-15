@@ -1,0 +1,51 @@
+#logo-header {
+  width: 15rem;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: end;
+
+}
+
+.button-start{
+  display: flex;
+  position: absolute;
+  left: 0;
+}
+
+.burger-menu-button {
+  width: 3rem;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.burger-menu-button-image {
+  width: 2rem;
+}
+
+.button-end {
+  position: relative;
+  display: flex;
+
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+}
+
+.input-recherche {
+  margin: 10px;
+  height: 30px;
+  position: relative;
+  top: -10px;
+}
+
+.button-dressing-choice {
+  background: red;
+}
+
+
