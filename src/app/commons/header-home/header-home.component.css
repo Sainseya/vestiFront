@@ -1,3 +1,5 @@
+
+
 #logo-header {
   width: 15rem;
 }
@@ -21,10 +23,12 @@
 }
 
 .button-end {
-  position: absolute;
+  position: relative;
   display: flex;
-  right: 60px;
-  top: 30px;
+
+
+   left: calc(100vw/2);
+   top: 30px;
   padding: 10px;
 }
 
@@ -36,5 +40,7 @@
 }
 
 .button-dressing-choice {
-  background-color: #be99ff;
+  background: red;
 }
+
+

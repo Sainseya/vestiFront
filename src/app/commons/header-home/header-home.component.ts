@@ -10,16 +10,16 @@ export class HeaderHomeComponent {
 
   @Input() drawer:any;
 
-  toggleControl = new FormControl(false);
 
-  @HostBinding('class') className = '';
 
 
   ngOnInit(): void {
-    this.toggleControl.valueChanges.subscribe((darkMode) => {
-      const darkClassName = 'darkMode';
-      this.className = darkMode ? darkClassName : '';
-    });
+
+}
+
+toggleDarkTheme(): void {
+  document.body.classList.toggle('dark-theme');
+  console.log("darktheme")
 }
 
 }

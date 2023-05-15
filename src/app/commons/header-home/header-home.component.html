@@ -10,14 +10,14 @@
     <input class="input-recherche" placeholder="Rechercher...">
 
 
-    <button class="button-dressing-choice" mat-raised-button color="primary" [matMenuTriggerFor]="menu">Dressing</button>
+    <button class="button-dressing-choice" mat-raised-button  [matMenuTriggerFor]="menu">Dressing</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Mon Dressing</button>
       <button mat-menu-item>Cosplay</button>
     </mat-menu>
 
     <mat-icon class="mr-8">brightness_5</mat-icon>
-  <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+  <mat-slide-toggle (click)="toggleDarkTheme()" >
   </mat-slide-toggle>
   <mat-icon>bedtime</mat-icon>
 
