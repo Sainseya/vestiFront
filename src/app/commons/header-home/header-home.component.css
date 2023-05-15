@@ -1,5 +1,3 @@
-
-
 #logo-header {
   width: 15rem;
 }
@@ -7,6 +5,14 @@
 .container {
   background-color: rgb(255, 255, 255);
   display: flex;
+  justify-content: end;
+
+}
+
+.button-start{
+  display: flex;
+  position: absolute;
+  left: 0;
 }
 
 .burger-menu-button {
@@ -26,9 +32,8 @@
   position: relative;
   display: flex;
 
-
-   left: calc(100vw/2);
-   top: 30px;
+  right: 20px;
+  top: 20px;
   padding: 10px;
 }
 

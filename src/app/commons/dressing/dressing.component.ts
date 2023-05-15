@@ -18,7 +18,7 @@ export class DressingComponent {
     },
     {
       id : 3,
-      img: "../assets/img/dressing/t-shirt-nike.png"
+      img: "../assets/img/dressing/doudoune-cuivre.png"
     },
     {
       id : 4,
@@ -26,11 +26,23 @@ export class DressingComponent {
     },
     {
       id : 4,
-      img: "../assets/img/dressing/t-shirt-nike.png"
+      img: "../assets/img/dressing/chemise-bordeaux.png"
     },
     {
       id : 5,
       img: "../assets/img/dressing/t-shirt-nike.png"
+    },
+    {
+      id : 6,
+      img: "../assets/img/dressing/t-shirt-nike.png"
+    },
+    {
+      id : 7,
+      img: "../assets/img/dressing/jean-blanc.png"
+    },
+    {
+      id : 7,
+      img: "../assets/img/dressing/jean-bleu.png"
     }
 
   ]
