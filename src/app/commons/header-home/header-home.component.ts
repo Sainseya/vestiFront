@@ -13,13 +13,6 @@ export class HeaderHomeComponent {
 
 
 
-  ngOnInit(): void {
 
-}
-
-toggleDarkTheme(): void {
-  document.body.classList.toggle('dark-theme');
-  console.log("darktheme")
-}
 
 }

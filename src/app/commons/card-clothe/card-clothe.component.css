@@ -6,8 +6,19 @@
 
 .clothe-card{
   margin: 0.2rem;
-
+  display: flex;
   width: 5rem;
   height: 8rem;
 
 }
+
+
+
+.fav-icon{
+  width: 2em;
+  align-self: flex-end;
+  position: static;
+}
+
+
+

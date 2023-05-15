@@ -13,6 +13,8 @@ import { HeaderHomeComponent } from './commons/header-home/header-home.component
 import { DressingComponent } from './commons/dressing/dressing.component';
 import { CardClotheComponent } from './commons/card-clothe/card-clothe.component';
 import { OfdtComponent } from './commons/odtd/ofdt.component';
+import { FooterHomeComponent } from './commons/footer-home/footer-home.component';
+
 //Angular
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
@@ -20,7 +22,10 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { FooterHomeComponent } from './commons/footer-home/footer-home.component';
+import {MatBadgeModule} from '@angular/material/badge';
+
+
+
 
 
 
@@ -32,12 +37,17 @@ import { FooterHomeComponent } from './commons/footer-home/footer-home.component
     DressingComponent,
     CardClotheComponent,
     OfdtComponent,
-    FooterHomeComponent
+    FooterHomeComponent,
+
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
 
 
     //Angular Material
@@ -46,7 +56,8 @@ import { FooterHomeComponent } from './commons/footer-home/footer-home.component
     MatCardModule,
     MatSidenavModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatBadgeModule
 
 
   ],

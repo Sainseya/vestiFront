@@ -1,4 +1,7 @@
-<mat-card class="clothe-card"  >
+<mat-card class="clothe-card" (mouseenter)="isHidden = !isHidden" (mouseleave)="isHidden = !isHidden"  >
+  <ng-container class="ng-container" *ngIf="isHidden">
+  <img  class="fav-icon" src="../assets/icons/icons-coeur.png" alt="">
+</ng-container>
   <mat-card-content></mat-card-content>
   <img class="img-card" [src]="item.img" >
 </mat-card>

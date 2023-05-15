@@ -1,7 +1,8 @@
 .dark-footer {
 
   width: 100%;
-
+  position: absolute;
+  bottom: 0;
   background-color: #D8DFE3;
   padding: 10px;
   display: flex;

@@ -9,4 +9,6 @@ export class CardClotheComponent {
 
   @Input() item:any;
 
+  isHidden = false;
+
 }
