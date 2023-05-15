@@ -5,13 +5,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeaderHomeComponent } from './commons/header-home/header-home.component';
 import { DressingComponent } from './commons/dressing/dressing.component';
 import { CardClotheComponent } from './commons/card-clothe/card-clothe.component';
+import { OfdtComponent } from './commons/odtd/ofdt.component';
 //Angular
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
@@ -29,11 +30,13 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     HeaderHomeComponent,
     DressingComponent,
     CardClotheComponent,
+    OfdtComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
 
     //Angular Material
     MatMenuModule,
