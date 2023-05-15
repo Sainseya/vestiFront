@@ -20,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { FooterHomeComponent } from './commons/footer-home/footer-home.component';
 
 
 
@@ -30,7 +31,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     HeaderHomeComponent,
     DressingComponent,
     CardClotheComponent,
-    OfdtComponent
+    OfdtComponent,
+    FooterHomeComponent
   ],
   imports: [
     BrowserModule,
