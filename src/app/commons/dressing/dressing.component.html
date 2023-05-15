@@ -1,0 +1,13 @@
+<div class="container">
+  <button class="add-clothe-button" mat-stroked-button> + Ajouter un vêtement</button>
+  <div class="list">
+
+
+    <div *ngFor="let item of listClothes">
+      <app-card-clothe [item]="item"></app-card-clothe>
+    </div>
+
+
+
+
+  </div>
