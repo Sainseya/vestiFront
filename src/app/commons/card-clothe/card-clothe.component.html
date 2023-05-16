@@ -1,7 +1,20 @@
 <mat-card class="clothe-card" (mouseenter)="isHidden = !isHidden" (mouseleave)="isHidden = !isHidden"  >
-  <ng-container class="ng-container" *ngIf="isHidden">
-  <img  class="fav-icon" src="../assets/icons/icons-coeur.png" alt="">
-</ng-container>
+
+    <button *ngIf="isHidden" class="button-fav-icon" mat-icon-button color="transparent" (click)="toggleSelected()">
+
+      <mat-icon class="fav-icon"
+    *ngIf="selected"
+    aria-label="Example icon-button with a heart icon">
+    favorite
+  </mat-icon>
+
+  <mat-icon class="fav-icon"
+    *ngIf="!selected"
+    aria-label="Example icon-button with a heart icon">
+    favorite_border
+  </mat-icon>
+</button>
+
   <mat-card-content></mat-card-content>
   <img class="img-card" [src]="item.img" >
 </mat-card>

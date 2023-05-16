@@ -1,24 +1,42 @@
-.img-card
-{
+.img-card {
   width: 5rem;
   justify-content: center;
+  position: absolute;
+  top: 1rem;
+
+
 }
 
-.clothe-card{
+.clothe-card {
   margin: 0.2rem;
   display: flex;
+
   width: 5rem;
   height: 8rem;
+}
 
+.fav-icon {
+  opacity: 1;
 }
 
 
 
-.fav-icon{
-  width: 2em;
+.button-fav-icon {
   align-self: flex-end;
-  position: static;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+
+
+
+
+
 }
 
+.mat-transparent{
+  background-color: transparent;
+}
 
-
+.button-fav-icon:hover {
+  background-color: transparent;
+}

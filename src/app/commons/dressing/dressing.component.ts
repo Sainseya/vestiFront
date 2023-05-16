@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class DressingComponent {
 
+  
+  disabledFav = false;
+
+  disabledFavFunction(){
+    this.disabledFav = !this.disabledFav;
+
+  }
+
   listClothes: any[] = [
     {
       id : 1,

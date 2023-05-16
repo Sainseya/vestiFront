@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-card-clothe',
@@ -10,5 +10,12 @@ export class CardClotheComponent {
   @Input() item:any;
 
   isHidden = false;
+  selected: boolean = false;
+  @Output() selectedChange = new EventEmitter<boolean>();
+
+  public toggleSelected() {
+    this.selected = !this.selected;
+    this.selectedChange.emit(this.selected);
+  }
 
 }
