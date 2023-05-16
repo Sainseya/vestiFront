@@ -41,7 +41,7 @@ export class DressingComponent implements OnInit {
   listClothes: any[] = [
     {
       id : 1,
-      img: "../assets/img/dressing/t-shirt-nike.png",
+      img: "../assets/img/dressing/chemise-bordeaux.png",
       fav: true
     },
     {
@@ -56,7 +56,7 @@ export class DressingComponent implements OnInit {
     },
     {
       id : 4,
-      img: "../assets/img/dressing/t-shirt-nike.png",
+      img: "../assets/img/dressing/pantalon-beige.png",
       fav: true
     },
     {
@@ -66,12 +66,12 @@ export class DressingComponent implements OnInit {
     },
     {
       id : 5,
-      img: "../assets/img/dressing/t-shirt-nike.png",
+      img: "../assets/img/dressing/jean-blanc.png",
       fav: false
     },
     {
       id : 6,
-      img: "../assets/img/dressing/t-shirt-nike.png",
+      img: "../assets/img/dressing/jean-bleu.png",
       fav: false
     },
     {

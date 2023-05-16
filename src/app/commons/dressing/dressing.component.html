@@ -16,6 +16,7 @@
         <app-card-clothe  [item]="item"></app-card-clothe>
       </div>
     </div>
+    <!-- div qui s'active pour montrer la liste des element favoris -->
     <div *ngIf="!disabledFav" class="list">
       <div *ngFor="let item of listClothesFav">
         <app-card-clothe  [item]="item"></app-card-clothe>
