@@ -9,6 +9,7 @@ export class CardClotheComponent {
 
   @Input() item:any;
 
+
   isHidden = false;
   selected: boolean = false;
   @Output() selectedChange = new EventEmitter<boolean>();
@@ -16,6 +17,8 @@ export class CardClotheComponent {
   public toggleSelected() {
     this.selected = !this.selected;
     this.selectedChange.emit(this.selected);
+
+    this.item.fav = !this.item.fav
   }
 
 }

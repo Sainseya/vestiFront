@@ -8,18 +8,29 @@
 
     </button>
   </div>
-  <div class="list">
-    <div *ngFor="let item of listClothes">
 
-      <app-card-clothe [item]="item"></app-card-clothe>
 
+
+    <div *ngIf="disabledFav" class="list">
+      <div *ngFor="let item of listClothes">
+        <app-card-clothe  [item]="item"></app-card-clothe>
+      </div>
     </div>
-  </div>
-  <div class="list">
+    <div *ngIf="!disabledFav" class="list">
+      <div *ngFor="let item of listClothesFav">
+        <app-card-clothe  [item]="item"></app-card-clothe>
+      </div>
+    </div>
 
 
-      
 
 
-  </div>
+
+<div class="product-detail">
+
+
+
+
+
+</div>
 </div>

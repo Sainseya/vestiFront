@@ -1,15 +1,16 @@
 <mat-card class="clothe-card" (mouseenter)="isHidden = !isHidden" (mouseleave)="isHidden = !isHidden"  >
 
-    <button *ngIf="isHidden" class="button-fav-icon" mat-icon-button color="transparent" (click)="toggleSelected()">
+  <!-- Bouton qui englobe les icones favoris et avec une fonction qui change le vetement en favori ou non -->
+    <button *ngIf="isHidden" class="button-fav-icon" mat-icon-button color="transparent"   (click)="toggleSelected()">
 
       <mat-icon class="fav-icon"
-    *ngIf="selected"
+    *ngIf="item.fav"
     aria-label="Example icon-button with a heart icon">
     favorite
   </mat-icon>
 
   <mat-icon class="fav-icon"
-    *ngIf="!selected"
+    *ngIf="!item.fav"
     aria-label="Example icon-button with a heart icon">
     favorite_border
   </mat-icon>
