@@ -2,30 +2,24 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-.log-space{
-    flex-direction: column;
-}
-
 .nav-bar{
-    background-color: #BE99FF;
     height: 5em;
+    padding-left: 20em;
+    padding-right: 20em;
 }
 .logo{
-    height: 50px;
+    margin-top: 10px;
+    width: 80%;
 }
-img{
-    width: 150px;
-    margin: auto;
-}
-.example-spacer {
-    flex: 1 1 auto;
-}
+
+
 section {
     display: table;
     margin: 8px 8px 8px 0;
 }
 .button-size{
-    height: 2.5em;
-    width: 6em;
-    /* color: #fdf785; */
+    height: 5em;
+    width: 7em;
+    border-radius: 10px;
+    margin-right: 10px;
 }
