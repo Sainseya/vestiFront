@@ -1,0 +1,13 @@
+.img-card
+{
+  width: 5rem;
+  justify-content: center;
+}
+
+.clothe-card{
+  margin: 0.2rem;
+
+  width: 5rem;
+  height: 8rem;
+
+}
