@@ -1,0 +1,49 @@
+{
+"clothe-inventory": [
+{
+  "id" : 1,
+  "img": "../assets/img/dressing/chemise-bordeaux.png",
+  "fav": true
+},
+{
+  "id" : 2,
+  "img": "../assets/img/dressing/pantalon-beige.png",
+  "fav": true
+},
+{
+  "id" : 3,
+  "img": "../assets/img/dressing/doudoune-cuivre.png",
+  "fav": false
+},
+{
+  "id" : 4,
+  "img": "../assets/img/dressing/pantalon-beige.png",
+  "fav": true
+},
+{
+  "id" : 4,
+  "img": "../assets/img/dressing/chemise-bordeaux.png",
+  "fav": false
+},
+{
+  "id" : 5,
+  "img": "../assets/img/dressing/jean-blanc.png",
+  "fav": false
+},
+{
+  "id" : 6,
+  "img": "../assets/img/dressing/jean-bleu.png",
+  "fav": false
+},
+{
+  "id" : 7,
+  "img": "../assets/img/dressing/jean-blanc.png",
+  "fav": false
+},
+{
+  "id" : 8,
+  "img": "../assets/img/dressing/jean-bleu.png",
+  "fav": false
+}
+]
+}

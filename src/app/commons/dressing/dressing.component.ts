@@ -1,4 +1,6 @@
+import { ClotheInventoryService } from './../../services/clothe-inventory.service';
 import { Component, OnInit } from '@angular/core';
+import IClothe from 'src/app/models/clothe.model';
 
 @Component({
   selector: 'app-dressing',
@@ -7,18 +9,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DressingComponent implements OnInit {
 
+  //variable pour le bouton afficher favoris
+  disabledFav = true;
+  //Liste des habits ou les donnes du service sont enregistrée
+  clotheInventory: IClothe[] = [];
+  //Liste des habits favoris
+  listClothesFav: any[] = []
 
-  disabledFav = false;
+  constructor(private clotheInventoryService: ClotheInventoryService){}
 
+  ngOnInit(): void {
+    this.sortFavElement()
+    this.getClotheInventory()
+  }
+
+  //Fonction qui recupere tous les habits et les mets dans clothe Inventory
+  getClotheInventory = () =>  {
+    this.clotheInventoryService.getAll().subscribe({
+      next : (data: IClothe[]) => {
+        this.clotheInventory = data
+        },
+      error :(data) => {
+          console.error("error get all")
+        },
+       complete(){
+
+        }
+
+
+    })
+  }
+
+  //Fonction pour switcher entre les favoris et tous les vetements
   disabledFavFunction(){
     this.disabledFav = !this.disabledFav;
     this.sortFavElement();
-
-
   }
 
+  //Fonction pour mettre dans une liste de favoris listClothesFav les vetement avec le boolean favori
   sortFavElement(){
-     this.listClothes.forEach(element => {
+     this.clotheInventory.forEach(element => {
       if(element.fav == true && !this.listClothesFav.includes(element) ){
         this.listClothesFav.push(element);
       }
@@ -32,60 +62,8 @@ export class DressingComponent implements OnInit {
     });
   }
 
-  constructor(){}
-  ngOnInit(): void {
-    this.sortFavElement()
-  }
-  listClothesFav: any[] = []
 
-  listClothes: any[] = [
-    {
-      id : 1,
-      img: "../assets/img/dressing/chemise-bordeaux.png",
-      fav: true
-    },
-    {
-      id : 2,
-      img: "../assets/img/dressing/pantalon-beige.png",
-      fav: true
-    },
-    {
-      id : 3,
-      img: "../assets/img/dressing/doudoune-cuivre.png",
-      fav: false
-    },
-    {
-      id : 4,
-      img: "../assets/img/dressing/pantalon-beige.png",
-      fav: true
-    },
-    {
-      id : 4,
-      img: "../assets/img/dressing/chemise-bordeaux.png",
-      fav: false
-    },
-    {
-      id : 5,
-      img: "../assets/img/dressing/jean-blanc.png",
-      fav: false
-    },
-    {
-      id : 6,
-      img: "../assets/img/dressing/jean-bleu.png",
-      fav: false
-    },
-    {
-      id : 7,
-      img: "../assets/img/dressing/jean-blanc.png",
-      fav: false
-    },
-    {
-      id : 7,
-      img: "../assets/img/dressing/jean-bleu.png",
-      fav: false
-    }
 
-  ]
 
 
 
