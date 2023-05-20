@@ -44,6 +44,11 @@
   "id" : 8,
   "img": "../assets/img/dressing/jean-bleu.png",
   "fav": false
+},
+{
+  "id" : 9,
+  "img": "../assets/img/dressing/chemise-bordeaux.png",
+  "fav": false
 }
 ]
 }
