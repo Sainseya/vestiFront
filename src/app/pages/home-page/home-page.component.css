@@ -1,15 +1,15 @@
 .container{
   background-color: rgb(255, 255, 255);
   width: 100vw;
-  height: 100vh;
+
 }
 
 .side-nav-link{
   display: flex;
   align-items: center;
+  margin-left: 0rem;
   margin-left: 1rem;
-  margin-right: 3rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   cursor: pointer;
 }
 
@@ -19,6 +19,25 @@
   top: 0.2rem;
 
 }
+
+.side-nav-link-text:hover{
+  color: rgb(53, 48, 86);
+
+}
+
+.inventory-and-view{
+  display: flex;
+  margin-left: 2rem;
+}
+
+.side-nav-container{
+  margin-top: 2rem;
+}
+
+.icon-tshirt{
+  width: 18%;
+}
+
 
 
 
