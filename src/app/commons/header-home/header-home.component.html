@@ -1,31 +1,34 @@
 <div class="container">
-
   <div class="button-start">
-  <button mat-button class="burger-menu-button" (click)="drawer.toggle()">
-    <img class="burger-menu-button-image"    src="../assets/home-header/button-menu.png" alt="">
-  </button>
-  <img id="logo-header" alt="logo-vesti" routerLink="/home" src="../assets/home-header/vesti.png">
-</div>
-
+    <!-- Bouton du menu burger -->
+    <button mat-button class="burger-menu-button" (click)="drawer.toggle()">
+      <img class="burger-menu-button-image" src="../assets/home-header/button-menu.png" alt="">
+    </button>
+    <!-- Logo du header -->
+    <img id="logo-header" alt="logo-vesti" routerLink="/home" src="../assets/home-header/vesti.png">
+  </div>
+  
   <div class="button-end">
-
+    <!-- Champ de recherche -->
     <input class="input-recherche" placeholder="Rechercher...">
-
+    
+    <!-- Bouton "Outfit of the day" -->
     <button mat-raised-button routerLink="/outfit-of-the-day">Outfit of the day</button>
-    <button class="button-dressing-choice" mat-raised-button  [matMenuTriggerFor]="menu">Dressing</button>
+    
+    <!-- Bouton "Dressing" avec menu déroulant -->
+    <button class="button-dressing-choice" mat-raised-button [matMenuTriggerFor]="menu">Dressing</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Mon Dressing</button>
       <button mat-menu-item>Cosplay</button>
     </mat-menu>
-
+    
+    <!-- Icône pour le mode sombre -->
     <mat-icon class="mr-8">brightness_5</mat-icon>
-    <mat-slide-toggle  >
-    </mat-slide-toggle>
+    
+    <!-- Bouton pour activer/désactiver le mode sombre -->
+    <mat-slide-toggle></mat-slide-toggle>
+    
+    <!-- Icône pour le mode nuit -->
     <mat-icon>bedtime</mat-icon>
-   
-
-
-
-
-
   </div>
+</div>

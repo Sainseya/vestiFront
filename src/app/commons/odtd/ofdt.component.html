@@ -1,62 +1,37 @@
-<!------------------ HEADER -------------------------------------------------------------------------------------------------------->
-<!-- BUTTON FOR DARK AND LIGHT MODE -->
-<app-header-home></app-header-home>
-
-<!-- <header>
-  <div class="logoVesti">
-    <img src="../assets/img/logo/logoVesti.png" alt="Logo de Vesti.">
-  </div>
-  <div class="darkMode">
-  <button class="btn-darkMode">Dark Mode</button>
-  </div>
-</header> -->
 <!------------------ BODY -------------------------------------------------------------------------------------------------------->
-<!-- OFTD = Outfit Of The Day -->
-<!-- Outfit Of The Day : TITLE -->
-<div class="container-img">
-  <div class="ofdt-title">
-    <h1>
-      <p>Tenue du jour : </p>
-    </h1>
-  </div>
-  <!-- Outfit Of The Day IMAGES : -->
-  <div class="oftd-img-clothes grid-container">
-    <!-- OFTD TOP -->
-    <div class="oftd-img-top grid-item">
-      <!-- OFTD -->
-      <div  class="oftd-img-top-teeshirt">
-        <img  src="../assets/img/oftd/top/teeshirt.png" alt="Teeshirt de couleur Marron Foncé sans marque ni logo">
-      </div>
-      <div class="oftd-img-top-sweatshirt">
-        <img src="../assets/img/oftd/top/sweatshirt.png" alt="Sweatshirt de couleur bleu ciel avec un logo et un texte de l'afrique du sud ">
-      </div>
-    </div>
-    <!-- OFTD BOTTOM -->
-    <div class="oftd-img-bottom grid-item">
-      <div class="oftd-img-bottom-jean">
-        <img src="../assets/img/oftd/bottom/jean.png" alt="Jean de couleur bleu classique">
-      </div>
-    </div>
-    <!-- OFTD SHOES -->
-    <div class="oftd-img-shoes grid-item">
-      <div class="oftd-img-shoes-sneakers">
-        <img src="../assets/img/oftd/shoes/sneakers.png" alt="Chaussures de couleur noir avec une semelle blanche de marque Adidas">
-      </div>
-    </div>
-    <!-- OFTD ACCESSORIES -->
-    <div class="oftd-img-accessories grid-item">
-      <div class="oftd-img-">
-        <img src="../assets/img/oftd/accessories/hat.png" alt="Bonnet de couleur rouge avec une moumoute blanche c'est le bonnet du pere noël">
-      </div>
-    </div>
-  </div>
+<div class="container">
+  <!-- Logo du header -->
+  <img id="logo-header" alt="logo-vesti" routerLink="/home" src="../assets/home-header/vesti.png">
 </div>
-<!------------------ FOOTER -------------------------------------------------------------------------------------------------------->
+
+<div class="button-end">
+  <!-- Champ de recherche -->
+  <input class="input-recherche" placeholder="Rechercher...">
+
+  <!-- Bouton "Outfit of the day" -->
+  <button mat-raised-button routerLink="/outfit-of-the-day">Outfit of the day</button>
+  
+  <!-- Bouton "Dressing" avec menu déroulant -->
+  <button class="button-dressing-choice" mat-raised-button [matMenuTriggerFor]="menu">Dressing</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Mon Dressing</button>
+    <button mat-menu-item>Cosplay</button>
+  </mat-menu>
+  
+  <!-- Icône pour le mode sombre -->
+  <mat-icon class="mr-8">brightness_5</mat-icon>
+  
+  <!-- Bouton pour activer/désactiver le mode sombre -->
+  <mat-slide-toggle></mat-slide-toggle>
+  
+  <!-- Icône pour le mode nuit -->
+  <mat-icon>bedtime</mat-icon>
+</div>
 
 <footer class="dark-footer">
   <nav>
     <ul class="footer-links-horizontal">
-      <li><a href="#">Conditions d’utilisation</a></li>
+      <li><a href="#">Conditions d'utilisation</a></li>
       <li><a href="#">Politique de Confidentialité</a></li>
       <li><a href="#">Politique relative aux cookies</a></li>
       <li><a href="#">Accessibilité</a></li>
@@ -64,6 +39,11 @@
       <li><a href="#">Plus</a></li>
     </ul>
   </nav>
-  <div class="mentionLegale" ></div>
-  <p>© 2023 Vesti Corp. Tous droits réservés.</p>
+  <div class="mentionLegale">
+    <p>© 2023 Vesti Corp. Tous droits réservés.</p>
+  </div>
 </footer>
+
+<div class="container">
+  <div class="product-detail"></div>
+</div>
