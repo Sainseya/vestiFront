@@ -1,6 +1,8 @@
 import { ClotheInventoryService } from './../../services/clothe-inventory.service';
 import { Component, OnInit } from '@angular/core';
-import IClothe from 'src/app/models/clothe.model';
+import IClothe from 'src/app/models/clothes.model';
+import IUsers from 'src/app/models/user.model';
+import Iitem from 'src/app/models/item.model';
 
 @Component({
   selector: 'app-dressing',
@@ -12,9 +14,10 @@ export class DressingComponent implements OnInit {
   //variable pour le bouton afficher favoris
   disabledFav = true;
   //Liste des habits ou les donnes du service sont enregistrée
-  clotheInventory: IClothe[] = [];
+  usersList: IUsers[] = [];
+  itemInventory: Iitem[] = [];
   //Liste des habits favoris
-  listClothesFav: any[] = []
+  listItemFav: any[] = []
 
   constructor(private clotheInventoryService: ClotheInventoryService){}
 
@@ -26,8 +29,10 @@ export class DressingComponent implements OnInit {
   //Fonction qui recupere tous les habits et les mets dans clothe Inventory
   getClotheInventory = () =>  {
     this.clotheInventoryService.getAll().subscribe({
-      next : (data: IClothe[]) => {
-        this.clotheInventory = data
+      next : (data: IUsers[]) => {
+        this.usersList = data
+        console.log(this.usersList[0].wardrobes[0].items)
+          this.itemInventory = this.usersList[0].wardrobes[0].items
         },
       error :(data) => {
           console.error("error get all")
@@ -44,18 +49,19 @@ export class DressingComponent implements OnInit {
   disabledFavFunction(){
     this.disabledFav = !this.disabledFav;
     this.sortFavElement();
+    
   }
 
-  //Fonction pour mettre dans une liste de favoris listClothesFav les vetement avec le boolean favori
+  //Fonction pour mettre dans une liste de favoris listItemFav les vetement avec le boolean favori
   sortFavElement(){
-     this.clotheInventory.forEach(element => {
-      if(element.fav == true && !this.listClothesFav.includes(element) ){
-        this.listClothesFav.push(element);
+     this.itemInventory.forEach(element => {
+      if(element.favorite == true && !this.listItemFav.includes(element) ){
+        this.listItemFav.push(element);
       }
 
-      this.listClothesFav.forEach(element => {
-        if(element.fav == false){
-          this.listClothesFav.splice(element, 1)
+      this.listItemFav.forEach(element => {
+        if(element.favorite == false){
+          this.listItemFav.splice(element, 1)
         }
       })
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import IClothe from '../models/clothe.model';
+import IClothe from '../models/clothes.model';
+import IUsers from '../models/user.model';
 import { Observable } from 'rxjs';
 
 
@@ -13,9 +14,11 @@ export class ClotheInventoryService {
 
   constructor(private http: HttpClient){}
 
-  getAll = () : Observable<IClothe[]> => {
 
-    return this.http.get<IClothe[]>(`${this.URI}/clothe-inventory`)
+  //Appelle la liste de d'utilisateur sur le serveur Spring
+  getAll = () : Observable<IUsers[]> => {
+
+    return this.http.get<IUsers[]>(`${this.URI}/vesti`)
   }
 
 }
