@@ -16,10 +16,12 @@
     </div>
   </mat-drawer>
 
+<div class="inventory-and-view">
+  <app-dressing (seletedItemEvent)="outputItemSeleted($event)"></app-dressing>
+  <app-view-one-item  [item]="itemSeletedFromOutput" *ngIf="itemSeletedFromOutput"></app-view-one-item>
+</div>
 
 
-
-    <app-dressing ></app-dressing>
 </mat-drawer-container>
 <app-footer-home></app-footer-home>
 

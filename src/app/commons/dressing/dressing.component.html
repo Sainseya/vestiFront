@@ -13,7 +13,7 @@
 
     <div *ngIf="disabledFav" class="list">
       <div *ngFor="let item of itemInventory">
-        <app-card-clothe  [item]="item"></app-card-clothe>
+        <app-card-clothe (click)="selectItem(item)"  [item]="item"></app-card-clothe>
       </div>
     </div>
     <!-- div qui s'active pour montrer la liste des element favoris -->

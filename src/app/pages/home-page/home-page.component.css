@@ -25,6 +25,10 @@
 
 }
 
+.inventory-and-view{
+  display: flex;
+}
+
 .side-nav-container{
   margin-top: 2rem;
 }

@@ -1,5 +1,5 @@
 import { ClotheInventoryService } from './../../services/clothe-inventory.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import IClothe from 'src/app/models/clothes.model';
 import IUsers from 'src/app/models/user.model';
 import Iitem from 'src/app/models/item.model';
@@ -18,6 +18,9 @@ export class DressingComponent implements OnInit {
   itemInventory: Iitem[] = [];
   //Liste des habits favoris
   listItemFav: any[] = []
+  itemSelected?: Iitem;
+
+  @Output() seletedItemEvent = new EventEmitter<Iitem>();
 
   constructor(private clotheInventoryService: ClotheInventoryService){}
 
@@ -49,7 +52,7 @@ export class DressingComponent implements OnInit {
   disabledFavFunction(){
     this.disabledFav = !this.disabledFav;
     this.sortFavElement();
-    
+
   }
 
   //Fonction pour mettre dans une liste de favoris listItemFav les vetement avec le boolean favori
@@ -66,6 +69,12 @@ export class DressingComponent implements OnInit {
       })
 
     });
+  }
+
+  selectItem(item:Iitem){
+     this.itemSelected = item;
+     this.seletedItemEvent.emit(this.itemSelected);
+    
   }
 
 
