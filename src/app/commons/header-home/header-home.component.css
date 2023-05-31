@@ -1,5 +1,8 @@
+
+
 #logo-header {
   width: 15rem;
+  cursor: pointer;
 }
 
 .container {
@@ -19,13 +22,14 @@
   width: 3rem;
   border: none;
   background-color: rgb(255, 255, 255);
-  cursor: pointer;
+
   align-self: center;
   margin-left: 10px;
 }
 
 .burger-menu-button-image {
   width: 2rem;
+  cursor: pointer;
 }
 
 .button-end {
@@ -47,5 +51,12 @@
 .button-dressing-choice {
   background: red;
 }
+
+.container.dark-mode{
+  background-color: #2d3436;
+  color: #dfe6e9;
+
+}
+
 
 

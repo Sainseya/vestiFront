@@ -2,16 +2,16 @@
 
   <div class="button-start">
   <button mat-button class="burger-menu-button" (click)="drawer.toggle()">
-    <img class="burger-menu-button-image" src="../assets/home-header/button-menu.png" alt="">
+    <img class="burger-menu-button-image"    src="../assets/home-header/button-menu.png" alt="">
   </button>
-  <img id="logo-header" alt="logo-vesti" src="../assets/home-header/vesti.png">
+  <img id="logo-header" alt="logo-vesti" routerLink="/home" src="../assets/home-header/vesti.png">
 </div>
 
   <div class="button-end">
 
     <input class="input-recherche" placeholder="Rechercher...">
 
-
+    <button mat-raised-button routerLink="/outfit-of-the-day">Outfit of the day</button>
     <button class="button-dressing-choice" mat-raised-button  [matMenuTriggerFor]="menu">Dressing</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Mon Dressing</button>
@@ -19,9 +19,11 @@
     </mat-menu>
 
     <mat-icon class="mr-8">brightness_5</mat-icon>
-  <mat-slide-toggle (click)="toggleDarkTheme()" >
-  </mat-slide-toggle>
-  <mat-icon>bedtime</mat-icon>
+    <mat-slide-toggle  >
+    </mat-slide-toggle>
+    <mat-icon>bedtime</mat-icon>
+   
+
 
 
 
