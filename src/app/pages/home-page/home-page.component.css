@@ -7,8 +7,8 @@
 .side-nav-link{
   display: flex;
   align-items: center;
+  margin-left: 0rem;
   margin-left: 1rem;
-  margin-right: 3rem;
   margin-top: 0.5rem;
   cursor: pointer;
 }
@@ -27,6 +27,7 @@
 
 .inventory-and-view{
   display: flex;
+  margin-left: 2rem;
 }
 
 .side-nav-container{

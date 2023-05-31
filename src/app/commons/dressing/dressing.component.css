@@ -1,17 +1,19 @@
 .container {
-  display: flex;
+ display: block;
 
 
 }
 
 .list {
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-left: 2rem;
-  margin-top: 3rem;
+  margin-left: 0rem;
+  margin-top: 0rem;
   background-color: #B2C9FF;
   padding: 1rem;
   border-radius: 5px;
+
 }
 
 .add-clothe-button {
@@ -28,7 +30,7 @@
 .option-button-dressing{
  display: flex;
  position: relative;
- left: 340px;
+
 
 }
 
