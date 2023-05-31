@@ -1,37 +1,30 @@
 <div class="container">
-
   <div class="option-button-dressing">
-
+    <!-- Bouton pour ajouter un vêtement -->
     <button class="add-clothe-button" mat-stroked-button> + Ajouter un vêtement</button>
+    
+    <!-- Bouton pour afficher les favoris -->
     <button class="favorite-button" mat-stroked-button (click)="disabledFavFunction()"> Favoris
       <mat-icon>favorite</mat-icon>
-
     </button>
   </div>
-
-
-
-    <div *ngIf="disabledFav" class="list">
-      <div *ngFor="let item of clotheInventory">
-        <app-card-clothe  [item]="item"></app-card-clothe>
-      </div>
+  
+  <!-- Liste des vêtements -->
+  <div *ngIf="disabledFav" class="list">
+    <!-- Affichage des éléments de clotheInventory -->
+    <div *ngFor="let item of clotheInventory">
+      <app-card-clothe [item]="item"></app-card-clothe>
     </div>
-    <!-- div qui s'active pour montrer la liste des element favoris -->
-    <div *ngIf="!disabledFav" class="list">
-      <div *ngFor="let item of listClothesFav">
-        <app-card-clothe  [item]="item"></app-card-clothe>
-      </div>
+  </div>
+  
+  <!-- Affichage de la liste des favoris -->
+  <div *ngIf="!disabledFav" class="list">
+    <div *ngFor="let item of listClothesFav">
+      <app-card-clothe [item]="item"></app-card-clothe>
     </div>
-
-
-
-
-
-<div class="product-detail">
-
-
-
-
-
-</div>
+  </div>
+  
+  <div class="product-detail">
+    <!-- Détails du produit -->
+  </div>
 </div>
