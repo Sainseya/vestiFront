@@ -1,0 +1,25 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar{
+    height: 5em;
+    padding-left: 20em;
+    padding-right: 20em;
+}
+.logo{
+    margin-top: 10px;
+    width: 80%;
+}
+
+
+section {
+    display: table;
+    margin: 8px 8px 8px 0;
+}
+.button-size{
+    height: 5em;
+    width: 7em;
+    border-radius: 10px;
+    margin-right: 10px;
+}

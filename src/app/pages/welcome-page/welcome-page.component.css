@@ -1,0 +1,21 @@
+body{
+    background-color: #e5c6c6;
+    
+}
+
+.background-QR-code{
+    height: 500px;
+    width: 400px;
+    background-color: #f2f7ff;
+    background-image: url('https://st3.depositphotos.com/10614052/36191/i/450/depositphotos_361917662-stock-photo-modern-wardrobe-with-stylish-spring.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    bottom: -100px;
+    margin-left: 400px;
+    margin-top: 220px;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
