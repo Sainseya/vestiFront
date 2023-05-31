@@ -16,9 +16,10 @@ export class CardClotheComponent {
 
   public toggleSelected() {
     this.selected = !this.selected;
+    console.log(this.selected)
     this.selectedChange.emit(this.selected);
 
-    this.item.fav = !this.item.fav
+    this.item.favorite = !this.item.favorite
   }
 
 }

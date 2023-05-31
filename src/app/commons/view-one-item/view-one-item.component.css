@@ -1,0 +1,30 @@
+.view-container{
+  margin-left: 2rem;
+  margin-top: 3rem;
+  background-color: #B2C9FF;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.card-for-view{
+  display:grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  align-content: center;
+  height: 400px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.image-view{
+  width: 60%;
+
+  justify-self: center;
+
+}
+
+.field-view{
+  justify-self: left;
+  margin-left: 2rem;
+}
+

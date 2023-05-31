@@ -24,6 +24,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatBadgeModule} from '@angular/material/badge';
+import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
 
 
 
@@ -39,6 +40,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     CardClotheComponent,
     OfdtComponent,
     FooterHomeComponent,
+    ViewOneItemComponent,
 
 
 

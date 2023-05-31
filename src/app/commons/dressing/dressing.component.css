@@ -1,18 +1,22 @@
 .container {
-  display: flex;
-  /* Utilisé pour créer un conteneur flexible */
+ display: block;
+
+
+
 }
 
 .list {
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* Affiche les éléments en grille avec 4 colonnes de largeur égale */
-  margin-left: 2rem;
-  margin-top: 3rem;
+
+  margin-left: 0rem;
+  margin-top: 0rem;
   background-color: #B2C9FF;
   padding: 1rem;
   border-radius: 5px;
-  /* Style de la liste avec une couleur de fond, un padding et un arrondi des coins */
+
+
 }
 
 .add-clothe-button {
@@ -29,8 +33,10 @@
 .option-button-dressing{
  display: flex;
  position: relative;
- left: 340px;
- /* Affiche les boutons d'options de dressing en ligne et les positionne à 340 pixels à gauche */
+
+
+
+
 }
 
 .favorite-button{

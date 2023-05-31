@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Iitem from 'src/app/models/item.model';
 
 @Component({
   selector: 'app-home-page',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
+
+  itemSeletedFromOutput!:Iitem;
+
+  outputItemSeleted(item:Iitem){
+    this.itemSeletedFromOutput = item;
+  }
 
 }

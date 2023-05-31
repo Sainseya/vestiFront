@@ -8,23 +8,24 @@
       <mat-icon>favorite</mat-icon>
     </button>
   </div>
-  
-  <!-- Liste des vêtements -->
-  <div *ngIf="disabledFav" class="list">
-    <!-- Affichage des éléments de clotheInventory -->
-    <div *ngFor="let item of clotheInventory">
-      <app-card-clothe [item]="item"></app-card-clothe>
+
+
+
+    <div *ngIf="disabledFav" class="list">
+      <div *ngFor="let item of itemInventory">
+        <app-card-clothe (click)="selectItem(item)"  [item]="item"></app-card-clothe>
+      </div>
     </div>
-  </div>
-  
-  <!-- Affichage de la liste des favoris -->
-  <div *ngIf="!disabledFav" class="list">
-    <div *ngFor="let item of listClothesFav">
-      <app-card-clothe [item]="item"></app-card-clothe>
+    <!-- div qui s'active pour montrer la liste des element favoris -->
+    <div *ngIf="!disabledFav" class="list">
+      <div *ngFor="let item of listItemFav">
+        <app-card-clothe  [item]="item"></app-card-clothe>
+      </div>
     </div>
-  </div>
-  
-  <div class="product-detail">
-    <!-- Détails du produit -->
-  </div>
-</div>
+    
+
+
+
+
+
+
