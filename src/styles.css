@@ -1,7 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; margin: 0; }
-body {  
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+html, body {
+  margin: 0;
+  height: 100%;
+}
 
- }
+
+body.dark-mode {
+  background-color: #2d3436;
+  color: #dfe6e9;
+}
+
+body.light-mode {
+  background-color: #dfe6e9;
+  color: #2d3436;
+}
+
+.container.dark-mode{
+  background-color: #2d3436;
+  color: #dfe6e9;
+
+}
+

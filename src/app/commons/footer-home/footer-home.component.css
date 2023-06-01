@@ -1,0 +1,44 @@
+.dark-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #D8DFE3;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+  /* Style du pied de page avec fond sombre, espace entre les éléments et alignement centré */
+}
+
+.footer-links-horizontal {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Style des liens horizontaux dans le pied de page */
+}
+
+.footer-links-horizontal li {
+  margin: 0 10px;
+  /* Marge autour des éléments de la liste */
+}
+
+.footer-links-horizontal a {
+  text-decoration: none;
+  /* Supprime la décoration des liens */
+}
+
+.footer-links-horizontal a:hover {
+  text-decoration: underline;
+  /* Souligne les liens au survol */
+}
+
+.mentionLegale {
+  display: flex;
+  align-self: center;
+  /* Style pour afficher les mentions légales centrées */
+}

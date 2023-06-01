@@ -1,0 +1,62 @@
+#logo-header {
+  width: 15rem;
+  cursor: pointer;
+  /* Style du logo dans l'en-tête avec une largeur fixe et curseur en forme de main */
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: end;
+  /* Style du conteneur avec fond blanc et alignement à droite */
+}
+
+.button-start {
+  display: flex;
+  position: absolute;
+  left: 0;
+  /* Bouton de démarrage positionné absolument à gauche */
+}
+
+.burger-menu-button {
+  width: 3rem;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  align-self: center;
+  margin-left: 10px;
+  /* Style du bouton de menu avec une largeur fixe et un fond blanc */
+}
+
+.burger-menu-button-image {
+  width: 2rem;
+  cursor: pointer;
+  /* Style de l'icône du bouton de menu avec une largeur fixe et curseur en forme de main */
+}
+
+.button-end {
+  position: relative;
+  display: flex;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+  /* Bouton de fin positionné relativement à droite avec un décalage vertical et un padding */
+}
+
+.input-recherche {
+  margin: 10px;
+  height: 30px;
+  position: relative;
+  top: -10px;
+  /* Style de l'input de recherche avec une marge, une hauteur et un décalage vertical négatif */
+}
+
+.button-dressing-choice {
+  background: red;
+  /* Style du bouton de choix de dressing avec un fond rouge */
+}
+
+.container.dark-mode {
+  background-color: #2d3436;
+  color: #dfe6e9;
+  /* Style du conteneur en mode sombre avec un fond gris foncé et une couleur de texte claire */
+}

@@ -1,0 +1,33 @@
+/* Définition du style pour la classe .img-card */
+.img-card {
+  width: 5rem; /* Largeur de l'image de la carte */
+  justify-content: center; /* Centre l'image horizontalement */
+  position: absolute; /* Position absolue pour permettre le positionnement précis */
+  top: 1rem; /* Distance de la carte depuis le haut de l'élément parent */
+}
+
+.clothe-card {
+  margin: 0.2rem; /* Marge autour de la carte de vêtement */
+  display: flex; /* Utilise un modèle d'affichage flexible pour aligner les éléments */
+  width: 5rem; /* Largeur de la carte de vêtement */
+  height: 8rem; /* Hauteur de la carte de vêtement */
+}
+
+.fav-icon {
+  opacity: 1; /* Opacité de l'icône de favori à 100% */
+}
+
+.button-fav-icon {
+  align-self: flex-end; /* Aligne le bouton d'icône de favori en bas de son conteneur */
+  position: relative; /* Position relative pour permettre le positionnement par rapport à son conteneur */
+  z-index: 1; /* Indice de profondeur pour contrôler l'empilement des éléments */
+  opacity: 1; /* Opacité du bouton d'icône de favori à 100% */
+}
+
+.mat-transparent {
+  background-color: transparent; /* Définit la couleur de fond comme transparente */
+}
+
+.button-fav-icon:hover {
+  background-color: transparent; /* Définit la couleur de fond comme transparente lors du survol du bouton d'icône de favori */
+}
