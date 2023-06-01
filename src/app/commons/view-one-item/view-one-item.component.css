@@ -11,7 +11,7 @@
   grid-template-columns: 1fr;
   align-items: center;
   align-content: center;
-  height: 400px;
+  height: 500px;
   background-color: white;
   border-radius: 5px;
 }
@@ -27,4 +27,6 @@
   justify-self: left;
   margin-left: 2rem;
 }
+
+
 

@@ -15,6 +15,10 @@ import { DressingComponent } from './commons/dressing/dressing.component';
 import { CardClotheComponent } from './commons/card-clothe/card-clothe.component';
 import { OfdtComponent } from './commons/odtd/ofdt.component';
 import { FooterHomeComponent } from './commons/footer-home/footer-home.component';
+import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+import { IphoneComponent } from './commons/iphone/iphone.component';
+import { BoxComponent } from './commons/box/box.component';
+import { NavBarComponent } from './commons/nav-bar/nav-bar.component';
 
 //Angular Material
 import {MatMenuModule} from '@angular/material/menu';
@@ -41,6 +45,11 @@ import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.comp
     OfdtComponent,
     FooterHomeComponent,
     ViewOneItemComponent,
+    WelcomePageComponent,
+    IphoneComponent,
+    BoxComponent,
+    NavBarComponent,
+
 
 
 
