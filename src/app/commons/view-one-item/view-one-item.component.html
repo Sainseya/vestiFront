@@ -1,9 +1,9 @@
-<div class="view-container">
+<div  [@newItemTrigger]="newItem ? 'notHere' : 'here'" class="view-container">
 
 
    <div class="card-for-view">
     <!-- Bouton qui englobe les icones favoris et avec une fonction qui change le vetement en favori ou non -->
- 
+
     <!-- image detaillé du vetement cliqué sur l inventaire -->
     <img class="image-view" [src]="item.linkImage">
 
