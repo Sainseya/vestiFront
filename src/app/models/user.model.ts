@@ -8,9 +8,24 @@ interface IUsers {
   accountType: string,
   wardrobes: [
     {
-     id: string,
-     name: string,
-    items: [
+
+    tops: [
+    {
+      id: string,
+      name: string,
+      label: string,
+      season: string,
+      linkImage: string,
+      favorite: boolean,
+      type: string,
+      color: string,
+      size: string,
+      fit:string
+
+
+    }
+  ]
+  bottoms: [
     {
       id: string,
       name: string,

@@ -28,8 +28,8 @@ export class OfdtComponent implements OnInit {
     this.clotheInventoryService.getAll().subscribe({
       next: (data: IUsers[]) => {
         this.usersList = data
-        console.log(this.usersList[0].wardrobes[0].items)
-        this.itemInventory = this.usersList[0].wardrobes[0].items
+        console.log(this.usersList[0].wardrobes[0])
+        this.itemInventory = this.usersList[0].wardrobes[0].tops.concat(this.usersList[0].wardrobes[0].bottoms)
 
         this.itemInventory.forEach(element => {
           if (element.type == "bas") {
