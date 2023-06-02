@@ -1,0 +1,24 @@
+
+
+ <app-header-home ></app-header-home>
+ <hr>
+ <div class="container">
+  <div class="oftd-container mat-elevation-z10">
+    <div class="card-for-outfit-top">
+
+
+      <!-- image detaillé du vetement cliqué sur l inventaire -->
+      <img class="image-view" [src]="itemOutfitTop.linkImage" >
+      </div>
+      <div class="card-for-outfit-bottom">
+
+        <!-- image detaillé du vetement cliqué sur l inventaire -->
+        <img class="image-view" [src]="itemOutfitBottom.linkImage">
+        </div>
+
+  </div>
+  <button mat-raised-button (click)="getRandomTopBottom()">Générer tenue</button>
+</div>
+
+
+<app-footer-home></app-footer-home>

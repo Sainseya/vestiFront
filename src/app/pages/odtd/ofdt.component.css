@@ -1,0 +1,59 @@
+/* Styles for Header */
+.container{
+  display: flex;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.oftd-container{
+  margin-left: 2rem;
+  margin-top: 3rem;
+  background-color: #eaeaea;
+  padding: 1rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: fit-content;
+  justify-self: center;
+}
+
+.image-view{
+  width: 40%;
+}
+
+.card-for-outfit-top{
+  background-color: #ffffff;
+
+  justify-self: center;
+}
+
+.card-for-outfit-bottom{
+  margin-top: 1rem;
+  background-color: #ffffff;
+  justify-self: center;
+}
+
+
+
+
+.logoVesti {
+  height: 60px;
+}
+
+.btn-darkMode {
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
