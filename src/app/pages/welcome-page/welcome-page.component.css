@@ -1,11 +1,14 @@
-body{
+.container{
     background-color: #e5c6c6;
-    
+    height: 100vh;
+
 }
 
 .background-QR-code{
-    height: 500px;
-    width: 400px;
+  position: relative;
+  bottom: 50px;
+    height: 400px;
+    width: 25%;
     background-color: #f2f7ff;
     background-image: url('https://st3.depositphotos.com/10614052/36191/i/450/depositphotos_361917662-stock-photo-modern-wardrobe-with-stylish-spring.jpg');
     background-size: cover;
@@ -14,8 +17,16 @@ body{
     align-items: center;
     justify-content: center;
     padding-left: 50px;
-    bottom: -100px;
-    margin-left: 400px;
+
+    margin-left: 20%;
     margin-top: 220px;
-    box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #5e5e5e;
+}
+
+.iphone-container {
+  position: relative;
+  bottom: 500px;
+  width: 20%;
+  left: 60%;
+  margin-bottom: 0%;
 }

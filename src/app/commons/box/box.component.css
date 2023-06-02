@@ -1,0 +1,11 @@
+.qrCode-container
+{
+
+}
+.qr-and-description{
+  display: flex;
+}
+
+.description{
+  margin-left: 1em;
+}
