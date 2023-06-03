@@ -29,9 +29,26 @@ header {
   width: 40%;
 }
 
+.image-view-animation{
+
+
+  transform: translateX(140px);
+  animation: topAnim 2.2s ease-out 2s;
+}
+
+@keyframes topAnim {
+  from {transform: translateX(350px);}
+  to {transform: translateX(-2450px);}
+}
+
+.image-anim-cache{
+  clip-path: inset(0px 140px);
+  width: 500px;
+}
+
 .card-for-outfit-top{
   background-color: #ffffff;
-
+  width: 500px;
   justify-self: center;
 }
 
