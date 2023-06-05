@@ -30,6 +30,10 @@ header {
   width: 100%;
 }
 
+.image-view-top{
+  width: 20%;
+}
+
 .image-view-animation{
 
 
@@ -42,14 +46,15 @@ header {
   to {transform: translateX(-2450px);}
 }
 
-.image-anim-cache{
-  clip-path: inset(0px 140px);
-  width: 500px;
+.image-anim-cache-top{
+  clip-path: inset(0px 300px);
+  margin-left: -300px;
+  background-color: rgba(0, 0, 23, 0.1);
 }
 
 .image-anim-cache-bottom{
-  clip-path: inset(0px 300px);
-  margin-left: -300px;
+  clip-path: inset(0px 400px);
+  margin-left: -400px;
   background-color: rgba(0, 0, 23, 0.1);
 
 }
@@ -66,10 +71,7 @@ header {
   to {transform: translateX(-2450px);}
 }
 
-.image-anim-cache{
-  clip-path: inset(0px 140px);
-  width: 500px;
-}
+
 
 .card-for-outfit-top{
   background-color: #ffffff;
@@ -78,6 +80,12 @@ header {
 }
 
 .outfit-bottom-list{
+  display: inline-flex;
+
+
+}
+
+.outfit-top-list{
   display: inline-flex;
 
 
