@@ -19,27 +19,61 @@ header {
   background-color: #eaeaea;
   padding: 1rem;
   border-radius: 5px;
-  display: grid;
-  grid-template-columns: 1fr;
+
+  width: 90%;
+
   width: fit-content;
   justify-self: center;
 }
 
 .image-view{
-  width: 40%;
+  width: 100%;
+}
+
+.image-view-animation{
+
+
+  transform: translateX(140px);
+  animation: topAnim 2.2s ease-out 2s;
+}
+
+@keyframes topAnim {
+  from {transform: translateX(350px);}
+  to {transform: translateX(-2450px);}
+}
+
+.image-anim-cache{
+  clip-path: inset(0px 140px);
+  width: 500px;
+}
+
+.image-anim-cache-bottom{
+  clip-path: inset(0px 300px);
+  margin-left: -300px;
+  background-color: rgba(0, 0, 23, 0.1);
+
 }
 
 .card-for-outfit-top{
   background-color: #ffffff;
-
+  width: 200px;
   justify-self: center;
+}
+
+.outfit-bottom-list{
+  display: inline-flex;
+
+
 }
 
 .card-for-outfit-bottom{
   margin-top: 1rem;
   background-color: #ffffff;
-  justify-self: center;
+  width: 200px;
+
 }
+
+
 
 
 

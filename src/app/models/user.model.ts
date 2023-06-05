@@ -15,12 +15,16 @@ interface IUsers {
       name: string,
       label: string,
       season: string,
-      linkImage: string,
-      favorite: boolean,
       type: string,
       color: string,
       size: string,
+      favorite: boolean,
+      linkImage: string,
       fit:string
+
+
+
+
 
 
     }
@@ -31,11 +35,11 @@ interface IUsers {
       name: string,
       label: string,
       season: string,
-      linkImage: string,
-      favorite: boolean,
       type: string,
       color: string,
       size: string,
+      favorite:boolean,
+      linkImage: string,
       fit:string
 
 
@@ -46,10 +50,10 @@ interface IUsers {
 events:[
   {
     id:string,
-    dateStart: Date,
-    dateEnd: Date,
+    dateStart: string,
+    dateEnd: string,
     description: string,
-    outfit: string
+    outfits: string
 
   }
 ]

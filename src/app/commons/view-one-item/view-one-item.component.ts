@@ -51,7 +51,7 @@ export class ViewOneItemComponent {
 
     }, 300);
 
-    console.log(this.newItem)
+    
 
   }
 }
