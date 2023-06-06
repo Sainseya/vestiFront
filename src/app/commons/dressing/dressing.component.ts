@@ -1,8 +1,9 @@
-import { ClotheInventoryService } from './../../services/clothe-inventory.service';
+import { ClotheInventoryService } from '../../services/clothe-inventory.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import IClothe from 'src/app/models/clothes.model';
-import IUsers from 'src/app/models/user.model';
-import Iitem from 'src/app/models/item.model';
+import User from 'src/app/models/user.model';
+import Item from 'src/app/models/item.model';
+import {MatDialog} from "@angular/material/dialog";
+import {ModalComponent} from "../modal/modal.component";
 
 @Component({
   selector: 'app-dressing',
@@ -14,15 +15,15 @@ export class DressingComponent implements OnInit {
   //variable pour le bouton afficher favoris
   disabledFav = true;
   //Liste des habits ou les donnes du service sont enregistrée
-  usersList: IUsers[] = [];
-  itemInventory: Iitem[] = [];
+  usersList: User[] = [];
+  itemInventory: Item[] = [];
   //Liste des habits favoris
   listItemFav: any[] = []
-  itemSelected?: Iitem;
+  itemSelected?: Item;
 
-  @Output() seletedItemEvent = new EventEmitter<Iitem>();
+  @Output() selectedItemEvent = new EventEmitter<Item>();
 
-  constructor(private clotheInventoryService: ClotheInventoryService){}
+  constructor(private clotheInventoryService: ClotheInventoryService, public dialog: MatDialog){}
 
   ngOnInit(): void {
     this.sortFavElement()
@@ -32,7 +33,7 @@ export class DressingComponent implements OnInit {
   //Fonction qui recupere tous les habits et les mets dans clothe Inventory
   getClotheInventory = () =>  {
     this.clotheInventoryService.getAll().subscribe({
-      next : (data: IUsers[]) => {
+      next : (data: User[]) => {
         this.usersList = data
         console.log(this.usersList[0].wardrobes[0].items)
           this.itemInventory = this.usersList[0].wardrobes[0].items
@@ -58,12 +59,12 @@ export class DressingComponent implements OnInit {
   //Fonction pour mettre dans une liste de favoris listItemFav les vetement avec le boolean favori
   sortFavElement(){
      this.itemInventory.forEach(element => {
-      if(element.favorite == true && !this.listItemFav.includes(element) ){
+      if(element.isFavorite && !this.listItemFav.includes(element) ){
         this.listItemFav.push(element);
       }
 
       this.listItemFav.forEach(element => {
-        if(element.favorite == false){
+        if(!element.isFavorite){
           this.listItemFav.splice(element, 1)
         }
       })
@@ -71,12 +72,26 @@ export class DressingComponent implements OnInit {
     });
   }
 
-  selectItem(item:Iitem){
+  selectItem(item:Item){
      this.itemSelected = item;
-     this.seletedItemEvent.emit(this.itemSelected);
-    
+     this.selectedItemEvent.emit(this.itemSelected);
+
   }
 
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      enterAnimationDuration,
+      exitAnimationDuration,});
+    // const dialogRef = this.dialog.open(ModalComponent, {
+      // data: {
+      // a remplir
+      //   }
+    // });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // à remplir/modifier this.animal = result;
+    });
+  }
 
 
 

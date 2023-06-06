@@ -11,13 +11,13 @@
       </div>
       <div class="side-nav-link" routerLink="/outfit-of-the-day">
         <img src="../assets/icons/icons-t-shirt.png" class="icon-tshirt" alt="icone t-shirt">
-        <a class="side-nav-link-text">Outif of the day</a>
+        <a class="side-nav-link-text">Oufit of the day</a>
       </div>
     </div>
   </mat-drawer>
 
 <div class="inventory-and-view">
-  <app-dressing (seletedItemEvent)="outputItemSeleted($event)"></app-dressing>
+  <app-dressing (selectedItemEvent)="outputItemSeleted($event)"></app-dressing>
   <app-view-one-item  [item]="itemSeletedFromOutput" *ngIf="itemSeletedFromOutput"></app-view-one-item>
 </div>
 
@@ -25,7 +25,4 @@
 </mat-drawer-container>
 <app-footer-home></app-footer-home>
 
-
-
-
-
+</div>

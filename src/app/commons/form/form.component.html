@@ -1,0 +1,37 @@
+<form [formGroup]="item" (ngSubmit)="onSubmitForm()">
+  <h1 mat-dialog-title>
+    Formulaire de saisie d'articles
+  </h1>
+  <div *ngFor="let attribute of item.controls | keyvalue">
+    <ng-container *ngIf="attribute.key !='color'">
+      <mat-form-field *ngFor="let label of itemAttributsForLabel">
+        <app-label label="{{label}}" ></app-label>
+        <ng-container *ngIf="attribute.key === 'type' || attribute.key === 'size'">
+          <app-select-in-menu></app-select-in-menu>
+        </ng-container>
+        <ng-container *ngIf="attribute.key === 'season' || attribute.key === 'fit'">
+          <app-button></app-button>
+        </ng-container>
+        <ng-container *ngIf="attribute.key === 'color'">
+          <app-color-picker></app-color-picker>
+        </ng-container>
+        <ng-container *ngIf="attribute.key === 'favorite'">
+          <p>Contenu pour l'attribut 'favorite'</p>
+        </ng-container>
+        <ng-container *ngIf="attribute.key === 'label'">
+          <app-input></app-input>
+        </ng-container>
+        <ng-container *ngIf="attribute.key === 'picture'">
+          <app-upload-image></app-upload-image>
+        </ng-container>
+<!--    <mat-label>{{element}} :</mat-label>-->
+<!--    <input matInput type="text" [(ngModel)]="" name="{{element}}">-->
+<!--  </mat-form-field>-->
+<!--  <mat-form-field>-->
+<!--    <mat-label>Email :</mat-label>-->
+<!--    <input matInput type="email" [(ngModel)]="" name="email">-->
+  </mat-form-field>
+    </ng-container>
+  </div>
+  <button mat-raised-button type="submit">Soumettre</button>
+</form>

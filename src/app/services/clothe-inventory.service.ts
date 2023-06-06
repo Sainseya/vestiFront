@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import IClothe from '../models/clothes.model';
-import IUsers from '../models/user.model';
 import { Observable } from 'rxjs';
+import User from "../models/user.model";
 
 
 @Injectable({
@@ -16,9 +15,9 @@ export class ClotheInventoryService {
 
 
   //Appelle la liste de d'utilisateur sur le serveur Spring
-  getAll = () : Observable<IUsers[]> => {
+  getAll = () : Observable<User[]> => {
 
-    return this.http.get<IUsers[]>(`${this.URI}/vesti`)
+    return this.http.get<User[]>(`${this.URI}/vesti`)
   }
 
 }

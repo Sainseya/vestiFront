@@ -1,42 +1,17 @@
-interface IUsers {
-  id: string,
-  name: string,
-  surname: string,
-  pseudo: string,
-  email: string,
-  gender: string,
-  accountType: string,
-  wardrobes: [
-    {
-     id: string,
-     name: string,
-    items: [
-    {
-      id: string,
-      name: string,
-      label: string,
-      season: string,
-      linkImage: string,
-      favorite: boolean,
-      type: string,
-      color: string,
-      size: string,
-      fit:string
+import Item from "./item.model";
+import Wardrobe from "./wardrobe.model";
+import Event from "./event.model";
 
-
-    }
-  ]
+interface User {
+  id: string
+  name: string
+  surname: string
+  pseudo: string
+  email: string
+  gender: string
+  accountType: string
+  wardrobes: Wardrobe[]
+  events: Event[];
+  outfit: Item[];
 }
-],
-events:[
-  {
-    id:string,
-    dateStart: Date,
-    dateEnd: Date,
-    description: string,
-    outfit: string
-
-  }
-]
-}
-export default IUsers
+export default User;

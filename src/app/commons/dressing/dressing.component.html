@@ -1,8 +1,8 @@
 <div class="container">
   <div class="option-button-dressing">
     <!-- Bouton pour ajouter un vêtement -->
-    <button class="add-clothe-button" mat-stroked-button> + Ajouter un vêtement</button>
-    
+    <button class="add-clothe-button" mat-stroked-button (click)="openDialog('1000ms', '300ms')"> + Ajouter un vêtement</button>
+
     <!-- Bouton pour afficher les favoris -->
     <button class="favorite-button" mat-stroked-button (click)="disabledFavFunction()"> Favoris
       <mat-icon>favorite</mat-icon>
@@ -22,10 +22,6 @@
         <app-card-clothe  [item]="item"></app-card-clothe>
       </div>
     </div>
-    
-
-
-
-
+</div>
 
 

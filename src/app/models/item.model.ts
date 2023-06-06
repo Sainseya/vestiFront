@@ -1,17 +1,19 @@
-interface Iitem {
-  id: string,
-  name: string,
-  label: string,
-  season: string,
-  linkImage: string,
-  favorite: boolean,
-  type: string,
-  color: string,
-  size: string,
-  fit: string
+class Item {
+  private id!: string;
+  label!: string;
+  isFavorite!: boolean;
+  type!: string;
+  season!: string;
+  size!: string;
+  fit!: string;
+  picture!: File;
+  color!: string;
+
+  constructor() {
+    this.isFavorite = false;
+  }
+
 
 }
 
-export default Iitem;
-
-
+export default Item;
