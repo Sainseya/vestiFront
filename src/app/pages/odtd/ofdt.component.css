@@ -1,5 +1,5 @@
 /* Styles for Header */
-.container{
+.container {
   display: flex;
 }
 
@@ -13,7 +13,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.oftd-container{
+.oftd-container {
   margin-left: 2rem;
   margin-top: 3rem;
   background-color: #eaeaea;
@@ -26,85 +26,108 @@ header {
   justify-self: center;
 }
 
-.image-view{
+.image-view {
   width: 100%;
 }
 
-.image-view-top{
+.image-view-top {
   width: 20%;
 }
 
-.image-view-animation{
-
-
+.image-view-animation {
   transform: translateX(140px);
   animation: topAnim 2.2s ease-out 2s;
 }
 
 @keyframes topAnim {
-  from {transform: translateX(350px);}
-  to {transform: translateX(-2450px);}
+  from {
+    transform: translateX(350px);
+  }
+  to {
+    transform: translateX(-2450px);
+  }
 }
 
-.image-anim-cache-top{
+.image-anim-cache-top {
   clip-path: inset(0px 300px);
   margin-left: -300px;
   background-color: rgba(0, 0, 23, 0.1);
 }
 
-.image-anim-cache-bottom{
+.image-anim-cache-bottom {
   clip-path: inset(0px 400px);
   margin-left: -400px;
   background-color: rgba(0, 0, 23, 0.1);
-
 }
 
-.image-view-animation{
-
-
+.image-view-animation {
   transform: translateX(140px);
   animation: topAnim 2.2s ease-out 2s;
 }
 
 @keyframes topAnim {
-  from {transform: translateX(350px);}
-  to {transform: translateX(-2450px);}
+  from {
+    transform: translateX(350px);
+  }
+  to {
+    transform: translateX(-2450px);
+  }
 }
 
-
-
-.card-for-outfit-top{
+.card-for-outfit-top {
   background-color: #ffffff;
 
   justify-self: center;
 }
 
-.outfit-bottom-list{
+.outfit-bottom-list {
   display: inline-flex;
-
-
 }
 
-.outfit-top-list{
+.outfit-top-list {
   display: inline-flex;
-
-
 }
 
-.card-for-outfit-bottom{
+.card-for-outfit-bottom {
   margin-top: 1rem;
   background-color: #ffffff;
   width: 200px;
-
 }
-
-
-
-
-
 
 .logoVesti {
   height: 60px;
+}
+
+.side-nav-container{
+  margin-top: 2rem;
+  height: fit-content;
+}
+
+.side-nav-link{
+  display: flex;
+  align-items: center;
+  margin-left: 0rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.side-nav-link-text{
+  margin-left: 0.3rem;
+  position: relative;
+  top: 0.2rem;
+
+}
+
+.side-nav-link-text:hover{
+  color: rgb(53, 48, 86);
+
+}
+
+.icon-tshirt {
+  width: 18%;
+  position: relative;
+  top: 0.5rem;
 }
 
 .btn-darkMode {
@@ -115,4 +138,3 @@ header {
   font-size: 14px;
   cursor: pointer;
 }
-
