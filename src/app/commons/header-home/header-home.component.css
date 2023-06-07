@@ -5,12 +5,11 @@
   filter: invert(0);
 }
 
-.logo-header-dark{
+.logo-header-dark {
   filter: invert(1);
 }
 
 #logo-header.dark-mode {
-
   filter: invert(1);
   /* Style du logo dans l'en-tête avec une largeur fixe et curseur en forme de main */
 }
@@ -19,23 +18,16 @@
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: end;
-
 }
 
 .container-header.dark-theme {
   background-color: #2d3436;
-
-
 }
 
-.dark-theme{
+.dark-theme {
   background-color: #2d3436;
   color: #dfe6e9;
 }
-
-
-
-
 
 .button-start {
   display: flex;
@@ -47,7 +39,6 @@
 .button-start.dark-mode {
   background-color: #2d3436;
   color: #dfe6e9;
-
 }
 
 .burger-menu-button {
@@ -58,8 +49,6 @@
   margin-left: 10px;
   /* Style du bouton de menu avec une largeur fixe et un fond blanc */
 }
-
-
 
 .burger-menu-button-image {
   width: 2rem;
@@ -84,25 +73,17 @@
   /* Style de l'input de recherche avec une marge, une hauteur et un décalage vertical négatif */
 }
 
-
-
-.button-welcome  {
+.button-welcome {
   padding: auto;
-
-
 }
 
-.button{
-  
+.button {
 }
 
-.button-dressing{
+.button-dressing {
   background-color: #2d3436;
   color: #dfe6e9;
 }
-
-
-
 
 .container .dark-mode {
   background-color: #2d3436;

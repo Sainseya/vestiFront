@@ -3,10 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
-
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 //Components
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -19,21 +17,19 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 import { IphoneComponent } from './commons/iphone/iphone.component';
 import { BoxComponent } from './commons/box/box.component';
 import { NavBarComponent } from './commons/nav-bar/nav-bar.component';
+import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
+import { EventPageComponent } from './pages/event-page/event-page.component';
 
 //Angular Material
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatBadgeModule} from '@angular/material/badge';
-import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
-
-
-
-
-
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -49,12 +45,7 @@ import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.comp
     IphoneComponent,
     BoxComponent,
     NavBarComponent,
-
-
-
-
-
-
+    EventPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,25 +53,20 @@ import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.comp
     BrowserAnimationsModule,
     HttpClientModule,
 
-   //Angular Material
+    //Angular Material
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
     MatSidenavModule,
     MatIconModule,
     MatSlideToggleModule,
-    MatBadgeModule
-
-
-  ],
-  schemas :[
-    CUSTOM_ELEMENTS_SCHEMA
+    MatBadgeModule,
+    MatNativeDateModule,
+    MatDatepickerModule
 
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-
-export class AppModule {
-
-}
+export class AppModule {}

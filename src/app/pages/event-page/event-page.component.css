@@ -1,18 +1,8 @@
-.container{
-  background-color: rgb(255, 255, 255);
-  width: 100vw;
-
+.demo-inline-calendar-card{
+  width: 30%;
 }
 
-.dark-theme{
-  background-color: #2d3436;
-  background: #2d3436;;
-  color: #ededed;
-
-}
-
-
-.side-nav-link{
+side-nav-link{
   display: flex;
   align-items: center;
   margin-left: 0rem;
@@ -33,13 +23,6 @@
 
 }
 
-.inventory-and-view{
-  display: flex;
-  margin-left: 2rem;
-  height: 300px;
-
-}
-
 .side-nav-container{
   margin-top: 2rem;
 
@@ -48,12 +31,3 @@
 .icon-tshirt{
   width: 18%;
 }
-
-.example-container{
-  height: 100%;
-}
-
-
-
-
-
