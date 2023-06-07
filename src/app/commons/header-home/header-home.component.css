@@ -33,10 +33,7 @@
   color: #dfe6e9;
 }
 
-.dark-theme-button{
-  background-color: #2d3436;
-  color: #dfe6e9;
-}
+
 
 
 
@@ -87,10 +84,25 @@
   /* Style de l'input de recherche avec une marge, une hauteur et un décalage vertical négatif */
 }
 
-.button-dressing-choice {
 
-  /* Style du bouton de choix de dressing avec un fond rouge */
+
+.button-welcome  {
+  padding: auto;
+
+
 }
+
+.button{
+  
+}
+
+.button-dressing{
+  background-color: #2d3436;
+  color: #dfe6e9;
+}
+
+
+
 
 .container .dark-mode {
   background-color: #2d3436;
