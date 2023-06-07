@@ -1,0 +1,53 @@
+<app-header-home [drawer]="drawer"></app-header-home>
+<hr />
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div class="side-nav-container">
+      <div class="side-nav-link">
+        <img src="../assets/icons/icons8-accueil.svg" alt="icone maison" />
+        <a class="side-nav-link-text">Accueil</a>
+      </div>
+      <div class="side-nav-link" routerLink="/outfit-of-the-day">
+        <img
+          src="../assets/icons/icons-t-shirt.png"
+          class="icon-tshirt"
+          alt="icone t-shirt"
+        />
+        <a class="side-nav-link-text">Outfit of the day</a>
+      </div>
+    </div>
+  </mat-drawer>
+
+  <div class="container">
+    <div class="oftd-container mat-elevation-z10">
+      <div class="image-anim-cache-bottom">
+        <div class="outfit-bottom-list" *ngFor="let item of itemTopList">
+          <div
+            class="card-for-outfit-bottom"
+            [@generateOutfitTop]="animateTrigger ? 'notHere' : 'here'"
+          >
+            <!-- image detaillé du vetement cliqué sur l inventaire -->
+            <!-- <img class="image-view" [src]="itemOutfitBottom.linkImage"> -->
+            <img class="image-view" [src]="item.linkImage" />
+          </div>
+        </div>
+      </div>
+
+      <div class="image-anim-cache-bottom">
+        <div class="outfit-bottom-list" *ngFor="let item of itemBottomList">
+          <div
+            class="card-for-outfit-bottom"
+            [@generateOutfitBottom]="animateTrigger ? 'notHere' : 'here'"
+          >
+            <!-- image detaillé du vetement cliqué sur l inventaire -->
+            <!-- <img class="image-view" [src]="itemOutfitBottom.linkImage"> -->
+            <img class="image-view" [src]="item.linkImage" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <button mat-raised-button (click)="toggle()">Générer tenue</button>
+  </div>
+</mat-drawer-container>
+
+<app-footer-home></app-footer-home>

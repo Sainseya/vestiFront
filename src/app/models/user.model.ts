@@ -8,19 +8,38 @@ interface IUsers {
   accountType: string,
   wardrobes: [
     {
-     id: string,
-     name: string,
-    items: [
+
+    tops: [
     {
       id: string,
       name: string,
       label: string,
       season: string,
-      linkImage: string,
-      favorite: boolean,
       type: string,
       color: string,
       size: string,
+      favorite: boolean,
+      linkImage: string,
+      fit:string
+
+
+
+
+
+
+    }
+  ]
+  bottoms: [
+    {
+      id: string,
+      name: string,
+      label: string,
+      season: string,
+      type: string,
+      color: string,
+      size: string,
+      favorite:boolean,
+      linkImage: string,
       fit:string
 
 
@@ -31,10 +50,10 @@ interface IUsers {
 events:[
   {
     id:string,
-    dateStart: Date,
-    dateEnd: Date,
+    dateStart: string,
+    dateEnd: string,
     description: string,
-    outfit: string
+    outfits: string
 
   }
 ]

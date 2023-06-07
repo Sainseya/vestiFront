@@ -3,7 +3,8 @@
   position: absolute;
   bottom: 0;
   background-color: #D8DFE3;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -40,5 +41,6 @@
 .mentionLegale {
   display: flex;
   align-self: center;
+  margin-right: 10px;
   /* Style pour afficher les mentions légales centrées */
 }

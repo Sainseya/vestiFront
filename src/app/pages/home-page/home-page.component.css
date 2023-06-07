@@ -28,14 +28,20 @@
 .inventory-and-view{
   display: flex;
   margin-left: 2rem;
+
 }
 
 .side-nav-container{
   margin-top: 2rem;
+  
 }
 
 .icon-tshirt{
   width: 18%;
+}
+
+.example-container{
+  height: 100%;
 }
 
 

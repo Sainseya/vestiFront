@@ -3,23 +3,39 @@ body {
 }
 
 .nav-bar{
-    height: 5em;
+    height: 7em;
     padding-left: 20em;
     padding-right: 20em;
+    display: flex;
+    background-color: white;
 }
 .logo{
-    margin-top: 10px;
-    width: 80%;
+    margin-top: 1rem;
+    width: 50%;
 }
 
+.title{
+  margin-top: 2rem;
+  width: 50%;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 6rem;
+
+
+}
 
 section {
     display: table;
     margin: 8px 8px 8px 0;
 }
 .button-size{
-    height: 5em;
+    height: 3em;
     width: 7em;
     border-radius: 10px;
     margin-right: 10px;
+}
+
+.buttons{
+  margin-top: 1.3rem;
+  display: flex;
 }

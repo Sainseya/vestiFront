@@ -10,8 +10,10 @@ export class HomePageComponent {
 
   itemSeletedFromOutput!:Iitem;
 
+ 
   outputItemSeleted(item:Iitem){
     this.itemSeletedFromOutput = item;
+
   }
 
 }
