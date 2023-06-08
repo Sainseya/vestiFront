@@ -1,8 +1,12 @@
 .demo-inline-calendar-card{
   width: 30%;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  display: flex;
+  margin-bottom: 4rem;
 }
 
-side-nav-link{
+.side-nav-link{
   display: flex;
   align-items: center;
   margin-left: 0rem;
@@ -17,7 +21,9 @@ side-nav-link{
   top: 0.2rem;
 
 }
-
+.container-event{
+  display: flex;
+}
 .side-nav-link-text:hover{
   color: rgb(53, 48, 86);
 
@@ -30,4 +36,8 @@ side-nav-link{
 
 .icon-tshirt{
   width: 18%;
+}
+
+::ng-deep .available .mat-calendar-body-cell-content{
+  background-color: rgba(14, 152, 5, 0.25);
 }

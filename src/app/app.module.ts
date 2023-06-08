@@ -30,6 +30,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatBadgeModule } from '@angular/material/badge';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { SideNavComponent } from './commons/side-nav/side-nav.component';
+
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     BoxComponent,
     NavBarComponent,
     EventPageComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatSlideToggleModule,
     MatBadgeModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
