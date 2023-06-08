@@ -1,0 +1,44 @@
+/******************BODY***********************************/
+.container-ootd {
+  /* affiche la tenue du jour */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.outfit-container {
+  /* La classe .outfit-container est appliquée à un conteneur qui englobe la tenue du jour.. */
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.title {
+  /*permet de gerer l'affichage du titre "Voici votre outfit of the day :" */
+  font-size: large; /* permet d'agrandir la taille du texte */
+  font-weight: bolder; /* permet de mettre le texte en gras */
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.btn-gen-outfit {
+  /* bouton "Générer outfit" */
+  width: 10rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.outfit-top,
+.outfit-bottom {
+  /* permet de centrer les habits (top et bottom) */
+  display: flex;
+  justify-content: center;
+}
+
+.image-view {
+  /* permet de gerer la taille des images dans les cards */
+  width: 35%;
+}

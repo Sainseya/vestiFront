@@ -1,23 +1,32 @@
 <div class="container">
-<app-header-home [drawer]="drawer"></app-header-home>
-<hr>
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
+  <!-----------------------------------HEADER---------------------------------------------------------------------------------------------->
+  <app-header-home [drawer]="drawer"></app-header-home>
+  <hr />
+  <!-- <hr /> = trait horizontal pour séparer l'en-tête du reste du contenu -->
 
-    <app-side-nav></app-side-nav>
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <app-side-nav></app-side-nav>
+    </mat-drawer>
 
-  </mat-drawer>
+    <div class="inventory-and-view">
+      <app-dressing
+        (seletedItemEvent)="outputItemSeleted($event)"
+      ></app-dressing>
+      <!-- affiche l'inventaire et émet un événement lorsqu'un élément est sélectionné -->
 
-<div class="inventory-and-view">
-  <app-dressing (seletedItemEvent)="outputItemSeleted($event)"></app-dressing>
-  <app-view-one-item  [item]="itemSeletedFromOutput" *ngIf="itemSeletedFromOutput"></app-view-one-item>
+      <app-view-one-item
+        [item]="itemSeletedFromOutput"
+        *ngIf="itemSeletedFromOutput"
+      ></app-view-one-item>
+      <!-- affiche les détails d'un élément sélectionné à partir de l'inventaire -->
+      <!-- L'élément est passé en tant que "item" -->
+      <!-- Il est affiché que si "itemSeletedFromOutput" est défini -->
+    </div>
+  </mat-drawer-container>
+
+  <!-----------------------------------FOOTER---------------------------------------------------------------------------------------------->
+
+  <app-footer-home></app-footer-home>
+  <!--Appel du composant footer-->
 </div>
-
-
-</mat-drawer-container>
-<app-footer-home></app-footer-home>
-
-
-
-
-
