@@ -13,12 +13,12 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-ofdt',
-  templateUrl: './ofdt.component.html',
-  styleUrls: ['./ofdt.component.css']
+  selector: 'app-ootd',
+  templateUrl: './ootd.component.html',
+  styleUrls: ['./ootd.component.css']
 
 })
-export class OfdtComponent implements OnInit {
+export class OotdComponent implements OnInit {
   usersList: IUsers[] = [];
   itemInventory: Iitem[] = [];
   itemTopList: Iitem[] = [];

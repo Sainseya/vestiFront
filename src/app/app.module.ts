@@ -11,7 +11,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeaderHomeComponent } from './commons/header-home/header-home.component';
 import { DressingComponent } from './commons/dressing/dressing.component';
 import { CardClotheComponent } from './commons/card-clothe/card-clothe.component';
-import { OfdtComponent } from './pages/odtd/ofdt.component';
+import { OotdComponent } from './pages/ootd-page/ootd.component';
 import { FooterHomeComponent } from './commons/footer-home/footer-home.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 import { IphoneComponent } from './commons/iphone/iphone.component';
@@ -40,7 +40,7 @@ import { SideNavComponent } from './commons/side-nav/side-nav.component';
     HeaderHomeComponent,
     DressingComponent,
     CardClotheComponent,
-    OfdtComponent,
+    OotdComponent,
     FooterHomeComponent,
     ViewOneItemComponent,
     WelcomePageComponent,
