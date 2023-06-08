@@ -24,3 +24,6 @@
 .side-nav-link-text:hover {
   color: rgb(53, 48, 86);
 }
+.side-nav-container{
+  height: 100%;
+}

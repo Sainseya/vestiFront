@@ -19,7 +19,7 @@ const year = today.getFullYear();
 })
 export class EventPageComponent {
   selectedDate!: Date;
-  datesToHighlight = ["2023/06/22", "2023/06/12",];
+  datesToHighlight = ["2023/06/22", "2023/06/12", "2023/06/25"];
 
   events: Event[] = [{
 
