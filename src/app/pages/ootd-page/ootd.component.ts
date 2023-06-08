@@ -2,31 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import Iitem from 'src/app/models/item.model';
 import IUsers from 'src/app/models/user.model';
 import { ClotheInventoryService } from 'src/app/services/clothe-inventory.service';
-import {
-  state,
-  trigger,
-  transition,
-  style,
-  animate,
-  query,
-  stagger,
-} from '@angular/animations';
+// import {
+//   state,
+//   trigger,
+//   transition,
+//   style,
+//   animate,
+//   query,
+//   stagger,
+// } from '@angular/animations';
 
 @Component({
   selector: 'app-ootd',
   templateUrl: './ootd.component.html',
-  styleUrls: ['./ootd.component.css']
-
+  styleUrls: ['./ootd.component.css'],
 })
 export class OotdComponent implements OnInit {
   usersList: IUsers[] = [];
   itemInventory: Iitem[] = [];
   itemTopList: Iitem[] = [];
-  itemBottomList: Iitem[] = []
+  itemBottomList: Iitem[] = [];
   itemBottomListClone: Iitem[] = this.itemBottomList;
   itemOutfitTop!: Iitem;
   itemOutfitBottom!: Iitem;
-  router:any;
+  router: any;
 
   //   {
   //     id: '3',
@@ -90,7 +89,6 @@ export class OotdComponent implements OnInit {
   //   },
   // ];
 
-
   //   {
   //     id: '3',
   //     name: 'jean bleu',
@@ -141,16 +139,15 @@ export class OotdComponent implements OnInit {
   //   },
   // ];
 
-
-
-
-
+  /**
+   * Creates an instance of OotdComponent.
+   * @param {ClotheInventoryService} clotheInventoryService
+   * @memberof OotdComponent
+   */
   constructor(private clotheInventoryService: ClotheInventoryService) {}
   ngOnInit(): void {
     this.getClotheInventory();
   }
-
-
 
   //Fonction qui recupere tous les habits et les mets dans clothe Inventory
   getClotheInventory = () => {
@@ -167,10 +164,9 @@ export class OotdComponent implements OnInit {
             this.itemBottomList.push(element);
           } else {
             this.itemTopList.push(element);
-
           }
         });
-        console.log(this.itemTopList)
+        console.log(this.itemTopList);
       },
       error: (data) => {
         console.error('error get all');
@@ -180,6 +176,7 @@ export class OotdComponent implements OnInit {
   };
 
   getRandomTopBottom() {
+    //fonction pour afficher un habits aleatoirement
     var topRandom = Math.floor(Math.random() * 4);
     var bottomRandom = Math.floor(Math.random() * 4);
 
