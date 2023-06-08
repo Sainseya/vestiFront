@@ -1,9 +1,9 @@
 import { CalendarEvent } from 'angular-calendar';
-import { Component,  Renderer2 } from '@angular/core';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatCardModule} from '@angular/material/card';
-import {MatNativeDateModule} from '@angular/material/core';
-import {FormGroup, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Component, Renderer2, ViewEncapsulation } from '@angular/core';
+import { MatCalendarCellClassFunction, MatCalendarCellCssClasses, MatDatepickerModule } from '@angular/material/datepicker';
+import { MatCardModule } from '@angular/material/card';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Event } from 'src/app/models/event.model';
 
 
@@ -14,34 +14,65 @@ const year = today.getFullYear();
 @Component({
   selector: 'app-event-page',
   templateUrl: './event-page.component.html',
-  styleUrls: ['./event-page.component.css']
+  styleUrls: ['./event-page.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class EventPageComponent {
   selectedDate!: Date;
+  datesToHighlight = ["2023/06/22", "2023/06/12",];
 
-  events: Event[] = [];
+  events: Event[] = [{
 
-  constructor(private renderer:Renderer2){}
+    title: "Mariage de Nseya",
+    date: new Date(this.datesToHighlight[0])
 
-  private highlightDays(days: string[]) {
-    const dayElements = document.querySelectorAll(
-      'mat-calendar .mat-calendar-table .mat-calendar-body-cell'
-    );
-
-
-
-    Array.from(dayElements).forEach((element) => {
-      const matchingDay = days.find((d) => d === element.getAttribute('even')) !== undefined;
-
-      if (matchingDay) {
-        this.renderer.addClass(element, 'available');
-        this.renderer.setAttribute(element, 'title', 'Event 1');
-      } else {
-        this.renderer.removeClass(element, 'available');
-        this.renderer.removeAttribute(element, 'title');
-      }
-    });
+  },
+  {
+    title: "Vacances",
+    date: new Date(this.datesToHighlight[1])
   }
+  ]
+
+  dateMatch: boolean = false
+  eventNumber: number = -1
+
+constructor(private renderer: Renderer2) { }
+
+  onSelect(event: any) {
+
+    this.selectedDate = event;
+
+
+
+    if (this.selectedDate.getTime() == this.events[0].date.getTime()) {
+      this.dateMatch = true
+      this.eventNumber = 0
+    } else if (this.selectedDate.getTime() == this.events[1].date.getTime()){
+      this.dateMatch = true
+      this.eventNumber = 1
+    } else {
+      this.dateMatch = false
+    }
+    console.log(this.eventNumber)
+
+
+  }
+
+  dateClass() {
+    return (date: Date): MatCalendarCellCssClasses => {
+      const highlightDate = this.datesToHighlight
+        .map(strDate => new Date(strDate))
+        .some(d => d.getDate() === date.getDate() && d.getMonth() === date.getMonth() && d.getFullYear() === date.getFullYear());
+
+      return highlightDate ? 'my-date' : '';
+    };
+  }
+
+  onSubmit() {
+
+  }
+
+
 
 
 }

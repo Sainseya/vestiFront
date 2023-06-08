@@ -41,3 +41,18 @@
 ::ng-deep .available .mat-calendar-body-cell-content{
   background-color: rgba(14, 152, 5, 0.25);
 }
+button.my-date {
+  background: rgb(254, 126, 126);
+  border-radius: 100%;
+}
+.example-custom-date-class {
+  background: orange;
+  border-radius: 100%;
+}
+
+.info-event{
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+
+}

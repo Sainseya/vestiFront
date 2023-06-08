@@ -9,9 +9,25 @@
 
     <div class="container-event">
     <mat-card class="demo-inline-calendar-card">
-      <mat-calendar #calendar ></mat-calendar>
+      <mat-calendar #calendar
+      [dateClass]="dateClass()" [selected]="selectedDate" (selectedChange)="onSelect($event)"></mat-calendar>
     </mat-card>
-    <p> Jour de l'évenement : {{selectedDate | date}}</p>
+    <div class="info-event">
+    <p> Jour de l'évenement : {{selectedDate |  date:'medium'}}</p>
+
+    <div *ngIf="dateMatch">
+      <div>{{events[eventNumber].title}}</div>
+    </div>
+
+    <div *ngIf="dateMatch">
+      <div>Outfit prévu</div>
+    </div>
+  </div>
+
+
+
+
+
   </div>
 
 
