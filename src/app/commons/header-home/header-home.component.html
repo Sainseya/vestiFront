@@ -13,6 +13,11 @@
     <!-- Champ de recherche -->
     <input class="input-recherche" placeholder="Rechercher...">
 
+    <button class="button-welcome" mat-raised-button color="button" routerLink="/home">
+      <img src="../assets/icons/icons8-accueil.svg" alt="icone maison">
+
+
+    </button>
     <!-- Bouton "Outfit of the day" -->
     <button class="button-welcome" mat-raised-button color="button" routerLink="/welcome-page">Welcome</button>
 
@@ -24,14 +29,14 @@
     </mat-menu>
 
     <!-- Icône pour le mode sombre -->
-    <mat-icon class="mr-8">brightness_5</mat-icon>
+    <mat-icon class="mr-8 slide-darkmode">brightness_5</mat-icon>
 
     <!-- Bouton pour activer/désactiver le mode sombre -->
-    <mat-slide-toggle (change)="toggleDarkmode()" ></mat-slide-toggle>
+    <mat-slide-toggle class="slide-darkmode" (change)="toggleDarkmode()" ></mat-slide-toggle>
 
 
     <!-- Icône pour le mode nuit -->
-    <mat-icon>bedtime</mat-icon>
+    <mat-icon class="slide-darkmode">bedtime</mat-icon>
 
   </div>
 </div>
