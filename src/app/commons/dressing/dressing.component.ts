@@ -34,8 +34,9 @@ export class DressingComponent implements OnInit {
     this.clotheInventoryService.getAll().subscribe({
       next : (data: IUsers[]) => {
         this.usersList = data
-        console.log(this.usersList[0].wardrobes[0].items)
-          this.itemInventory = this.usersList[0].wardrobes[0].items
+        console.log(this.usersList[0].wardrobes[0].tops)
+          this.itemInventory = this.usersList[0].wardrobes[0].tops.concat(this.usersList[0].wardrobes[0].bottoms)
+         
         },
       error :(data) => {
           console.error("error get all")
@@ -55,7 +56,9 @@ export class DressingComponent implements OnInit {
 
   }
 
-  //Fonction pour mettre dans une liste de favoris listItemFav les vetement avec le boolean favori
+  /**
+   * Fonction pour mettre dans une liste de favoris listItemFav les vetement avec le boolean favori
+   */
   sortFavElement(){
      this.itemInventory.forEach(element => {
       if(element.favorite == true && !this.listItemFav.includes(element) ){
@@ -74,7 +77,7 @@ export class DressingComponent implements OnInit {
   selectItem(item:Iitem){
      this.itemSelected = item;
      this.seletedItemEvent.emit(this.itemSelected);
-    
+
   }
 
 
