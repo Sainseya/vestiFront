@@ -80,6 +80,10 @@
 .button {
 }
 
+.slide-darkmode{
+  margin-top: 0.5rem;
+}
+
 .button-dressing {
   background-color: #2d3436;
   color: #dfe6e9;
