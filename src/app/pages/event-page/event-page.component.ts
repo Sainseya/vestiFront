@@ -1,4 +1,3 @@
-import { CalendarEvent } from 'angular-calendar';
 import { Component,  Renderer2 } from '@angular/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
