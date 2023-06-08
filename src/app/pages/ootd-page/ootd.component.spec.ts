@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OfdtComponent } from './ofdt.component';
+import { OotdComponent } from './ootd.component';
 
-describe('OfdtComponent', () => {
-  let component: OfdtComponent;
-  let fixture: ComponentFixture<OfdtComponent>;
+describe('OotdtComponent', () => {
+  let component: OotdComponent;
+  let fixture: ComponentFixture<OotdComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OfdtComponent ]
-    })
-    .compileComponents();
+      declarations: [OotdComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(OfdtComponent);
+    fixture = TestBed.createComponent(OotdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
