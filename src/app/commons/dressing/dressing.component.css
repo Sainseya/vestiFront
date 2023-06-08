@@ -1,12 +1,15 @@
-.container {
- display: block;
-
-
+.dark-theme{
+  background-color: #2d3436;
+  background: #2d3436;;
+  color: #ededed;
 
 }
 
-.list {
+.container {
+  display: block;
+}
 
+.list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 
@@ -15,8 +18,6 @@
   background-color: #eaeaea;
   padding: 1rem;
   border-radius: 5px;
-
-
 }
 
 .add-clothe-button {
@@ -30,16 +31,16 @@
   /* Ombre appliquée aux éléments avec la classe mat-elevation-z2 */
 }
 
-.option-button-dressing{
- display: flex;
- position: relative;
-
-
-
-
+.option-button-dressing {
+  display: flex;
+  position: relative;
 }
 
-.favorite-button{
+.favorite-button {
   margin-left: 1rem;
   /* Marge à gauche du bouton favori */
 }
+
+
+
+

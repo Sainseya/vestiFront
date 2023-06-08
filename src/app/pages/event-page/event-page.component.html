@@ -1,0 +1,25 @@
+<div class="container">
+  <app-header-home [drawer]="drawer"></app-header-home>
+  <hr>
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+
+      <app-side-nav></app-side-nav>
+    </mat-drawer>
+
+    <div class="container-event">
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar #calendar ></mat-calendar>
+    </mat-card>
+    <p> Jour de l'évenement : {{selectedDate | date}}</p>
+  </div>
+
+
+ </mat-drawer-container>
+  <app-footer-home></app-footer-home>
+
+
+
+
+
+

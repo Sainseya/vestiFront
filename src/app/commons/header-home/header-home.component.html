@@ -3,7 +3,7 @@
   <div class="button-start">
     <!-- Bouton du menu burger -->
     <button mat-button class="burger-menu-button" (click)="drawer.toggle()">
-      <img class="burger-menu-button-image " src="../assets/home-header/button-menu.png" alt="">
+      <img class="burger-menu-button-image" src="../assets/home-header/button-menu.png" alt="">
     </button>
     <!-- Logo du header -->
     <img class="logo-header" alt="logo-vesti" routerLink="/home" src="../assets/home-header/vesti.png">
@@ -14,10 +14,10 @@
     <input class="input-recherche" placeholder="Rechercher...">
 
     <!-- Bouton "Outfit of the day" -->
-    <button class="button" mat-raised-button routerLink="/welcome-page">Welcome</button>
+    <button class="button-welcome" mat-raised-button color="button" routerLink="/welcome-page">Welcome</button>
 
     <!-- Bouton "Dressing" avec menu déroulant -->
-    <button class="button" mat-raised-button [matMenuTriggerFor]="menu">Dressing</button>
+    <button class="button-dressing"  color="button" mat-raised-button [matMenuTriggerFor]="menu">Dressing</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Mon Dressing</button>
       <button mat-menu-item>Cosplay</button>

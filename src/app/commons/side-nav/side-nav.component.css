@@ -1,0 +1,26 @@
+.side-nav-container {
+  margin-top: 2rem;
+}
+
+.icon-tshirt {
+  width: 18%;
+}
+
+.side-nav-link {
+  display: flex;
+  align-items: center;
+  margin-left: 0rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.side-nav-link-text {
+  margin-left: 0.3rem;
+  position: relative;
+  top: 0.2rem;
+}
+
+.side-nav-link-text:hover {
+  color: rgb(53, 48, 86);
+}

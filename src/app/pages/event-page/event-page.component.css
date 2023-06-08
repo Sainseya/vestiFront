@@ -1,16 +1,10 @@
-.container{
-  background-color: rgb(255, 255, 255);
-  width: 100vw;
-
+.demo-inline-calendar-card{
+  width: 30%;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  display: flex;
+  margin-bottom: 4rem;
 }
-
-.dark-theme{
-  background-color: #2d3436;
-  background: #2d3436;;
-  color: #ededed;
-
-}
-
 
 .side-nav-link{
   display: flex;
@@ -27,16 +21,11 @@
   top: 0.2rem;
 
 }
-
+.container-event{
+  display: flex;
+}
 .side-nav-link-text:hover{
   color: rgb(53, 48, 86);
-
-}
-
-.inventory-and-view{
-  display: flex;
-  margin-left: 2rem;
-  height: 300px;
 
 }
 
@@ -49,11 +38,6 @@
   width: 18%;
 }
 
-.example-container{
-  height: 100%;
+::ng-deep .available .mat-calendar-body-cell-content{
+  background-color: rgba(14, 152, 5, 0.25);
 }
-
-
-
-
-
