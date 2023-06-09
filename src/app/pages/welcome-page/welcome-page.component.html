@@ -1,30 +1,45 @@
 <body>
 
-
 <div class="container">
 
-  <app-nav-bar></app-nav-bar>
 
+  <app-nav-bar></app-nav-bar>
   <div class="background-QR-code">
     <strong style="background-image:url('/src/assets/Designe-garde-robe.png');">
-
         <app-box></app-box>
-
     </strong>
   </div>
-
-
   <div class="iphone-container" >
     <app-iphone></app-iphone>
   </div>
 
+  <div class="arrow-icon">
+    <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollDownUnique()">arrow_downward</mat-icon>
+  </div>
+
+
 </div>
 
+<div class="container"  *ngFor="let text of presentationText; let indexOfText = index" [ngStyle]="{'background-color': colors[indexOfText]}">
+    <div class="card-position">
+      <app-card-texte-presentation [customStyles]="left" [longText]="text" *ngIf="indexOfText % 2 == 0"></app-card-texte-presentation >
+      <app-card-texte-presentation [customStyles]="right" [longText]="text" *ngIf="indexOfText % 2 != 0"></app-card-texte-presentation>
+    </div>
+    <div class="arrow-icon-2">
+      <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollDown(indexOfText)">arrow_downward</mat-icon>
+    </div>
+</div>
 
-
-
-
-
-
-<app-footer></app-footer>
+<div class="end-page">
+  <div class="container-2">
+    <span class="end-page-text">
+      Rejoignez dès maintenant la communauté passionnée de Vestidors et vivez la mode comme jamais auparavant.
+      Téléchargez Vestidor et transformez votre façon de gérer votre garde-robe pour toujours !
+    </span>
+    <div class="background-QR-code-2">
+      <app-box></app-box>
+    </div>
+  </div>
+  <app-footer-home></app-footer-home>
+</div>
 </body>

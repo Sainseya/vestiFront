@@ -4,8 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
-
+import {HttpClientModule} from '@angular/common/http';
 
 
 //Components
@@ -29,9 +28,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatBadgeModule} from '@angular/material/badge';
 import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
-
-
-
+import { CardPresentationTextComponent } from './commons/card-presentation-text/card-presentation-text.component';
 
 
 
@@ -49,17 +46,12 @@ import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.comp
     IphoneComponent,
     BoxComponent,
     NavBarComponent,
-
-
-
-
-
+    CardPresentationTextComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     HttpClientModule,
 
    //Angular Material
@@ -69,12 +61,13 @@ import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.comp
     MatSidenavModule,
     MatIconModule,
     MatSlideToggleModule,
-    MatBadgeModule
+    MatBadgeModule,
+    BrowserAnimationsModule
 
-
+    //Css Animation
   ],
   schemas :[
-    CUSTOM_ELEMENTS_SCHEMA
+    CUSTOM_ELEMENTS_SCHEMA,
 
   ],
   providers: [],
