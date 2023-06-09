@@ -9,8 +9,6 @@
     </button>
   </div>
 
-
-
     <div *ngIf="disabledFav" class="list mat-elevation-z10">
       <div *ngFor="let item of itemInventory">
         <app-card-clothe (click)="selectItem(item)"  [item]="item"></app-card-clothe>

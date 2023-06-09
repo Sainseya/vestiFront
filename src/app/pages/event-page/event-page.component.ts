@@ -7,6 +7,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { Event } from 'src/app/models/event.model';
+import Iitem from 'src/app/models/item.model';
 
 
 const today = new Date();
@@ -21,12 +22,37 @@ const year = today.getFullYear();
 })
 export class EventPageComponent {
   selectedDate!: Date;
-  datesToHighlight = ["2023/06/22", "2023/06/12", "2023/06/25"];
+  datesToHighlight = ["2023/06/22", "2023/06/12", "2023/06/25", "2023/07/20"];
+  itemOutfitTop: Iitem = {
+        id: '3',
+        name: 'chemise bordeaux',
+        label: 'mon dressing',
+        season: 'Eté',
+        type: 'haut',
+        color: 'rouge',
+        size: 'XS',
+        favorite: true,
+        linkImage: '../assets/img/dressing/chemise-bordeaux.png',
+        fit: 'Serré',
+      }
+  itemOutfitBottom: Iitem =  {
+        id: '4',
+        name: 'jean blanc',
+        label: 'mon dressing',
+        season: 'Hiver',
+        type: 'bas',
+        color: 'blanc',
+        size: 'M',
+        favorite: false,
+        linkImage: '../assets/img/dressing/jean-blanc.png',
+        fit: 'large',
+      }
 
   events: Event[] = [{
 
     title: "Mariage de Nseya",
     date: new Date(this.datesToHighlight[0])
+
 
   },
   {

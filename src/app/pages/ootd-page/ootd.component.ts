@@ -166,7 +166,7 @@ export class OotdComponent implements OnInit {
             this.itemTopList.push(element);
           }
         });
-        console.log(this.itemTopList);
+     
       },
       error: (data) => {
         console.error('error get all');

@@ -42,5 +42,6 @@
   display: flex;
   align-self: center;
   margin-right: 10px;
+  margin-top: 10px;
   /* Style pour afficher les mentions légales centrées */
 }
