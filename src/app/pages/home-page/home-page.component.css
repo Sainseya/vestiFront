@@ -39,7 +39,11 @@
   margin-left: 2rem;
 
   height: 100%;
+<<<<<<< HEAD
+  margin-bottom: 2rem;
+=======
   margin-bottom:2rem;
+>>>>>>> 74b543b2ab486e2d920c8074afc6d66e0b0625ad
 }
 
 .side-nav-container {
