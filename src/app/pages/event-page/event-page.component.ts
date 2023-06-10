@@ -1,14 +1,31 @@
 
 import { CalendarEvent } from 'angular-calendar';
-import { Component, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
-import { MatCalendar, MatCalendarCellClassFunction, MatCalendarCellCssClasses, MatDatepickerModule } from '@angular/material/datepicker';
+import {
+  Component,
+  Renderer2,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
+import {
+  MatCalendar,
+  MatCalendarCellClassFunction,
+  MatCalendarCellCssClasses,
+  MatDatepickerModule,
+} from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
-import { FormGroup, FormControl, FormsModule, ReactiveFormsModule, FormBuilder, NgForm } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  FormsModule,
+  ReactiveFormsModule,
+  FormBuilder,
+  NgForm,
+} from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { Event } from 'src/app/models/event.model';
 import Iitem from 'src/app/models/item.model';
-
+import Outfit from 'src/app/models/outfit.model';
 
 const today = new Date();
 const month = today.getMonth();
@@ -21,109 +38,154 @@ const year = today.getFullYear();
   encapsulation: ViewEncapsulation.None,
 })
 export class EventPageComponent {
-
   @ViewChild(MatCalendar) calendar!: MatCalendar<Date>;
 
-  selectedDate: Date = new Date()
-  datesToHighlight = ["2023/06/22", "2023/06/12", "2023/06/25", "2023/07/20"];
+  selectedDate: Date = new Date();
+  datesToHighlight = ['2023/06/22', '2023/06/12'];
 
-  itemOutfitTop: Iitem = {
-        id: '3',
-        name: 'chemise bordeaux',
-        label: 'mon dressing',
-        season: 'Eté',
-        type: 'haut',
-        color: 'rouge',
-        size: 'XS',
-        favorite: true,
-        linkImage: '../assets/img/dressing/chemise-bordeaux.png',
-        fit: 'Serré',
-      }
-  itemOutfitBottom: Iitem =  {
-        id: '4',
-        name: 'jean blanc',
-        label: 'mon dressing',
-        season: 'Hiver',
-        type: 'bas',
-        color: 'blanc',
-        size: 'M',
-        favorite: false,
-        linkImage: '../assets/img/dressing/jean-blanc.png',
-        fit: 'large',
-      }
+  itemChemiseBordeaux: Iitem = {
+    id: '3',
+    name: 'chemise bordeaux',
+    label: 'mon dressing',
+    season: 'Eté',
+    type: 'haut',
+    color: 'rouge',
+    size: 'XS',
+    favorite: true,
+    linkImage: '../assets/img/dressing/chemise-bordeaux.png',
+    fit: 'Serré',
+  };
+  itemShortGris: Iitem = {
+    id: "10",
+    name: "short gris",
+    label: "mon dressing",
+    season: "Hiver",
+    type: "bas",
+    linkImage: "../assets/img/dressing/short-gris.png",
+    color: "gris",
+    size: "M",
+    favorite: false,
+    fit: "fit"
+  };
+  itemVesteNoire: Iitem = {
+    id: "10",
+    name: "short gris",
+    label: "mon dressing",
+    season: "Hiver",
+    type: "bas",
+    linkImage: "../assets/img/dressing/veste-noire.png",
+    color: "gris",
+    size: "M",
+    favorite: false,
+    fit: "fit"
+  };
+  itemPantalonNoir: Iitem = {
+    id: "10",
+    name: "short gris",
+    label: "mon dressing",
+    season: "Hiver",
+    type: "bas",
+    linkImage: "../assets/img/dressing/pantalon-noir.png",
+    color: "gris",
+    size: "M",
+    favorite: false,
+    fit: "fit"
+  };
 
-  events: Event[] = [{
+  outfitList: Outfit[] = [
+    {
+    itemTop : this.itemChemiseBordeaux,
+    itemBottom : this.itemShortGris
+    },
+    {
+      itemTop : this.itemVesteNoire,
+      itemBottom : this.itemPantalonNoir
+    },
 
-    title: "Mariage de Nseya",
-    date: new Date(this.datesToHighlight[0])
 
 
-  },
-  {
-    title: "Vacances",
-    date: new Date(this.datesToHighlight[1])
-  }
   ]
 
-  dateMatch: boolean = false
-  eventNumber: number = -1
-  dateTransformed:string = ""
+  events: Event[] = [
+    {
+      title: 'Mariage de Nseya',
+      date: new Date(this.datesToHighlight[0]),
+      outfitIndex: 0
+    },
+    {
+      title: 'Vacances',
+      date: new Date(this.datesToHighlight[1]),
+      outfitIndex: 1
+    },
+  ];
 
+  eventTemp: Event = {
+    title: '',
+    date: new Date(),
+    outfitIndex: 0
+  };
+
+  dateMatch: boolean = false;
+  eventNumber: number = -1;
+  dateTransformed: string = '';
 
   eventForm = this.formBuilder.group({
     title: '',
-    date: ''
+    date: new Date(),
   });
 
+  constructor(private formBuilder: FormBuilder, private datePipe: DatePipe) {}
 
-
-constructor( private formBuilder: FormBuilder, private datePipe: DatePipe) { }
-
+  // Récupère la date sélectionnée dans le calendrier et compare cette date aux autres dates du tableau des
+  // Évènements events
   onSelect(event: any) {
-
     this.selectedDate = event;
 
+    let eventTempToFind = this.events.find(
+      (x) => x.date.getTime() == this.selectedDate.getTime()
+    );
 
+    this.eventTemp = eventTempToFind!;
 
-    if (this.selectedDate.getTime() == this.events[0].date.getTime()) {
-      this.dateMatch = true
-      this.eventNumber = 0
-    } else if (this.selectedDate.getTime() == this.events[1].date.getTime()){
-      this.dateMatch = true
-      this.eventNumber = 1
+    if (eventTempToFind?.date.getTime() == this.selectedDate.getTime()) {
+      this.dateMatch = true;
     } else {
-      this.dateMatch = false
+      this.dateMatch = false;
     }
-    console.log(this.eventNumber)
-
-
   }
 
   dateClass() {
     return (date: Date): MatCalendarCellCssClasses => {
       const highlightDate = this.datesToHighlight
-        .map(strDate => new Date(strDate))
-        .some(d => d.getDate() === date.getDate() && d.getMonth() === date.getMonth() && d.getFullYear() === date.getFullYear());
+        .map((strDate) => new Date(strDate))
+        .some(
+          (d) =>
+            d.getDate() === date.getDate() &&
+            d.getMonth() === date.getMonth() &&
+            d.getFullYear() === date.getFullYear()
+        );
 
       return highlightDate ? 'my-date' : '';
     };
   }
 
-   transformDate(date : Date):string {
-   return this.datePipe.transform(date, 'yyyy/MM/dd') || '';
+  transformDate(date: Date): string {
+    return this.datePipe.transform(date, 'yyyy/MM/dd') || '';
   }
 
   onSubmit() {
-        this.datesToHighlight.push(this.transformDate(this.selectedDate))
-        this.calendar.updateTodaysDate();
-        console.log(this.datesToHighlight)
+    let eventTemp: Event = {
+      title: '',
+      date: new Date(),
+      outfitIndex: 0
+    };
 
-
+    this.datesToHighlight.push(this.transformDate(this.selectedDate));
+    this.calendar.updateTodaysDate();
+    this.eventForm.value.date = new Date(this.selectedDate);
+    eventTemp.date = this.eventForm.value.date;
+    eventTemp.title = this.eventForm.value.title!;
+    this.events.push(eventTemp);
+    this.eventForm.reset();
   }
-
-
-
-
-
-
 }

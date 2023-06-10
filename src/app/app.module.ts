@@ -35,6 +35,7 @@ import { ReactiveFormsModule, FormsModule, } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { DatePipe } from '@angular/common';
     NavBarComponent,
     EventPageComponent,
     SideNavComponent,
+
   ],
   imports: [
     BrowserModule,

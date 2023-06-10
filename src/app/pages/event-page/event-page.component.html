@@ -22,23 +22,26 @@
 
         <div class="event-and-outfit">
           <div class="event" *ngIf="dateMatch">
-            <div>{{ events[eventNumber].title }}</div>
+            <div>{{ eventTemp.title }}</div>
+          </div>
+          <div class="event" *ngIf="!dateMatch">
+            <div> Aucun évenement</div>
           </div>
 
           <div class="outfit" *ngIf="dateMatch">
             <div class="outfit-top">
               <img
                 class="image-view"
-                *ngIf="itemOutfitTop"
-                [src]="itemOutfitTop.linkImage"
+                *ngIf="itemChemiseBordeaux"
+                [src]="itemVesteNoire.linkImage"
               />
             </div>
 
             <div class="outfit-bottom">
               <img
                 class="image-view"
-                *ngIf="itemOutfitBottom"
-                [src]="itemOutfitBottom.linkImage"
+                *ngIf="itemShortGris"
+                [src]="itemShortGris.linkImage"
               />
             </div>
           </div>
@@ -46,7 +49,7 @@
       </div>
       <div class="add-event-container">
         <form [formGroup]="eventForm"   class="example-form" (ngSubmit)="onSubmit()">
-          <button class="btn-ajouter-even" type="submit" mat-raised-button >
+          <button class="btn-ajouter-even"  mat-raised-button >
             Ajouter évenement
           </button>
           <mat-form-field class="example-full-width">
@@ -54,6 +57,9 @@
             <input formControlName="title" class="input-event"  ngModel    matInput placeholder="Nom evenement" />
           </mat-form-field>
         </form>
+        <div>
+         <app-carrousel></app-carrousel>
+        </div>
       </div>
     </div>
   </mat-drawer-container>
