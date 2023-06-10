@@ -1,11 +1,11 @@
 
 import { CalendarEvent } from 'angular-calendar';
-import { Component, Renderer2, ViewEncapsulation } from '@angular/core';
-import { MatCalendarCellClassFunction, MatCalendarCellCssClasses, MatDatepickerModule } from '@angular/material/datepicker';
+import { Component, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
+import { MatCalendar, MatCalendarCellClassFunction, MatCalendarCellCssClasses, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
-import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FormGroup, FormControl, FormsModule, ReactiveFormsModule, FormBuilder, NgForm } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 import { Event } from 'src/app/models/event.model';
 import Iitem from 'src/app/models/item.model';
 
@@ -21,8 +21,12 @@ const year = today.getFullYear();
   encapsulation: ViewEncapsulation.None,
 })
 export class EventPageComponent {
-  selectedDate!: Date;
+
+  @ViewChild(MatCalendar) calendar!: MatCalendar<Date>;
+
+  selectedDate: Date = new Date()
   datesToHighlight = ["2023/06/22", "2023/06/12", "2023/06/25", "2023/07/20"];
+
   itemOutfitTop: Iitem = {
         id: '3',
         name: 'chemise bordeaux',
@@ -63,8 +67,17 @@ export class EventPageComponent {
 
   dateMatch: boolean = false
   eventNumber: number = -1
+  dateTransformed:string = ""
 
-constructor(private renderer: Renderer2) { }
+
+  eventForm = this.formBuilder.group({
+    title: '',
+    date: ''
+  });
+
+
+
+constructor( private formBuilder: FormBuilder, private datePipe: DatePipe) { }
 
   onSelect(event: any) {
 
@@ -96,9 +109,19 @@ constructor(private renderer: Renderer2) { }
     };
   }
 
+   transformDate(date : Date):string {
+   return this.datePipe.transform(date, 'yyyy/MM/dd') || '';
+  }
+
   onSubmit() {
+        this.datesToHighlight.push(this.transformDate(this.selectedDate))
+        this.calendar.updateTodaysDate();
+        console.log(this.datesToHighlight)
+
 
   }
+
+
 
 
 

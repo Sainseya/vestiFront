@@ -1,55 +1,61 @@
 <div class="container">
   <app-header-home [drawer]="drawer"></app-header-home>
-  <hr>
+  <hr />
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
-
       <app-side-nav></app-side-nav>
     </mat-drawer>
 
-<div class="container-event">
-  <mat-card class="demo-inline-calendar-card">
-    <mat-calendar #calendar [dateClass]="dateClass()" [selected]="selectedDate"
-      (selectedChange)="onSelect($event)"></mat-calendar>
-  </mat-card>
-  <div class="info-event mat-elevation-z2">
-    <div class="title"> Jour de l'évenement : {{selectedDate | date:'longDate'}}</div>
+    <div class="container-event">
+      <mat-card class="demo-inline-calendar-card">
+        <mat-calendar
+          #calendar
+          [dateClass]="dateClass()"
+          [selected]="selectedDate"
+          (selectedChange)="onSelect($event)"
+        ></mat-calendar>
+      </mat-card>
+      <div class="info-event mat-elevation-z2">
+        <div class="title">
+          Jour de l'évenement : {{ selectedDate | date : "longDate" }}
+        </div>
 
-    <div class="event" *ngIf="dateMatch">
-      <div>{{events[eventNumber].title}}</div>
-    </div>
+        <div class="event-and-outfit">
+          <div class="event" *ngIf="dateMatch">
+            <div>{{ events[eventNumber].title }}</div>
+          </div>
 
-    <div class="outfit" *ngIf="dateMatch">
+          <div class="outfit" *ngIf="dateMatch">
+            <div class="outfit-top">
+              <img
+                class="image-view"
+                *ngIf="itemOutfitTop"
+                [src]="itemOutfitTop.linkImage"
+              />
+            </div>
 
-     
-      <div class="outfit-top">
-        <img
-          class="image-view"
-          *ngIf="itemOutfitTop"
-          [src]="itemOutfitTop.linkImage"
-        />
+            <div class="outfit-bottom">
+              <img
+                class="image-view"
+                *ngIf="itemOutfitBottom"
+                [src]="itemOutfitBottom.linkImage"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-
-
-      <div class="outfit-bottom">
-        <img
-          class="image-view"
-          *ngIf="itemOutfitBottom"
-          [src]="itemOutfitBottom.linkImage"
-        />
+      <div class="add-event-container">
+        <form [formGroup]="eventForm"   class="example-form" (ngSubmit)="onSubmit()">
+          <button class="btn-ajouter-even" type="submit" mat-raised-button >
+            Ajouter évenement
+          </button>
+          <mat-form-field class="example-full-width">
+            <mat-label></mat-label>
+            <input formControlName="title" class="input-event"  ngModel    matInput placeholder="Nom evenement" />
+          </mat-form-field>
+        </form>
       </div>
     </div>
-  </div>
-
-</div>
-
-
-
- </mat-drawer-container>
+  </mat-drawer-container>
   <app-footer-home></app-footer-home>
-
-
-
-
-
-
+</div>
