@@ -40,8 +40,8 @@
             <div class="outfit-bottom">
               <img
                 class="image-view"
-                *ngIf="itemShortGris"
-                [src]="itemShortGris.linkImage"
+                *ngIf="itemPantalonNoir"
+                [src]="itemPantalonNoir.linkImage"
               />
             </div>
           </div>
@@ -54,10 +54,11 @@
           </button>
           <mat-form-field class="example-full-width">
             <mat-label></mat-label>
-            <input formControlName="title" class="input-event"  ngModel    matInput placeholder="Nom evenement" />
+            <input formControlName="title" class="input-event" ngModel matInput placeholder="Nom evenement" />
           </mat-form-field>
         </form>
         <div>
+          <div>Choisi ton outfit</div>
          <app-carrousel></app-carrousel>
         </div>
       </div>

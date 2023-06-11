@@ -1,0 +1,8 @@
+
+<div style="margin-left: 10%; margin-right: 1px; margin-top: 50px;">
+   <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let slide of slides" class="side">
+        <img src="{{slide.img}}" alt="" class="img-style">
+      </div>
+   </ngx-slick-carousel>
+</div>

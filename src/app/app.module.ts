@@ -33,7 +33,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { SideNavComponent } from './commons/side-nav/side-nav.component';
 import { ReactiveFormsModule, FormsModule, } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-
+import { CarrouselComponent } from './commons/carrousel/carrousel.component';
+``
 
 
 @NgModule({
@@ -53,12 +54,14 @@ import { DatePipe } from '@angular/common';
     EventPageComponent,
     SideNavComponent,
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    CarrouselComponent,
 
     //Angular Material
     MatMenuModule,

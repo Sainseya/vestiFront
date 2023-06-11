@@ -1,0 +1,14 @@
+
+.slick-prev:before, .slick-next:before{
+  color: black !important;
+  background-color: black !important;
+}
+
+.carousel{
+  width: 200px;
+  color: black ;
+}
+
+.img-style{
+  width: 100px;
+}
