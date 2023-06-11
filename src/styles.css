@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.slick-prev:before, .slick-next:before{
+  color: black !important;
+
+}
 
 html, body {
   margin: 0;

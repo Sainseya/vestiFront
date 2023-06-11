@@ -1,14 +1,21 @@
+.carousel-container {
+  margin-left: 10%;
+  margin-right: 10%;
 
-.slick-prev:before, .slick-next:before{
-  color: black !important;
-  background-color: black !important;
 }
 
-.carousel{
+.carousel {
+  margin-top: 2rem;
   width: 200px;
-  color: black ;
+  margin-left: 2rem;
+
 }
 
-.img-style{
+.img-style {
   width: 100px;
+ margin: auto;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
 }

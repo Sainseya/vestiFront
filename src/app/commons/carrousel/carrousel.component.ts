@@ -1,6 +1,8 @@
+
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import Outfit from 'src/app/models/outfit.model';
 
 @Component({
   selector: 'app-carrousel',
@@ -9,18 +11,39 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   templateUrl: './carrousel.component.html',
   styleUrls: ['./carrousel.component.css']
 })
-export class CarrouselComponent {
+export class CarrouselComponent implements OnInit {
+  ngOnInit(): void {
+   console.log(this.outfitListInput!)
+   this.addSlide()
+
+  }
+
+  @Input() outfitListInput!:Outfit[];
+
+  @Output() outfitIndexChoosed = new EventEmitter<number>();
 
    slides = [
-     {img: "../assets/img/dressing/veste-noire.png"},
-     {img: "../assets/img/dressing/pantalon-noir.png"},
-     {img: "../assets/img/dressing/veste-noire.png"},
-     {img: "../assets/img/dressing/pantalon-noir.png"},
-     {img: "../assets/img/dressing/veste-noire.png"},
-     {img: "../assets/img/dressing/pantalon-noir.png"},
-     {img: "../assets/img/dressing/veste-noire.png"},
-     {img: "../assets/img/dressing/pantalon-noir.png"}
-   ];
+     {img: "../assets/img/dressing/veste-noire.png",
+     img2: "../assets/img/dressing/pantalon-noir.png"},
+   ]
+
+   addSlide() {
+    this.slides.shift()
+    for (let index = 0; index < this.outfitListInput.length; index++) {
+      this.slides.push({img: this.outfitListInput[index].itemTop.linkImage,
+        img2: this.outfitListInput[index].itemBottom.linkImage})
+
+    }
+
+  }
+
+  afterChange(e:any) {
+    console.log('afterChange',e);
+
+    this.outfitIndexChoosed.emit(e.currentSlide);
+  }
+
+ 
 
    slideConfig = {
     "slidesToShow":1,

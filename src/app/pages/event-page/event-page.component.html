@@ -32,8 +32,8 @@
             <div class="outfit-top">
               <img
                 class="image-view"
-                *ngIf="itemChemiseBordeaux"
-                [src]="itemVesteNoire.linkImage"
+                *ngIf="itemVesteNoire"
+                [src]="outfitList[eventTemp.outfitIndex].itemTop.linkImage"
               />
             </div>
 
@@ -41,25 +41,25 @@
               <img
                 class="image-view"
                 *ngIf="itemPantalonNoir"
-                [src]="itemPantalonNoir.linkImage"
+                [src]="outfitList[eventTemp.outfitIndex].itemBottom.linkImage"
               />
             </div>
           </div>
         </div>
       </div>
-      <div class="add-event-container">
+      <div class="add-event-container ">
         <form [formGroup]="eventForm"   class="example-form" (ngSubmit)="onSubmit()">
           <button class="btn-ajouter-even"  mat-raised-button >
             Ajouter évenement
           </button>
           <mat-form-field class="example-full-width">
             <mat-label></mat-label>
-            <input formControlName="title" class="input-event" ngModel matInput placeholder="Nom evenement" />
+            <input formControlName="title" class="input-event"  matInput placeholder="Nom evenement" />
           </mat-form-field>
         </form>
-        <div>
-          <div>Choisi ton outfit</div>
-         <app-carrousel></app-carrousel>
+        <div >
+          <div class="sub-title">Choisis ton outfit</div>
+         <app-carrousel (outfitIndexChoosed)="getIndexOutfitEvent($event)" [outfitListInput]="outfitList"></app-carrousel>
         </div>
       </div>
     </div>

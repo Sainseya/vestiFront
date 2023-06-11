@@ -42,6 +42,7 @@ export class EventPageComponent {
 
   selectedDate: Date = new Date();
   datesToHighlight = ['2023/06/22', '2023/06/12'];
+  outfitIndexChoosed!: number;
 
   itemChemiseBordeaux: Iitem = {
     id: '3',
@@ -91,6 +92,30 @@ export class EventPageComponent {
     favorite: false,
     fit: "fit"
   };
+  itemJean: Iitem = {
+    id: "10",
+    name: "short gris",
+    label: "mon dressing",
+    season: "Hiver",
+    type: "bas",
+    linkImage: "../assets/img/dressing/jean-bleu.png",
+    color: "gris",
+    size: "M",
+    favorite: false,
+    fit: "fit"
+  };
+  itemChemiseVelours: Iitem = {
+    id: '3',
+    name: 'chemise bordeaux',
+    label: 'mon dressing',
+    season: 'Eté',
+    type: 'haut',
+    color: 'rouge',
+    size: 'XS',
+    favorite: true,
+    linkImage: '../assets/img/dressing/chemise-velours.png',
+    fit: 'Serré',
+  };
 
   outfitList: Outfit[] = [
     {
@@ -101,6 +126,10 @@ export class EventPageComponent {
       itemTop : this.itemVesteNoire,
       itemBottom : this.itemPantalonNoir
     },
+    {
+      itemTop : this.itemChemiseVelours,
+      itemBottom : this.itemJean
+    },
 
 
 
@@ -108,12 +137,12 @@ export class EventPageComponent {
 
   events: Event[] = [
     {
-      title: 'Mariage de Nseya',
+      title: 'Vacances',
       date: new Date(this.datesToHighlight[0]),
       outfitIndex: 0
     },
     {
-      title: 'Vacances',
+      title: 'Mariage de Nseya',
       date: new Date(this.datesToHighlight[1]),
       outfitIndex: 1
     },
@@ -146,6 +175,10 @@ export class EventPageComponent {
     );
 
     this.eventTemp = eventTempToFind!;
+
+    if(eventTempToFind?.outfitIndex != undefined){
+    this.eventTemp.outfitIndex = eventTempToFind!.outfitIndex;
+    }
 
     if (eventTempToFind?.date.getTime() == this.selectedDate.getTime()) {
       this.dateMatch = true;
@@ -185,7 +218,20 @@ export class EventPageComponent {
     this.eventForm.value.date = new Date(this.selectedDate);
     eventTemp.date = this.eventForm.value.date;
     eventTemp.title = this.eventForm.value.title!;
+    if(this.outfitIndexChoosed != undefined){
+    eventTemp.outfitIndex = this.outfitIndexChoosed
+    }else{
+      eventTemp.outfitIndex = 0;
+    }
     this.events.push(eventTemp);
     this.eventForm.reset();
+
+    console.log(this.outfitIndexChoosed)
+  }
+
+  getIndexOutfitEvent(e:any)
+  {
+    this.outfitIndexChoosed = e;
+
   }
 }
