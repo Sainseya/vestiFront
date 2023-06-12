@@ -32,13 +32,14 @@
 }
 
 .outfit-top,
-.outfit-bottom {
-  /* permet de centrer les habits (top et bottom) */
+.outfit-bottom,
+.outfit-shoes {
+  /* permet de centrer les habits (top et bottom et les shoes (chaussures) */
   display: flex;
   justify-content: center;
 }
 
 .image-view {
   /* permet de gerer la taille des images dans les cards */
-  width: 35%;
+  width: 15%;
 }
