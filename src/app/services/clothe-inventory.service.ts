@@ -12,7 +12,12 @@ import { Observable } from 'rxjs';
 export class ClotheInventoryService {
 
   private URI = "http://localhost:8080"
-  userId: string = '123'
+  userId: string = '648705859aaaaf554aae3be2'
+  // private userId: string = "";
+
+  public setId(id: string): void {
+      this.userId = id;
+  }
   constructor(private http: HttpClient){}
 
 
@@ -24,17 +29,17 @@ export class ClotheInventoryService {
 
   getByTypeTop = () : Observable<Item[]> => {
 
-    return this.http.get<Item[]>(`${this.URI}/${this.userId}/wardrobe/top`)
+    return this.http.get<Item[]>(`${this.URI}/vesti/${this.userId}/wardrobe/top`)
   }
 
   getByTypeBottom = () : Observable<Item[]> => {
 
-    return this.http.get<Item[]>(`${this.URI}/${this.userId}/wardrobe/bottom`)
+    return this.http.get<Item[]>(`${this.URI}/vesti/${this.userId}/wardrobe/bottom`)
   }
 
   getByTypeShoes = () : Observable<Item[]> => {
 
-    return this.http.get<Item[]>(`${this.URI}/${this.userId}/wardrobe/shoes`)
+    return this.http.get<Item[]>(`${this.URI}/vesti/${this.userId}/wardrobe/shoes`)
   }
 
 

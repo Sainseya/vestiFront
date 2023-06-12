@@ -3,6 +3,7 @@ import Item from 'src/app/models/item.model';
 import Iitem from 'src/app/models/item.model';
 import IUsers from 'src/app/models/user.model';
 import { ClotheInventoryService } from 'src/app/services/clothe-inventory.service';
+import {delay} from 'utils-decorators'
 
 @Component({
   selector: 'app-ootd',
@@ -29,8 +30,10 @@ export class OotdComponent implements OnInit {
   constructor(private clotheInventoryService: ClotheInventoryService) {}
   ngOnInit(): void {
     this.getClotheInventory();
-    // this.getTopList();
-    // this.getBottomList();
+
+    this.getTopList();
+    this.getBottomList();
+    this.getShoesList()
   }
 
   //Fonction qui recupere tous les habits et les mets dans clothe Inventory
@@ -46,9 +49,10 @@ export class OotdComponent implements OnInit {
     this.clotheInventoryService.getAll().subscribe({
       next: (data: IUsers[]) => {
         this.usersList = data;
-        console.log(this.usersList)
+
         // console.log(this.usersList[0].userId)
-        this.clotheInventoryService.userId = this.usersList[0].id;
+        this.clotheInventoryService.setId(this.usersList[0].userId);
+
       },
       error: (data) => {
         console.error('error get all');
@@ -58,29 +62,44 @@ export class OotdComponent implements OnInit {
   };
 
 
-  // getTopList = () => {
-  //   this.clotheInventoryService.getByTypeTop().subscribe({
-  //     next: (data: Item[]) => {
-  //       this.itemTopList = data;
-  //     },
-  //     error: (data) => {
-  //       console.error('error get tops');
-  //     },
-  //     complete() {},
-  //   });
-  // };
+  getTopList = () => {
+    this.clotheInventoryService.getByTypeTop().subscribe({
+      next: (data: Item[]) => {
+        this.getClotheInventory()
+        this.itemTopList = data;
 
-  // getBottomList = () => {
-  //   this.clotheInventoryService.getByTypeBottom().subscribe({
-  //     next: (data: Item[]) => {
-  //       this.itemBottomList = data;
-  //     },
-  //     error: (data) => {
-  //       console.error('error get tops');
-  //     },
-  //     complete() {},
-  //   });
-  // };
+      },
+      error: (data) => {
+        console.error('error get tops');
+      },
+      complete() {},
+    });
+  };
+
+  getBottomList = () => {
+    this.clotheInventoryService.getByTypeBottom().subscribe({
+      next: (data: Item[]) => {
+        this.itemBottomList = data;
+      },
+      error: (data) => {
+        console.error('error get bottoms');
+      },
+      complete() {},
+    });
+  };
+
+  getShoesList = () => {
+    this.clotheInventoryService.getByTypeShoes().subscribe({
+      next: (data: Item[]) => {
+        this.itemShoesList = data;
+        console.log(this.itemShoesList)
+      },
+      error: (data) => {
+        console.error('error get shoes');
+      },
+      complete() {},
+    });
+  };
 
 
 

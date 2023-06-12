@@ -32,6 +32,8 @@
           [src]="itemOutfitTop.linkImage"
         />
       </div>
+
+
       <!-- Cette partie correspond à l'affichage de la partie supérieure de la tenue du jour -->
       <!-- L'image est affichée uniquement si la variable itemOutfitTop est définie -->
       <!-- L'image affichée est déterminée par la propriété linkImage de l'objet itemOutfitTop -->
@@ -46,6 +48,13 @@
       <!-- Cette partie correspond à l'affichage de la partie inférieure de la tenue du jour -->
       <!-- L'image est affichée uniquement si la variable itemOutfitBottom est définie -->
       <!-- L'image affichée est déterminée par la propriété linkImage de l'objet itemOutfitBottom -->
+      <div class="outfit-top">
+        <img
+          class="image-view"
+          *ngIf="itemOutfitShoes"
+          [src]="itemOutfitShoes.linkImage"
+        />
+      </div>
     </div>
   </div>
 </mat-drawer-container>
