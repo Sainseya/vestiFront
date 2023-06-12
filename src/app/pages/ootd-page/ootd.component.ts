@@ -3,7 +3,7 @@ import Item from 'src/app/models/item.model';
 import Iitem from 'src/app/models/item.model';
 import IUsers from 'src/app/models/user.model';
 import { ClotheInventoryService } from 'src/app/services/clothe-inventory.service';
-import {delay} from 'utils-decorators'
+
 
 @Component({
   selector: 'app-ootd',
@@ -27,6 +27,7 @@ export class OotdComponent implements OnInit {
    * @param {ClotheInventoryService} clotheInventoryService
    * @memberof OotdComponent
    */
+
   constructor(private clotheInventoryService: ClotheInventoryService) {}
   ngOnInit(): void {
     this.getClotheInventory();
@@ -50,8 +51,10 @@ export class OotdComponent implements OnInit {
       next: (data: IUsers[]) => {
         this.usersList = data;
 
+
         // console.log(this.usersList[0].userId)
         this.clotheInventoryService.setId(this.usersList[0].userId);
+
 
       },
       error: (data) => {
@@ -104,7 +107,7 @@ export class OotdComponent implements OnInit {
 
 
   getRandomTopBottom() {
-    //fonction pour afficher un habits aleatoirement
+    //fonction pour afficher un habits aleatoirement (haut, bas, chaussures)
     var topRandom = Math.floor(Math.random() * 4);
     var bottomRandom = Math.floor(Math.random() * 4);
     var shoesRandom = Math.floor(Math.random() * 4);

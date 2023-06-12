@@ -3,10 +3,12 @@
 }
 
 .icon-tshirt {
+  /* Largeur de 18% pour l'icône de t-shirt */
   width: 18%;
 }
 
 .side-nav-link {
+  /*permet de gerer l'affichage des elements dans la barre latérale de navigation*/
   display: flex;
   align-items: center;
   margin-left: 0rem;
@@ -16,14 +18,18 @@
 }
 
 .side-nav-link-text {
+  /* permet de gerer l'affichage du texte dans la barre de navigation latérale*/
   margin-left: 0.3rem;
   position: relative;
   top: 0.2rem;
 }
 
 .side-nav-link-text:hover {
-  color: rgb(53, 48, 86);
+  /* Couleur et taille du texte quand survolé par la souris*/
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
-.side-nav-container{
+
+.side-nav-container {
   height: 100%;
 }
