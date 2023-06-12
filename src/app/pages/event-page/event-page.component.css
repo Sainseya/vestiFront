@@ -1,4 +1,4 @@
-.demo-inline-calendar-card{
+.demo-inline-calendar-card {
   width: 30%;
   margin-top: 3rem;
   margin-left: 5rem;
@@ -6,7 +6,11 @@
   margin-bottom: 4rem;
 }
 
-.side-nav-link{
+.example-container{
+  background-color: #ffffff;
+}
+
+.side-nav-link {
   display: flex;
   align-items: center;
   margin-left: 0rem;
@@ -15,44 +19,98 @@
   cursor: pointer;
 }
 
-.side-nav-link-text{
+.side-nav-link-text {
   margin-left: 0.3rem;
   position: relative;
   top: 0.2rem;
-
 }
-.container-event{
+.container-event {
   display: flex;
+  height: 100%;
 }
-.side-nav-link-text:hover{
+.side-nav-link-text:hover {
   color: rgb(53, 48, 86);
-
 }
 
-.side-nav-container{
+.side-nav-container {
   margin-top: 2rem;
-
 }
 
-.icon-tshirt{
+.icon-tshirt {
   width: 18%;
 }
 
-::ng-deep .available .mat-calendar-body-cell-content{
+::ng-deep .available .mat-calendar-body-cell-content {
   background-color: rgba(14, 152, 5, 0.25);
 }
 button.my-date {
-  background: rgb(254, 126, 126);
-  border-radius: 100%;
-}
-.example-custom-date-class {
-  background: orange;
+  background: #be99ff;
   border-radius: 100%;
 }
 
-.info-event{
+.event-and-outfit{
+
+}
+
+
+.info-event {
   display: flex;
   flex-direction: column;
-  margin: 3rem;
+  width: 30%;
+  margin-top: 3.1rem;
+  margin-left: 2.1rem;
+  margin-bottom: 4.1rem;
+  border-radius: 1%;
+}
+
+.title {
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.event {
+  text-align: center;
+}
+
+.outfit-top {
+
+  text-align: center;
 
 }
+
+.outfit-bottom {
+
+  text-align: center;
+
+}
+
+.image-view {
+  /* permet de gerer la taille des images dans les cards */
+  width: 45%;
+}
+
+.example-form{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.btn-ajouter-even{
+  margin-top: 3.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.input-event{
+  margin: 1rem;
+}
+
+.carrousel-container{
+  margin-left: 2rem;
+}
+
+.sub-title{
+  text-align: center;
+}
+
+

@@ -7,7 +7,7 @@
   /* utilisée pour appliquer un thème sombre */
   background-color: #2d3436;
   background: #2d3436;
-  color: #ededed;
+  color: #ffffff;
 }
 
 .side-nav-link {
@@ -37,7 +37,10 @@
   /* l'inventaire et l'affichage */
   display: flex;
   margin-left: 2rem;
-  height: 300px;
+  height: 100%;
+
+  margin-bottom:2rem;
+
 }
 
 .side-nav-container {
@@ -50,4 +53,5 @@
 
 .example-container {
   height: 100%;
+  background-color: #ffffff;
 }
