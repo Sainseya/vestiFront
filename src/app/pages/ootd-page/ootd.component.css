@@ -42,8 +42,15 @@
   display: flex;
   justify-content: center;
 }
-
-.image-view {
-  /* permet de gerer la taille des images dans les cards */
-  width: 15%;
+/* permet de gerer la taille des images dans les cards */
+.image-view-top {
+  width: 25%;
+}
+.image-view-bottom {
+  width: 29%;
+  margin-top: -1rem;
+}
+.image-view-shoes {
+  width: 12%;
+  margin-top: -1rem;
 }
