@@ -4,17 +4,21 @@
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+  background-color: rgb(255, 255, 255);
 }
 
 .outfit-container {
-  /* La classe .outfit-container est appliquée à un conteneur qui englobe la tenue du jour.. */
+  /* La classe .outfit-container englobe la tenue du jour.. */
   background-color: rgb(255, 255, 255);
   width: 50%;
   display: flex;
   margin-top: 2rem;
   flex-direction: column;
 }
-
+.example-container {
+  /* permet de gerer la couleur de fond */
+  background-color: rgb(255, 255, 255);
+}
 .title {
   /*permet de gerer l'affichage du titre "Voici votre outfit of the day :" */
   font-size: large; /* permet d'agrandir la taille du texte */
