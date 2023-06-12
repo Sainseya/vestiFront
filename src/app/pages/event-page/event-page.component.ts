@@ -1,19 +1,9 @@
 
-import { CalendarEvent } from 'angular-calendar';
-import {
-  Component,
-  Renderer2,
-  ViewChild,
-  ViewEncapsulation,
-} from '@angular/core';
-import {
-  MatCalendar,
-  MatCalendarCellClassFunction,
-  MatCalendarCellCssClasses,
-  MatDatepickerModule,
-} from '@angular/material/datepicker';
+import { Component, ViewChild, ViewEncapsulation} from '@angular/core';
+import {MatCalendar, MatCalendarCellCssClasses, MatDatepickerModule,} from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
+//prettier ignore
 import {
   FormGroup,
   FormControl,
