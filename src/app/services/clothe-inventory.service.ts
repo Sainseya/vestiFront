@@ -13,6 +13,7 @@ export class ClotheInventoryService {
 
   private URI = "http://localhost:8080"
   userId: string = '648705859aaaaf554aae3be2'
+
   // private userId: string = "";
 
   public setId(id: string): void {
@@ -28,7 +29,7 @@ export class ClotheInventoryService {
   }
 
   getByTypeTop = () : Observable<Item[]> => {
-
+    console.log
     return this.http.get<Item[]>(`${this.URI}/vesti/${this.userId}/wardrobe/top`)
   }
 

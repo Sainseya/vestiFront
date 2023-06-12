@@ -107,6 +107,8 @@ export class EventPageComponent {
     fit: 'Serré',
   };
 
+
+  //liste des outfits
   outfitList: Outfit[] = [
     {
     itemTop : this.itemChemiseBordeaux,
@@ -124,7 +126,7 @@ export class EventPageComponent {
 
 
   ]
-
+  //liste des events
   events: Event[] = [
     {
       title: 'Vacances',
@@ -177,6 +179,7 @@ export class EventPageComponent {
     }
   }
 
+  // recupere les dates des evenements pour les mettre en couleurs dans le tableau
   dateClass() {
     return (date: Date): MatCalendarCellCssClasses => {
       const highlightDate = this.datesToHighlight
@@ -191,11 +194,12 @@ export class EventPageComponent {
       return highlightDate ? 'my-date' : '';
     };
   }
-
+   // La date est mise au bon format
   transformDate(date: Date): string {
     return this.datePipe.transform(date, 'yyyy/MM/dd') || '';
   }
 
+  // Recupere la date de l'evenement et le numero de l'outfit et le met dans le tableau des evenements
   onSubmit() {
     let eventTemp: Event = {
       title: '',
