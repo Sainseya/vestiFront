@@ -4,7 +4,6 @@ import Iitem from 'src/app/models/item.model';
 import IUsers from 'src/app/models/user.model';
 import { ClotheInventoryService } from 'src/app/services/clothe-inventory.service';
 
-
 @Component({
   selector: 'app-ootd',
   templateUrl: './ootd.component.html',
@@ -34,7 +33,7 @@ export class OotdComponent implements OnInit {
 
     this.getTopList();
     this.getBottomList();
-    this.getShoesList()
+    this.getShoesList();
   }
 
   //Fonction qui recupere tous les habits et les mets dans clothe Inventory
@@ -51,11 +50,8 @@ export class OotdComponent implements OnInit {
       next: (data: IUsers[]) => {
         this.usersList = data;
 
-
         // console.log(this.usersList[0].userId)
         this.clotheInventoryService.setId(this.usersList[0].userId);
-
-
       },
       error: (data) => {
         console.error('error get all');
@@ -64,13 +60,11 @@ export class OotdComponent implements OnInit {
     });
   };
 
-
   getTopList = () => {
     this.clotheInventoryService.getByTypeTop().subscribe({
       next: (data: Item[]) => {
-        this.getClotheInventory()
+        this.getClotheInventory();
         this.itemTopList = data;
-
       },
       error: (data) => {
         console.error('error get tops');
@@ -95,7 +89,7 @@ export class OotdComponent implements OnInit {
     this.clotheInventoryService.getByTypeShoes().subscribe({
       next: (data: Item[]) => {
         this.itemShoesList = data;
-        console.log(this.itemShoesList)
+        console.log(this.itemShoesList);
       },
       error: (data) => {
         console.error('error get shoes');
@@ -104,13 +98,11 @@ export class OotdComponent implements OnInit {
     });
   };
 
-
-
   getRandomTopBottom() {
     //fonction pour afficher un habits aleatoirement (haut, bas, chaussures)
-    var topRandom = Math.floor(Math.random() * 4);
-    var bottomRandom = Math.floor(Math.random() * 4);
-    var shoesRandom = Math.floor(Math.random() * 4);
+    var topRandom = Math.floor(Math.random() * 3);
+    var bottomRandom = Math.floor(Math.random() * 3);
+    var shoesRandom = Math.floor(Math.random() * 3);
 
     this.itemOutfitTop = this.itemTopList[topRandom];
     this.itemOutfitBottom = this.itemBottomList[bottomRandom];
