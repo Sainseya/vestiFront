@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ClotheInventoryService {
   private URI = 'http://localhost:8080';
-  userId: string = '6487112851012704f07baebd';
+  userId: string = '64872d2e51012704f07baebe';
   // private userId: string = "";
 
   public setId(id: string): void {
