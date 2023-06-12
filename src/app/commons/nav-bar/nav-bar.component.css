@@ -7,7 +7,8 @@ body {
     padding-left: 20em;
     padding-right: 20em;
     display: flex;
-    background-color: white;
+    background-color: #b09393;
+
   display: flex;
   align-items: center;
 }
@@ -19,11 +20,9 @@ body {
 .title{
   margin-top: 2rem;
   width: 50%;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   margin-right: 6rem;
-
-
 }
 
 section {

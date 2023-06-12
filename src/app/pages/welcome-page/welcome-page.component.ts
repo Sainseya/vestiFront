@@ -1,5 +1,6 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
 import {trigger,style,animate,transition,state,animation,keyframes} from "@angular/animations";
+import {classNames} from "@angular/cdk/schematics";
 
 @Component({
   selector: 'app-welcome-page',
@@ -8,31 +9,13 @@ import {trigger,style,animate,transition,state,animation,keyframes} from "@angul
   animations:[
   ]
 })
-export class WelcomePageComponent implements OnInit{
-  constructor() {}
-  ngOnInit(): void {
-  }
-  left = {
-    width: '400px',
-    height: '400px',
-    justifyContent: 'center',
-    marginLeft: '20em',
-    borderRadius: '30px',
-  }
+export class WelcomePageComponent implements OnInit {
 
-  right = {
-    width: '400px',
-    height: '400px',
-    justifyContent: 'center',
-    marginLeft:'90em',
-    borderRadius: '30px'
-  };
-
-  colors:string [] = [
-    '#F2F7FF',
+  colors: string [] = [
+    '#e5c6c6',
     '#FDF785',
     '#B2C9FF'
-      ]
+  ]
 
   presentationText: string[] = [
     `Découvrez la meilleure application de dressing connecté : Emportez votre garde-robe partout dans le monde avec Vestidor !
@@ -45,15 +28,25 @@ export class WelcomePageComponent implements OnInit{
     Soyez le premier à connaître les dernières tendances, les promotions exclusives et les événements spéciaux.`
   ];
 
-  scrollDown(index: number) {
-    const targetElement = document.getElementsByClassName('container')[index + 2];
-    while (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
+  constructor() {
   }
-  scrollDownUnique() {
+
+  ngOnInit(): void {
+  }
+
+  scrollDown(): void {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  }
+
+  scrollUp(): void {
     window.scrollTo({
-      top:window.innerHeight,
-      behavior:'smooth'
-    })};
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  protected readonly classNames = classNames;
 }

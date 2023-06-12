@@ -29,6 +29,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatBadgeModule} from '@angular/material/badge';
 import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
 import { CardPresentationTextComponent } from './commons/card-presentation-text/card-presentation-text.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 
@@ -49,23 +50,24 @@ import { CardPresentationTextComponent } from './commons/card-presentation-text/
     CardPresentationTextComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
 
-   //Angular Material
-    MatMenuModule,
-    MatButtonModule,
-    MatCardModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatSlideToggleModule,
-    MatBadgeModule,
-    BrowserAnimationsModule
+        //Angular Material
+        MatMenuModule,
+        MatButtonModule,
+        MatCardModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatSlideToggleModule,
+        MatBadgeModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
 
-    //Css Animation
-  ],
+        //Css Animation
+    ],
   schemas :[
     CUSTOM_ELEMENTS_SCHEMA,
 

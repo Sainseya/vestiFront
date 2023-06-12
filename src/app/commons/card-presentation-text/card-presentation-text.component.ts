@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CardPresentationTextComponent {
   @Input()longText !: string;
-  //Les styles sont définis comme un objet, où la clé est le nom de la propriété CSS et la valeur est la valeur correspondante
-  @Input()customStyles!:{[keys: string]: string};
+/*  //Les styles sont définis comme un objet, où la clé est le nom de la propriété CSS et la valeur est la valeur correspondante
+  @Input()customStyles!:{[keys: string]: string};*/
 }
 

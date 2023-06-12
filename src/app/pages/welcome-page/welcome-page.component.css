@@ -1,5 +1,5 @@
 .container{
-    background-color: #e5c6c6;
+    background-color: #F2F7FF;
     height: 100vh;
     width: 100%;
 }
@@ -36,13 +36,28 @@
   width: 0;
 }
 
+.left{
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+  margin-left: 20em;
+  border-radius: 30px;
+}
+
+.right{
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+  margin-left: 90em;
+  border-radius: 30px;
+}
+
 .arrow-icon{
   position: relative;
   width: 100%;
   display:flex;
   bottom: 32em;
   justify-content: center;
-
   /*Bounce animation*/
   animation-name: bounce;
   animation-duration: 1s;
@@ -56,7 +71,6 @@
   display:flex;
   justify-content: center;
   top: 30em;
-
   /*Bounce animation*/
   animation-name: bounce;
   animation-duration: 1s;
@@ -64,23 +78,35 @@
   animation-iteration-count: infinite;
 }
 
-.container-2{
-  background-color: #80817e;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  flex-direction: column;
-}
 .end-page-text{
-  width: 40%;
+  width: 45%;
   height: 40%;
   display: flex;
   align-items: center;
   text-align: center;
   font: italic 1.2em "Fira Sans", serif;
   font-size: 2em;
+}
+.container-2{
+  background-color: #80817e;
+  height: 88vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+}
+.arrow-upward{
+  position: relative;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  top: 10em;
+  /*Bounce animation*/
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .background-QR-code-2{
@@ -90,7 +116,6 @@
 }
 
 /*Animation*/
-
 @keyframes bounce {
   0% {
     transform: translateY(0);
