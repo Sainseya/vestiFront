@@ -1,0 +1,21 @@
+.carousel-container {
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.carousel {
+  margin-top: 2rem;
+  width: 200px;
+  margin-left: 2rem;
+
+}
+
+.img-style {
+  width: 100px;
+ margin: auto;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}

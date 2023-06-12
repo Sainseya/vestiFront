@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import Item from 'src/app/models/item.model';
 import Iitem from 'src/app/models/item.model';
 import IUsers from 'src/app/models/user.model';
 import { ClotheInventoryService } from 'src/app/services/clothe-inventory.service';
+
 
 @Component({
   selector: 'app-ootd',
@@ -29,25 +31,31 @@ export class OotdComponent implements OnInit {
   constructor(private clotheInventoryService: ClotheInventoryService) {}
   ngOnInit(): void {
     this.getClotheInventory();
+
+    this.getTopList();
+    this.getBottomList();
+    this.getShoesList()
   }
 
   //Fonction qui recupere tous les habits et les mets dans clothe Inventory
+  // getClotheInventory = () => {
+  //   this.clotheInventoryService.getAll().subscribe({
+  //     next: (data: IUsers[]) => {
+  //       this.usersList = data;
+
+  //       this.itemInventory = this.usersList[0].wardrobes[0].tops.concat(
+  //         this.usersList[0].wardrobes[0].bottoms
+  //       );
   getClotheInventory = () => {
     this.clotheInventoryService.getAll().subscribe({
       next: (data: IUsers[]) => {
         this.usersList = data;
 
-        this.itemInventory = this.usersList[0].wardrobes[0].tops.concat(
-          this.usersList[0].wardrobes[0].bottoms
-        );
 
-        this.itemInventory.forEach((element) => {
-          if (element.type == 'bas') {
-            this.itemBottomList.push(element);
-          } else {
-            this.itemTopList.push(element);
-          }
-        });
+        // console.log(this.usersList[0].userId)
+        this.clotheInventoryService.setId(this.usersList[0].userId);
+
+
       },
       error: (data) => {
         console.error('error get all');
@@ -55,6 +63,48 @@ export class OotdComponent implements OnInit {
       complete() {},
     });
   };
+
+
+  getTopList = () => {
+    this.clotheInventoryService.getByTypeTop().subscribe({
+      next: (data: Item[]) => {
+        this.getClotheInventory()
+        this.itemTopList = data;
+
+      },
+      error: (data) => {
+        console.error('error get tops');
+      },
+      complete() {},
+    });
+  };
+
+  getBottomList = () => {
+    this.clotheInventoryService.getByTypeBottom().subscribe({
+      next: (data: Item[]) => {
+        this.itemBottomList = data;
+      },
+      error: (data) => {
+        console.error('error get bottoms');
+      },
+      complete() {},
+    });
+  };
+
+  getShoesList = () => {
+    this.clotheInventoryService.getByTypeShoes().subscribe({
+      next: (data: Item[]) => {
+        this.itemShoesList = data;
+        console.log(this.itemShoesList)
+      },
+      error: (data) => {
+        console.error('error get shoes');
+      },
+      complete() {},
+    });
+  };
+
+
 
   getRandomTopBottom() {
     //fonction pour afficher un habits aleatoirement (haut, bas, chaussures)

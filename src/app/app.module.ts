@@ -31,6 +31,10 @@ import { MatBadgeModule } from '@angular/material/badge';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { SideNavComponent } from './commons/side-nav/side-nav.component';
+import { ReactiveFormsModule, FormsModule, } from '@angular/forms';
+import { DatePipe } from '@angular/common';
+import { CarrouselComponent } from './commons/carrousel/carrousel.component';
+``
 
 
 @NgModule({
@@ -49,12 +53,15 @@ import { SideNavComponent } from './commons/side-nav/side-nav.component';
     NavBarComponent,
     EventPageComponent,
     SideNavComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    CarrouselComponent,
 
     //Angular Material
     MatMenuModule,
@@ -66,11 +73,13 @@ import { SideNavComponent } from './commons/side-nav/side-nav.component';
     MatBadgeModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    ReactiveFormsModule,
+    FormsModule
 
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

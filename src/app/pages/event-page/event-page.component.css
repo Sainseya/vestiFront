@@ -6,6 +6,10 @@
   margin-bottom: 4rem;
 }
 
+.example-container{
+  background-color: #ffffff;
+}
+
 .side-nav-link {
   display: flex;
   align-items: center;
@@ -44,6 +48,11 @@ button.my-date {
   border-radius: 100%;
 }
 
+.event-and-outfit{
+
+}
+
+
 .info-event {
   display: flex;
   flex-direction: column;
@@ -60,17 +69,48 @@ button.my-date {
 }
 
 .event {
-  margin: 1rem;
+  text-align: center;
 }
 
-.outfit {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  
+.outfit-top {
+
+  text-align: center;
+
+}
+
+.outfit-bottom {
+
+  text-align: center;
+
 }
 
 .image-view {
   /* permet de gerer la taille des images dans les cards */
   width: 45%;
 }
+
+.example-form{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.btn-ajouter-even{
+  margin-top: 3.1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.input-event{
+  margin: 1rem;
+}
+
+.carrousel-container{
+  margin-left: 2rem;
+}
+
+.sub-title{
+  text-align: center;
+}
+
+

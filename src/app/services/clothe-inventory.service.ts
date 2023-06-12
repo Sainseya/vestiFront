@@ -1,3 +1,4 @@
+import Item from '../models/item.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import IClothe from '../models/clothes.model';
@@ -11,7 +12,12 @@ import { Observable } from 'rxjs';
 export class ClotheInventoryService {
 
   private URI = "http://localhost:8080"
+  userId: string = '648705859aaaaf554aae3be2'
+  // private userId: string = "";
 
+  public setId(id: string): void {
+      this.userId = id;
+  }
   constructor(private http: HttpClient){}
 
 
@@ -21,4 +27,22 @@ export class ClotheInventoryService {
     return this.http.get<IUsers[]>(`${this.URI}/vesti`)
   }
 
+  getByTypeTop = () : Observable<Item[]> => {
+
+    return this.http.get<Item[]>(`${this.URI}/vesti/${this.userId}/wardrobe/top`)
+  }
+
+  getByTypeBottom = () : Observable<Item[]> => {
+
+    return this.http.get<Item[]>(`${this.URI}/vesti/${this.userId}/wardrobe/bottom`)
+  }
+
+  getByTypeShoes = () : Observable<Item[]> => {
+
+    return this.http.get<Item[]>(`${this.URI}/vesti/${this.userId}/wardrobe/shoes`)
+  }
+
+
+
 }
+

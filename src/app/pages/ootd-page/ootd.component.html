@@ -1,6 +1,7 @@
 <!-----------------------------------HEADER---------------------------------------------------------------------------------------------->
 <app-header-home [drawer]="drawer"></app-header-home>
 <hr />
+
 <!-- Un trait horizontal pour séparer l'en-tête du reste du contenu -->
 <!-----------------------------------BODY---------------------------------------------------------------------------------------------->
 <mat-drawer-container class="example-container" autosize>
@@ -30,6 +31,8 @@
           [src]="itemOutfitTop.linkImage"
         />
       </div>
+
+
       <!-- Cette partie correspond à l'affichage de la partie supérieure de la tenue du jour -->
       <!-- L'image est affichée uniquement si la variable "itemOutfitTop" est définie -->
       <!-- L'image affichée est déterminée par la propriété "linkImage" de l'objet "itemOutfitTop" -->
@@ -42,19 +45,24 @@
         />
       </div>
       <!-- Cette partie correspond à l'affichage de la partie inférieure de la tenue du jour -->
+
       <!-- L'image est affichée uniquement si la variable "itemOutfitBottom" est définie -->
       <!-- L'image affichée est déterminée par la propriété "linkImage" de l'objet "itemOutfitBottom" -->
 
       <div class="outfit-shoes">
+
         <img
           class="image-view"
           *ngIf="itemOutfitShoes"
           [src]="itemOutfitShoes.linkImage"
         />
       </div>
+
+
       <!-- Cette partie correspond à l'affichage de la partie chaussures de la tenue du jour -->
       <!-- L'image est affichée uniquement si la variable "itemOutfitShoes" est définie -->
       <!-- L'image affichée est déterminée par la propriété "linkImage" de l'objet "itemOutfitShoes" -->
+
     </div>
   </div>
 </mat-drawer-container>
