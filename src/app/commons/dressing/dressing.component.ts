@@ -29,14 +29,16 @@ export class DressingComponent implements OnInit {
     this.getClotheInventory()
   }
 
-  //Fonction qui recupere tous les habits et les mets dans clothe Inventory
+  //Fonction qui recupere tous les habits et les mets dans clotheInventory
   getClotheInventory = () =>  {
+
     this.clotheInventoryService.getAll().subscribe({
       next : (data: IUsers[]) => {
+
         this.usersList = data
-        console.log(this.usersList[0].wardrobes[0].tops)
+
           this.itemInventory = this.usersList[0].wardrobes[0].tops.concat(this.usersList[0].wardrobes[0].bottoms)
-         
+
         },
       error :(data) => {
           console.error("error get all")
@@ -44,8 +46,6 @@ export class DressingComponent implements OnInit {
        complete(){
 
         }
-
-
     })
   }
 
