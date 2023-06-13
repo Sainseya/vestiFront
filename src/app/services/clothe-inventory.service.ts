@@ -9,9 +9,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ClotheInventoryService {
-  private URI = 'http://localhost:8080';
-  userId: string = '6487112851012704f07baebd';
-  // private userId: string = "";
+  private URI = "http://localhost:8080"
+  private userId: string = ''
 
   public setId(id: string): void {
     this.userId = id;
@@ -19,25 +18,24 @@ export class ClotheInventoryService {
   constructor(private http: HttpClient) {}
 
   //Appelle la liste de d'utilisateur sur le serveur Spring
-  getAll = (): Observable<IUsers[]> => {
-    return this.http.get<IUsers[]>(`${this.URI}/vesti`);
-  };
 
-  getByTypeTop = (): Observable<Item[]> => {
-    return this.http.get<Item[]>(
-      `${this.URI}/vesti/${this.userId}/wardrobe/top`
-    );
-  };
+  getAll = () : Observable<IUsers[]> => {
 
-  getByTypeBottom = (): Observable<Item[]> => {
-    return this.http.get<Item[]>(
-      `${this.URI}/vesti/${this.userId}/wardrobe/bottom`
-    );
-  };
+    return this.http.get<IUsers[]>(`${this.URI}/vesti`)
+  }
 
-  getByTypeShoes = (): Observable<Item[]> => {
-    return this.http.get<Item[]>(
-      `${this.URI}/vesti/${this.userId}/wardrobe/shoes`
-    );
-  };
+  getByTypeTop = (id:string) : Observable<Item[]> => {
+    console.log
+    return this.http.get<Item[]>(`${this.URI}/vesti/${id}/wardrobe/top`)
+  }
+
+  getByTypeBottom = (id:string) : Observable<Item[]> => {
+
+    return this.http.get<Item[]>(`${this.URI}/vesti/${id}/wardrobe/bottom`)
+  }
+
+  getByTypeShoes = (id:string) : Observable<Item[]> => {
+
+    return this.http.get<Item[]>(`${this.URI}/vesti/${id}/wardrobe/shoes`)
+  }
 }

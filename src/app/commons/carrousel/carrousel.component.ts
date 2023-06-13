@@ -13,7 +13,7 @@ import Outfit from 'src/app/models/outfit.model';
 })
 export class CarrouselComponent implements OnInit {
   ngOnInit(): void {
-   console.log(this.outfitListInput!)
+   
    this.addSlide()
 
   }
@@ -38,12 +38,12 @@ export class CarrouselComponent implements OnInit {
   }
 
   afterChange(e:any) {
-    console.log('afterChange',e);
+
 
     this.outfitIndexChoosed.emit(e.currentSlide);
   }
 
- 
+
 
    slideConfig = {
     "slidesToShow":1,
