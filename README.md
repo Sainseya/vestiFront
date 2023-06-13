@@ -1,5 +1,4 @@
-# BIENVENUE SUR VESTI
-
+# BIENVENUE SUR VESTI : 
 
 Vesti : est un dressing connecter qui vous permet d'organiser vos tenues et d'avoir des idées en fonction de vos propres goûts, préférences, en fonction de la saison, de la météo et plus encore ..."
 
@@ -7,7 +6,7 @@ Vesti : est un dressing connecter qui vous permet d'organiser vos tenues et d'av
 
 
 ## Lien des consignes
-()
++ https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/CONSIGNE.md
 
 ## Langages utilisés ?
 
@@ -16,7 +15,7 @@ Vesti : est un dressing connecter qui vous permet d'organiser vos tenues et d'av
 + SpringBoot 
 
 ## Lien vers le Back-end :
-(https://github.com/Sainseya/vestiSpringBoot)
++ https://github.com/Sainseya/vestiSpringBoot
 
 ## A venir
 
