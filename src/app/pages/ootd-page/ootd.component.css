@@ -42,14 +42,16 @@
   display: flex;
   justify-content: center;
 }
-/* permet de gerer la taille des images dans les cards */
+/* permet de gerer la taille des hauts */
 .image-view-top {
   width: 25%;
 }
+/* permet de gerer la taille des bas */
 .image-view-bottom {
   width: 29%;
   margin-top: -1rem;
 }
+/* permet de gerer la taille des chaussures */
 .image-view-shoes {
   width: 16%;
   margin-top: -2.5rem;
