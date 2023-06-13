@@ -4,10 +4,10 @@
 
 Clone the back-end and Front-end Repositories : 
 
-+Front-end : 
++ Front-end : 
 https://github.com/Mi-chat/vesti
 
-+Back-end : 
++ Back-end : 
 https://github.com/Sainseya/vestiSpringBoot
 
 ## Then : 
