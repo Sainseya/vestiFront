@@ -13,12 +13,14 @@ Vesti : est un dressing connecter qui vous permet d'organiser vos tenues et d'av
 
 + Angular : HTML, CSS, TypeScript.
 + Mongodb
++ SpringBoot 
 
-
+## Lien vers le Back-end :
+![VestiSpringBoot](https://github.com/Sainseya/vestiSpringBoot)
 
 ## A venir
 
-Tout _**pleins**_ de fonctionnalités qui arriveront d'ici peu! Le linge Sale, Le Partage de Tenue, Le Chat , Un Dark mode ect...
+Tout _**pleins**_ de fonctionnalités qui arriveront d'ici peu! Le linge sale, Le partage de tenue, Le chat , un dark mode ect...
 
 ## Screenshots 
 
