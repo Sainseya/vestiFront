@@ -18,6 +18,8 @@ Vesti : est un dressing connecté qui vous permet d'organiser vos tenues et d'av
 Tout _**pleins**_ de fonctionnalités qui arriveront d'ici peu ! Le linge sale, le partage de tenue, le chat, un dark mode etc.
 
 ## Screenshots :
+
++ ### Génération de Tenue : 
 ![Génération de tenues](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
 
 ## Contributeurs :
