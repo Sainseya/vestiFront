@@ -3,7 +3,7 @@
 
 Vesti : est un dressing connecter qui vous permet d'organiser vos tenues et d'avoir des idées en fonction de vos propres goûts, préférences, en fonction de la saison, de la météo et plus encore ..."
 
-![Vesti](https://github.com/Mi-chat/vesti/assets/82023133/3ef2c91c-d631-4f25-a348-fadf96b8f3ad)
+![Vesti](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/logoVestiWhite.png)
 
 
 ## Lien des consignes
