@@ -28,10 +28,10 @@ Tout _**pleins**_ de fonctionnalités qui arriveront d'ici peu! Le linge sale, L
 
 
 ## Contributeurs : 
-https://github.com/Mi-chat
-https://github.com/ClementVaugoyeau
-https://github.com/Sainseya
-https://github.com/MelanieVD
++ https://github.com/Mi-chat
++ https://github.com/ClementVaugoyeau
++ https://github.com/Sainseya
++ https://github.com/MelanieVD
 
 
 
