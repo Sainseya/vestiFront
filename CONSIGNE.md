@@ -2,7 +2,7 @@
 
 ## First : 
 
-Clone the back-end and Front-end Repositories : 
+Clone the Front-end and Back-end Repositories : 
 
 + Front-end : 
 https://github.com/Mi-chat/vesti
