@@ -15,7 +15,7 @@ Vesti : est un dressing connecté qui vous permet d'organiser vos tenues et d'av
 + https://github.com/Sainseya/vestiSpringBoot
 
 ## A venir :
-Tout _**pleins**_ de fonctionnalités qui arriveront d'ici peu ! Le linge sale, le partage de tenue, le chat, un dark mode etc.
+Tout _**plein**_ de fonctionnalités qui arriveront d'ici peu ! Le linge sale, le partage de tenue, le chat, un dark mode etc.
 
 ## Screenshots :
 
