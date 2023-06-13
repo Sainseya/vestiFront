@@ -1,3 +1,30 @@
+## To Run This Project : 
+
+#First : 
+
+Clone the back-end and Front-end Repositories : 
+
++Front-end : 
+https://github.com/Mi-chat/vesti
+
++Back-end : 
+https://github.com/Sainseya/vestiSpringBoot
+
+#Then : 
+
++ On IntelliJ :
+  run the VestiBackApplication.java (the main class) use the link to the back-end repository.
+
++ On VisualStudioCode :
+  + Step 1 : Open the Project and a new terminal and type these commands : 
+  + Step 2 : npm install 
+  + Step 3 : ng add @angular/material
+  + Step 4 : ng serve -o
+	
+
++ If nothing happens go to your browser and type : http://localhost:4200/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
@@ -25,31 +52,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## To Run This Project : 
-
-#First : 
-
-Clone the back-end and Front-end Repositories : 
-
-+Front-end : 
-https://github.com/Mi-chat/vesti
-
-+Back-end : 
-https://github.com/Sainseya/vestiSpringBoot
-
-#Then : 
-
-+ On IntelliJ :
-  run the VestiBackApplication.java (the main class) use the link to the back-end repository.
-
-+ On VisualStudioCode :
-  + Step 1 : Open the Project and a new terminal and type these commands : 
-  + Step 2 : npm install 
-  + Step 3 : ng add @angular/material
-  + Step 4 : ng serve -o
-	
-
-+ If nothing happens go to your browser and type : http://localhost:4200/
 
