@@ -5,7 +5,7 @@ Vesti : est un dressing connecter qui vous permet d'organiser vos tenues et d'av
 ![Vesti](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/logoVestiWhite.png)
 
 
-## Lien des consignes
+## Lien des consignes : 
 + https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/CONSIGNE.md
 
 ## Langages utilisés ?
@@ -17,11 +17,11 @@ Vesti : est un dressing connecter qui vous permet d'organiser vos tenues et d'av
 ## Lien vers le Back-end :
 + https://github.com/Sainseya/vestiSpringBoot
 
-## A venir
+## A venir : 
 
 Tout _**pleins**_ de fonctionnalités qui arriveront d'ici peu! Le linge sale, Le partage de tenue, Le chat , un dark mode ect...
 
-## Screenshots 
+## Screenshots :
 
 ![Génération de tenues](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
 
