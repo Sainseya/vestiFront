@@ -111,7 +111,7 @@ export class OotdComponent implements OnInit {
     var topRandom = Math.floor(Math.random() * 3);
     var bottomRandom = Math.floor(Math.random() * 3);
     var shoesRandom = Math.floor(Math.random() * 3);
-    
+
 
     this.itemOutfitTop = this.itemTopList[topRandom];
     this.itemOutfitBottom = this.itemBottomList[bottomRandom];

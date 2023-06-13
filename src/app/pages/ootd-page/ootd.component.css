@@ -45,5 +45,10 @@
 
 .image-view {
   /* permet de gerer la taille des images dans les cards */
-  width: 15%;
+  width: 30%;
+}
+
+.image-view-shoes {
+  /* permet de gerer la taille des images dans les cards */
+  width: 20%;
 }
