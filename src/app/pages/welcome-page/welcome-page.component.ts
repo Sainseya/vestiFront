@@ -1,17 +1,14 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
-import {trigger,style,animate,transition,state,animation,keyframes} from "@angular/animations";
-import {classNames} from "@angular/cdk/schematics";
-
+import { Component, HostBinding, OnInit } from '@angular/core';
 @Component({
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
   styleUrls: ['./welcome-page.component.css'],
-  animations:[
+  animations: [
   ]
 })
 export class WelcomePageComponent implements OnInit {
 
-  colors: string [] = [
+  colors: string[] = [
     '#e5c6c6',
     '#FDF785',
     '#B2C9FF'
@@ -47,6 +44,4 @@ export class WelcomePageComponent implements OnInit {
       behavior: 'smooth'
     });
   }
-
-  protected readonly classNames = classNames;
-}
+  }

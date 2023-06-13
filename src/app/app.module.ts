@@ -30,6 +30,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
 import { CardPresentationTextComponent } from './commons/card-presentation-text/card-presentation-text.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
+import { ModalWelcomePageComponent } from './commons/modal-welcome-page/modal-welcome-page.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -48,6 +50,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     BoxComponent,
     NavBarComponent,
     CardPresentationTextComponent,
+    ModalWelcomePageComponent,
 
   ],
     imports: [
@@ -65,6 +68,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
         MatBadgeModule,
         BrowserAnimationsModule,
         MatToolbarModule,
+        MatDialogModule
 
         //Css Animation
     ],
