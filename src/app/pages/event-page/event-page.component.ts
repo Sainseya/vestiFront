@@ -140,6 +140,7 @@ export class EventPageComponent {
     },
   ];
 
+  // evenement temp pour trouver si un evenement existe, 
   eventTemp: Event = {
     title: '',
     date: new Date(),
