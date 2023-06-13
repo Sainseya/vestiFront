@@ -21,7 +21,6 @@ Tout _**pleins**_ de fonctionnalités qui arriveront d'ici peu ! Le linge sale, 
 ## Screenshots :
 ![Génération de tenues](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
 
-
 ## Contributeurs :
 + https://github.com/Mi-chat
 + https://github.com/ClementVaugoyeau
