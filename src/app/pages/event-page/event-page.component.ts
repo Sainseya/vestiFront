@@ -220,7 +220,7 @@ export class EventPageComponent {
     this.events.push(eventTemp);
     this.eventForm.reset();
 
-    console.log(this.outfitIndexChoosed)
+   
   }
 
   getIndexOutfitEvent(e:any)
