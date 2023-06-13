@@ -1,6 +1,6 @@
 ## To Run This Project : 
 
-#First : 
+## First : 
 
 Clone the back-end and Front-end Repositories : 
 
@@ -10,7 +10,7 @@ https://github.com/Mi-chat/vesti
 +Back-end : 
 https://github.com/Sainseya/vestiSpringBoot
 
-#Then : 
+## Then : 
 
 + On IntelliJ :
   run the VestiBackApplication.java (the main class) use the link to the back-end repository.
