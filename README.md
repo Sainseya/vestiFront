@@ -1,10 +1,9 @@
 # BIENVENUE SUR :
 
-<div text-align= "center">
-  <img src="https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/logoVestiWhiteLittle.png" width="480" height="150"/>
-</div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Description de l'image](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/logoVestiWhiteLittle.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/logoVestiWhiteLittle.png" width="480" height="150"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![LogoVesti](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/logoVestiWhiteLittle.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 <p align="center">
