@@ -1,10 +1,10 @@
 # BIENVENUE SUR :
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/logoVestiWhiteLittle.png" width="480" height="150"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/logoVestiWhiteLittle.png" width="480" height="150"/>
 
 Vesti : est un dressing connecté qui vous permet d'organiser vos tenues et d'avoir des idées en fonction de vos propres goûts, préférences, en fonction de la saison, de la météo et plus encore ..."
 
 ## Lien des consignes :
-+ https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/CONSIGNE.md
++ https://github.com/Mi-chat/vesti/blob/dev/CONSIGNE.md
 
 ## Langages utilisés ?
 + Angular : HTML, CSS, TypeScript.
@@ -20,13 +20,13 @@ Tout _**pleins**_ de fonctionnalités qui arriveront d'ici peu ! Le linge sale, 
 ## Screenshots :
 
 ### Génération de Tenue : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
 
 ### Dressing : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
 
 ### Pace d'acceuil : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/fix-outfit-otd/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
 
 
 ## Contributeurs :
