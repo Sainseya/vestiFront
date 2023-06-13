@@ -103,6 +103,7 @@ button.my-date {
 
 .input-event{
   margin: 1rem;
+
 }
 
 .carrousel-container{
@@ -111,6 +112,12 @@ button.my-date {
 
 .sub-title{
   text-align: center;
+}
+
+.add-event-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
