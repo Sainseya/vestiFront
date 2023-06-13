@@ -9,13 +9,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ClotheInventoryService {
-
-
   private URI = "http://localhost:8080"
   private userId: string = ''
-
-
-  // private userId: string = "";
 
   public setId(id: string): void {
     this.userId = id;
@@ -43,5 +38,4 @@ export class ClotheInventoryService {
 
     return this.http.get<Item[]>(`${this.URI}/vesti/${id}/wardrobe/shoes`)
   }
-
 }
