@@ -1,7 +1,7 @@
 import { ClotheInventoryService } from './../../services/clothe-inventory.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import IClothe from 'src/app/models/clothes.model';
-import IUsers from 'src/app/models/user.model';
+import IUsers from 'src/app/models/user.model.new';
 import Iitem from 'src/app/models/item.model';
 
 @Component({
@@ -13,7 +13,7 @@ export class DressingComponent implements OnInit {
   //variable pour le bouton afficher favoris
   disabledFav = true;
   //Liste des habits ou les donnes du service sont enregistrée
-  usersList: IUsers[] = [];
+  usersList : IUsers[] = []
   itemInventory: Iitem[] = [];
   //Liste des habits favoris
   listItemFav: any[] = [];
@@ -31,12 +31,11 @@ export class DressingComponent implements OnInit {
   //Fonction qui recupere tous les habits et les mets dans clotheInventory
   getClotheInventory = () => {
     this.clotheInventoryService.getAll().subscribe({
-      next: (data: IUsers[]) => {
-        this.usersList = data;
+        next:(data:any) => {
 
-        this.itemInventory = this.usersList[0].wardrobes[0].tops.concat(
-          this.usersList[0].wardrobes[0].bottoms
-        );
+
+          this.usersList = data;
+          this.itemInventory = this.usersList[0].wardrobes[0].items
       },
       error: (data) => {
         console.error('error get all');

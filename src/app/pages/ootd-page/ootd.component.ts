@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, Component, DoCheck, OnInit } from '@angular/core';
 import Item from 'src/app/models/item.model';
 import Iitem from 'src/app/models/item.model';
 import IUsers from 'src/app/models/user.model';
 import { ClotheInventoryService } from 'src/app/services/clothe-inventory.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-ootd',
@@ -20,6 +21,9 @@ export class OotdComponent implements OnInit {
   itemOutfitBottom!: Iitem;
   itemOutfitShoes!: Iitem;
   router: any;
+  oldUserid:any = ""
+  userId:any = ""
+  isApiLoaded = true;
 
   /**
    * Creates an instance of OotdComponent.
@@ -28,30 +32,27 @@ export class OotdComponent implements OnInit {
    */
 
   constructor(private clotheInventoryService: ClotheInventoryService) {}
-  ngOnInit(): void {
-    this.getClotheInventory();
 
-    this.getTopList();
-    this.getBottomList();
-    this.getShoesList();
+  ngOnInit(): void {
+    this.getClotheInventory()
+
+
   }
 
-  //Fonction qui recupere tous les habits et les mets dans clothe Inventory
-  // getClotheInventory = () => {
-  //   this.clotheInventoryService.getAll().subscribe({
-  //     next: (data: IUsers[]) => {
-  //       this.usersList = data;
 
-  //       this.itemInventory = this.usersList[0].wardrobes[0].tops.concat(
-  //         this.usersList[0].wardrobes[0].bottoms
-  //       );
+
+
+
   getClotheInventory = () => {
     this.clotheInventoryService.getAll().subscribe({
       next: (data: IUsers[]) => {
         this.usersList = data;
 
-        // console.log(this.usersList[0].userId)
+
         this.clotheInventoryService.setId(this.usersList[0].userId);
+        this.userId = this.usersList[0].userId
+
+
       },
       error: (data) => {
         console.error('error get all');
@@ -61,7 +62,7 @@ export class OotdComponent implements OnInit {
   };
 
   getTopList = () => {
-    this.clotheInventoryService.getByTypeTop().subscribe({
+    this.clotheInventoryService.getByTypeTop(this.userId).subscribe({
       next: (data: Item[]) => {
         this.getClotheInventory();
         this.itemTopList = data;
@@ -74,7 +75,7 @@ export class OotdComponent implements OnInit {
   };
 
   getBottomList = () => {
-    this.clotheInventoryService.getByTypeBottom().subscribe({
+    this.clotheInventoryService.getByTypeBottom(this.userId).subscribe({
       next: (data: Item[]) => {
         this.itemBottomList = data;
       },
@@ -86,10 +87,10 @@ export class OotdComponent implements OnInit {
   };
 
   getShoesList = () => {
-    this.clotheInventoryService.getByTypeShoes().subscribe({
+    this.clotheInventoryService.getByTypeShoes(this.userId).subscribe({
       next: (data: Item[]) => {
         this.itemShoesList = data;
-        console.log(this.itemShoesList);
+
       },
       error: (data) => {
         console.error('error get shoes');
@@ -100,9 +101,17 @@ export class OotdComponent implements OnInit {
 
   getRandomTopBottom() {
     //fonction pour afficher un habits aleatoirement (haut, bas, chaussures)
+    if(this.isApiLoaded){
+      this.getTopList();
+      this.getBottomList();
+      this.getShoesList();
+      this.isApiLoaded = false
+    }
+
     var topRandom = Math.floor(Math.random() * 3);
     var bottomRandom = Math.floor(Math.random() * 3);
     var shoesRandom = Math.floor(Math.random() * 3);
+    
 
     this.itemOutfitTop = this.itemTopList[topRandom];
     this.itemOutfitBottom = this.itemBottomList[bottomRandom];
