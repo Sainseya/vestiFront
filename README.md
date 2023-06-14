@@ -1,7 +1,7 @@
 # BIENVENUE SUR :
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/logoVestiWhiteLittle.png" width="480" height="150"/>
 
-Vesti : est un dressing connecté qui vous permet d'organiser vos tenues et d'avoir des idées en fonction de vos propres goûts, préférences, en fonction de la saison, de la météo et plus encore ..."
+Vesti: is a connected wardrobe that allows you to organize your outfits and have ideas according to your own tastes, preferences, according to the season, the weather and more ..."
 
 ## To Run This Project : 
 ## First : 
