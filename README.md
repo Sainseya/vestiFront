@@ -15,10 +15,10 @@ https://github.com/Sainseya/vestiSpringBoot
 
 ## Then : 
 
-+ On IntelliJ :
++ On [IntelliJ](https://www.jetbrains.com/idea/download/#section=windows) :
   run the VestiBackApplication.java (the main class) use the link to the back-end repository.
 
-+ On VisualStudioCode :
++ On [VisualStudioCode](https://code.visualstudio.com/download) :
   + Step 1 : Open the Project and a new terminal and type these commands : 
   + Step 2 : `npm install` 
   + Step 3 : `ng add @angular/material`
