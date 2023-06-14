@@ -15,6 +15,31 @@ https://github.com/Sainseya/vestiSpringBoot
 
 ## Then : 
 
++ On [Docker](https://www.docker.com/products/docker-desktop/) : 
+  [Docker compose](https://hub.docker.com/_/mongo)
+  # Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      
+  
 + On [IntelliJ](https://www.jetbrains.com/idea/download/#section=windows) :
   run the VestiBackApplication.java (the main class) use the link to the back-end repository.
 
