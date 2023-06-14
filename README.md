@@ -20,11 +20,11 @@ https://github.com/Sainseya/vestiSpringBoot
 
 + On VisualStudioCode :
   + Step 1 : Open the Project and a new terminal and type these commands : 
-  + Step 2 : npm install 
-  + Step 3 : ng add @angular/material
-  + Step 4 : ng serve -o
+  + Step 2 : `npm install` 
+  + Step 3 : `ng add @angular/material`
+  + Step 4 : `ng serve -o`
 	
-+ If nothing happens go to your browser and type : http://localhost:4200/
++ If nothing happens go to your browser and type : `http://localhost:4200/`
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
