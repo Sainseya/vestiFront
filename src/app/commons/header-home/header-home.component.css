@@ -77,8 +77,6 @@
   padding: auto;
 }
 
-.button {
-}
 
 .slide-darkmode{
   margin-top: 0.5rem;
@@ -94,3 +92,10 @@
   color: #dfe6e9;
   /* Style du conteneur en mode sombre avec un fond gris foncé et une couleur de texte claire */
 }
+
+.logo-home{
+  width: 70%;
+  margin-top: 5px;
+
+}
+

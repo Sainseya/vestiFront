@@ -27,7 +27,7 @@
       color="button"
       routerLink="/home"
     >
-      <img src="../assets/icons/icons8-accueil.svg" alt="icone maison" />
+      <img class="logo-home" src="../assets/icons/icons8-accueil.svg" alt="icone maison" />
     </button>
     <!-- Bouton "Outfit of the day" -->
     <button
@@ -49,8 +49,8 @@
       Dressing
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Mon Dressing</button>
-      <button mat-menu-item>Cosplay</button>
+      <button (click)="emitSwitchDressing(0)" mat-menu-item>Mon Dressing</button>
+      <button (click)="emitSwitchDressing(1)"mat-menu-item>Cosplay</button>
     </mat-menu>
 
     <!-- Icône pour le mode sombre -->
