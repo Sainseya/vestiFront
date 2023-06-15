@@ -140,6 +140,7 @@ export class EventPageComponent {
     },
   ];
 
+  // evenement temp pour trouver si un evenement existe,
   eventTemp: Event = {
     title: '',
     date: new Date(),
@@ -219,12 +220,12 @@ export class EventPageComponent {
     }
     this.events.push(eventTemp);
     this.eventForm.reset();
+    
 
-   
   }
-
+  // recupere l'index de l'outfit pour enregistrez le bon outfit dans calendrier
   getIndexOutfitEvent(e:any)
-  {
+  {1
     this.outfitIndexChoosed = e;
 
   }

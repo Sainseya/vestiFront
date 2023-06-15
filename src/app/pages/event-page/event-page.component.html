@@ -6,7 +6,7 @@
       <app-side-nav></app-side-nav>
     </mat-drawer>
 
-    <!-- Calendrier angular Material -->
+    <!-- Calendrier angular Material dateClass sont les date enregistrées commme évenement -->
     <div class="container-event">
       <mat-card class="demo-inline-calendar-card">
         <mat-calendar
@@ -21,6 +21,7 @@
           Jour de l'évenement : {{ selectedDate | date : "longDate" }}
         </div>
 
+        <!-- Affiche le titre de l'evenement ou aucun evenement selon la date -->
         <div class="event-and-outfit">
           <div class="event" *ngIf="dateMatch">
             <div>{{ eventTemp.title }}</div>
@@ -29,6 +30,7 @@
             <div> Aucun évenement</div>
           </div>
 
+           <!-- Affiche le outif top spécifique si il y a un evenement a cette date selon la date -->
           <div class="outfit" *ngIf="dateMatch">
             <div class="outfit-top">
               <img
@@ -37,7 +39,9 @@
                 [src]="outfitList[eventTemp.outfitIndex].itemTop.linkImage"
               />
             </div>
+            
 
+             <!-- Affiche le outif bottom spécifique  -->
             <div class="outfit-bottom">
               <img
                 class="image-view"
@@ -48,6 +52,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Partie ajouter un evenement  -->
       <div class="add-event-container ">
         <form [formGroup]="eventForm"   class="example-form" (ngSubmit)="onSubmit()">
           <button class="btn-ajouter-even"  mat-raised-button >

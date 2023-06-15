@@ -1,5 +1,5 @@
 import { ClotheInventoryService } from './../../services/clothe-inventory.service';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import IClothe from 'src/app/models/clothes.model';
 import IUsers from 'src/app/models/user.model.new';
 import Iitem from 'src/app/models/item.model';
@@ -13,13 +13,17 @@ export class DressingComponent implements OnInit {
   //variable pour le bouton afficher favoris
   disabledFav = true;
   //Liste des habits ou les donnes du service sont enregistrée
-  usersList : IUsers[] = []
+  usersList: IUsers[] = [];
   itemInventory: Iitem[] = [];
+  itemInventoryCosplay: Iitem[] = [];
   //Liste des habits favoris
   listItemFav: any[] = [];
   itemSelected?: Iitem;
+  isDressingOne = true;
 
   @Output() seletedItemEvent = new EventEmitter<Iitem>();
+
+  @Input() switchDressing: any;
 
   constructor(private clotheInventoryService: ClotheInventoryService) {}
 
@@ -31,11 +35,10 @@ export class DressingComponent implements OnInit {
   //Fonction qui recupere tous les habits et les mets dans clotheInventory
   getClotheInventory = () => {
     this.clotheInventoryService.getAll().subscribe({
-        next:(data:any) => {
-
-
-          this.usersList = data;
-          this.itemInventory = this.usersList[0].wardrobes[0].items
+      next: (data: any) => {
+        this.usersList = data;
+        this.itemInventory = this.usersList[0].wardrobes[0].items;
+        console.log(this.usersList[0].wardrobes[0 + 1].items);
       },
       error: (data) => {
         console.error('error get all');
@@ -70,5 +73,9 @@ export class DressingComponent implements OnInit {
   selectItem(item: Iitem) {
     this.itemSelected = item;
     this.seletedItemEvent.emit(this.itemSelected);
+  }
+
+  switchBetweenDressing(number: any) {
+    this.itemInventory = this.usersList[0].wardrobes[number].items;
   }
 }

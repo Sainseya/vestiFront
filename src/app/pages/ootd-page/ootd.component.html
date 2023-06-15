@@ -24,13 +24,25 @@
       </button>
       <!-- Un bouton pour générer une tenue aléatoire -->
 
+
+
+      <div class="outfit-accesoiries">
+        <img
+          class="image-view-accesoiries"
+          *ngIf="itemOutfitAccesoiries"
+          [src]="itemOutfitAccesoiries.linkImage"
+        />
+      </div>
+
       <div class="outfit-top">
         <img
           class="image-view-top"
           *ngIf="itemOutfitTop"
           [src]="itemOutfitTop.linkImage"
         />
+        
       </div>
+
 
       <!-- Cette partie correspond à l'affichage de la partie supérieure de la tenue du jour -->
       <!-- L'image est affichée uniquement si la variable "itemOutfitTop" est définie -->

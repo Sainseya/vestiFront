@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding } from '@angular/core';
+import { Component, Input, HostBinding, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -9,6 +9,8 @@ import { FormControl } from '@angular/forms';
 export class HeaderHomeComponent {
 
   @Input() drawer:any;
+
+  @Output() switchDressing = new EventEmitter<any>();
 
   darkmodeChecked :boolean = false;
   element:any
@@ -25,6 +27,9 @@ export class HeaderHomeComponent {
   elementList:any
   elementMatDrawer:any
 
+  emitSwitchDressing(event:any){
+    this.switchDressing.emit(event)
+  }
 
   //#region darmode
  toggleDarkmode(){
