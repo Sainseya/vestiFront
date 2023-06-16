@@ -39,7 +39,7 @@
                 [src]="outfitList[eventTemp.outfitIndex].itemTop.linkImage"
               />
             </div>
-            
+
 
              <!-- Affiche le outif bottom spécifique  -->
             <div class="outfit-bottom">
@@ -65,7 +65,7 @@
           </mat-form-field>
         </form>
         <div >
-          <div class="sub-title">Choisis ton outfit</div>
+          <div class="sub-title">Choisissez votre outfit</div>
          <app-carrousel (outfitIndexChoosed)="getIndexOutfitEvent($event)" [outfitListInput]="outfitList"></app-carrousel>
         </div>
       </div>
