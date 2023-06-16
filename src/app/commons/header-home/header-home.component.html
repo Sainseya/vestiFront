@@ -19,7 +19,7 @@
 
   <div class="button-end">
     <!-- Champ de recherche -->
-    <input class="input-recherche" placeholder="Rechercher..." />
+  
 
     <button
       class="button-welcome"
@@ -27,7 +27,7 @@
       color="button"
       routerLink="/home"
     >
-      <img src="../assets/icons/icons8-accueil.svg" alt="icone maison" />
+      <img class="logo-home" src="../assets/icons/icons8-accueil.svg" alt="icone maison" />
     </button>
     <!-- Bouton "Outfit of the day" -->
     <button
@@ -49,20 +49,9 @@
       Dressing
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Mon Dressing</button>
-      <button mat-menu-item>Cosplay</button>
+      <button (click)="emitSwitchDressing(0)" mat-menu-item>Mon Dressing</button>
+      <button (click)="emitSwitchDressing(1)"mat-menu-item>Cosplay</button>
     </mat-menu>
 
-    <!-- Icône pour le mode sombre -->
-    <mat-icon class="mr-8 slide-darkmode">brightness_5</mat-icon>
-
-    <!-- Bouton pour activer/désactiver le mode sombre -->
-    <mat-slide-toggle
-      class="slide-darkmode"
-      (change)="toggleDarkmode()"
-    ></mat-slide-toggle>
-
-    <!-- Icône pour le mode nuit -->
-    <mat-icon class="slide-darkmode">bedtime</mat-icon>
-  </div>
+    </div>
 </div>

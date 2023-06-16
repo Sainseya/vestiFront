@@ -1,17 +1,6 @@
 .logo-header {
   width: 15rem;
   cursor: pointer;
-  /* Style du logo dans l'en-tête avec une largeur fixe et curseur en forme de main */
-  filter: invert(0);
-}
-
-.logo-header-dark {
-  filter: invert(1);
-}
-
-#logo-header.dark-mode {
-  filter: invert(1);
-  /* Style du logo dans l'en-tête avec une largeur fixe et curseur en forme de main */
 }
 
 .container-header {
@@ -20,25 +9,11 @@
   justify-content: end;
 }
 
-.container-header.dark-theme {
-  background-color: #2d3436;
-}
-
-.dark-theme {
-  background-color: #2d3436;
-  color: #dfe6e9;
-}
-
 .button-start {
   display: flex;
   position: absolute;
   left: 0;
   /* Bouton de démarrage positionné absolument à gauche */
-}
-
-.button-start.dark-mode {
-  background-color: #2d3436;
-  color: #dfe6e9;
 }
 
 .burger-menu-button {
@@ -62,26 +37,14 @@
   right: 20px;
   top: 20px;
   padding: 10px;
+  margin-bottom: 1rem;
   /* Bouton de fin positionné relativement à droite avec un décalage vertical et un padding */
 }
 
-.input-recherche {
-  margin: 10px;
-  height: 30px;
-  position: relative;
-  top: -10px;
-  /* Style de l'input de recherche avec une marge, une hauteur et un décalage vertical négatif */
-}
+
 
 .button-welcome {
   padding: auto;
-}
-
-.button {
-}
-
-.slide-darkmode{
-  margin-top: 0.5rem;
 }
 
 .button-dressing {
@@ -89,8 +52,7 @@
   color: #dfe6e9;
 }
 
-.container .dark-mode {
-  background-color: #2d3436;
-  color: #dfe6e9;
-  /* Style du conteneur en mode sombre avec un fond gris foncé et une couleur de texte claire */
+.logo-home {
+  width: 70%;
+  margin-top: 5px;
 }
