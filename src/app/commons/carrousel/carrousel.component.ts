@@ -13,7 +13,7 @@ import Outfit from 'src/app/models/outfit.model';
 })
 export class CarrouselComponent implements OnInit {
   ngOnInit(): void {
-   
+
    this.addSlide()
 
   }
@@ -32,7 +32,7 @@ export class CarrouselComponent implements OnInit {
     for (let index = 0; index < this.outfitListInput.length; index++) {
       this.slides.push({img: this.outfitListInput[index].itemTop.linkImage,
         img2: this.outfitListInput[index].itemBottom.linkImage})
-
+      
     }
 
   }
