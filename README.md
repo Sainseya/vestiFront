@@ -2,7 +2,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/logoVestiWhiteLittle.png" width="480" height="150"/>
 
-Vesti : is a connected dressing room that allows you to organize your outfits and have ideas according to your own tastes, preferences, according to the season, the weather and more ..."
+Vesti : is a connected dressing room that allows you to organize your outfits and have ideas according to your own tastes, preferences, according to the season, the weather and more ..." 
 
 ## To Run This Project : 
 ## First : 
@@ -77,15 +77,20 @@ _**features**_ that will be coming soon : laundry, dress sharing, chat, dark mod
 
 ## Screenshots :
 
-### Outfit Of The Day : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
+### Welcome Page : 
+![Génération de tenues]()
 
 ### Dressing : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/homepage.png)
 
-### Welcome Page : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
+### Outfit Of The Day : 
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/ootdpage.png)
 
+### Events : 
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/eventpage.png)
+
+### Modal : 
+![Génération de tenues]()
 
 ## Contributeurs :
 + https://github.com/Mi-chat
