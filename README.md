@@ -78,19 +78,19 @@ _**features**_ that will be coming soon : laundry, dress sharing, chat, dark mod
 ## Screenshots :
 
 ### Welcome Page : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/Capture%20d'ecrans/Capture%20d'%C3%A9cran%202023-06-13%20100404.png)
+![Génération de tenues]()
 
 ### Dressing : 
 ![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/homepage.png)
 
 ### Outfit Of The Day : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/ootd.png)
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/ootdpage.png)
 
 ### Events : 
 ![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/eventpage.png)
 
 ### Modal : 
-![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/eventpage.png)
+![Génération de tenues]()
 
 ## Contributeurs :
 + https://github.com/Mi-chat
