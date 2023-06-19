@@ -4,6 +4,7 @@ p{
   margin-right: auto;
   text-align: left;
   color: black;
+  font-family: Futura,Helvetica,Arial,sans-serif;
 }
 .background-image{
   background-image: url("/assets/welcome-page/drap1.jpg");

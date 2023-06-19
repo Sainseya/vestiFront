@@ -7,11 +7,10 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 
 const routes: Routes = [
 
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', redirectTo: 'welcome-page', pathMatch: 'full'},
   {path: 'home', component: HomePageComponent},
   {path: 'outfit-of-the-day', component: OfdtComponent},
   {path: 'welcome-page', component: WelcomePageComponent}
-
 
 ];
 

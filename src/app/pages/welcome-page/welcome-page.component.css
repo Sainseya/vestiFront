@@ -1,3 +1,9 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Futura,Helvetica,Arial,sans-serif;
+}
+
 .container{
   background-color: #F2F7FF;
   height: 100vh;
@@ -121,11 +127,14 @@ padding: 0;
 @keyframes bounce {
 0% {
   transform: translateY(0);
+  opacity: 60%;
 }
 50% {
   transform: translateY(10px);
+  opacity: 90%;
 }
 100% {
   transform: translateY(0);
+  opacity: 100%;
 }
 }

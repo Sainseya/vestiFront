@@ -1,8 +1,5 @@
-<body>
-  <div class="progress"></div>
-  
-  <div class="container">
-  
+<div class="container" (wheel)="handleScroll($event, 'container')">
+
     <app-nav-bar></app-nav-bar>
     <div class="background-QR-code">
       <strong style="background-image:url('/src/assets/Designe-garde-robe.png')">
@@ -15,12 +12,13 @@
     <div class="arrow-icon">
       <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollDown()">arrow_downward</mat-icon>
     </div>
-  
-  </div>
-  
 
-  <div class="container"  *ngFor="let text of presentationText; let indexOfText = index" [ngStyle]="{'background-color': colors[indexOfText]}">
-  
+  </div>
+
+  <!--Container contenant les video de les cards de presentation texte et video-->
+
+  <div class="container"  *ngFor="let text of presentationText; let indexOfText = index" [ngStyle]="{'background-color': colors[indexOfText]}" (wheel)="handleScroll($event, 'container-' + indexOfText)">
+
       <div class="left">
         <app-card-texte-presentation [longText]="text" *ngIf="indexOfText % 2 == 0"></app-card-texte-presentation >
       </div>
@@ -28,13 +26,14 @@
         <app-card-texte-presentation [longText]="text" *ngIf="indexOfText % 2 != 0"></app-card-texte-presentation>
       </div>
       <div class="arrow-icon-2">
-        <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollDown()" >arrow_downward</mat-icon>  
+        <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollDown()" >arrow_downward</mat-icon>
       </div>
 
   </div>
-  
 
-  <div class="container-2">
+<!--Le bas de la page avec le footer-->
+
+  <div class="container-2" (wheel)="handleScroll($event, 'container-2')">
 
       <span class="end-page-text">
         Rejoignez dès maintenant la communauté passionnée de Vestidors et vivez la mode comme jamais auparavant.
@@ -44,11 +43,12 @@
         <app-box></app-box>
       </div>
       <div class="arrow-upward">
-        <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollUp" >arrow_upward</mat-icon>
+        <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollToTop()" >arrow_upward</mat-icon>
       </div>
       <div class="arrow-upward" style="top: 12em">Sign Up</div>
-      
+
   </div>
   <app-footer-home></app-footer-home>
-  
-  </body>
+
+
+

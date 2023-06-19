@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 
-
 //Components
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeaderHomeComponent } from './commons/header-home/header-home.component';
@@ -30,8 +29,11 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
 import { CardPresentationTextComponent } from './commons/card-presentation-text/card-presentation-text.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
-import { ModalWelcomePageComponent } from './commons/modal-welcome-page/modal-welcome-page.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DialogContentComponent } from './commons/dialog-content/dialog-content.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import { DialogSignupComponent } from './commons/dialog-signup/dialog-signup.component';
 
 
 
@@ -50,28 +52,31 @@ import { MatDialogModule } from '@angular/material/dialog';
     BoxComponent,
     NavBarComponent,
     CardPresentationTextComponent,
-    ModalWelcomePageComponent,
+    DialogContentComponent,
+    DialogSignupComponent,
 
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
 
-        //Angular Material
-        MatMenuModule,
-        MatButtonModule,
-        MatCardModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatSlideToggleModule,
-        MatBadgeModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatDialogModule
+    //Angular Material
+    MatMenuModule,
+    MatButtonModule,
+    MatCardModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatSlideToggleModule,
+    MatBadgeModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatInputModule,
 
-        //Css Animation
-    ],
+    //Css Animation
+  ],
   schemas :[
     CUSTOM_ELEMENTS_SCHEMA,
 

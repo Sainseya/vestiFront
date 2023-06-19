@@ -1,0 +1,60 @@
+.card {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 5px solid #181616;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 95%;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #050506;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #151618;
+}
+
+.btn-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.mb-3{
+  margin-bottom: 30px;
+
+}
+
+li{
+  font-size: 10px;
+  color: red;
+  text-justify: auto;
+}
+

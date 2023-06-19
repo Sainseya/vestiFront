@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 @Component({
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
@@ -24,24 +24,35 @@ export class WelcomePageComponent implements OnInit {
     `Mais ce n'est pas tout ! Restez informé des nouvelles tendances de la mode grâce aux notifications de Vestidor.
     Soyez le premier à connaître les dernières tendances, les promotions exclusives et les événements spéciaux.`
   ];
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
+  /*Scroll vers le haut ou le bas en cliquant sur la sur la fleche  */
   scrollDown(): void {
     window.scrollBy({
       top: window.innerHeight,
       behavior: 'smooth'
     });
   }
-
-  scrollUp(): void {
+  scrollToTop(): void {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   }
+
+  /**La fonction handleScroll est un gestionnaire d'événement utilisé pour détecter et gérer les événements de défilement de la souris (WheelEvent).
+   * Elle prend deux paramètres en entrée : l'événement de défilement (event) et
+   * l'identifiant (containerId) du conteneur sur lequel le défilement doit être appliqué
+   * */
+  handleScroll(event: WheelEvent, containerId: string): void {
+    event.preventDefault(); //Empêche le scroll par défaut.
+    const container = document.getElementById(containerId);
+
+    if (event.deltaY < 0) {
+      this.scrollToTop();
+    } else {
+      this.scrollDown();
+    }
   }
+
+  ngOnInit(): void {
+  }
+}

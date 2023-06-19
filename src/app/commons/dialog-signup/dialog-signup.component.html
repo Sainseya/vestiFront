@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header">Inscription</div>
+  <div class="card-body">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+      <div class="mb-3">
+        <input type="text" formControlName="username" class="form-control" placeholder="Nom d'utilisateur"/>
+        <span *ngIf="submitted && form['username'].invalid">
+          <span *ngIf="form['nom'].hasError('minLenght')"></span>
+          <li>Le nom d'utilisateur doit contenir plus de 3 caractères</li>
+        </span>
+      </div>
+
+      <div class="mb-3">
+        <input type="email" formControlName="email" class="form-control" placeholder="Mail" />
+        <span *ngIf="submitted && form['email'].invalid">
+          <span *ngIf="form['nom'].hasError('minLenght')"></span>
+          <li>Example : john.doe@example.com</li>
+        </span>
+      </div>
+
+      <div class="mb-3">
+        <input type="password" formControlName="password" class="form-control" placeholder="Mots de passe" />
+        <span *ngIf="submitted && form['password'].invalid">
+          <span *ngIf="form['password'].hasError('minLenght')"></span>
+          <li>Elle doit contenir au moins une lettre minuscule.</li>
+          <li>Elle doit contenir au moins une lettre majuscule.</li>
+          <li>Elle doit contenir au moins un chiffre.</li>
+          <li>Elle doit contenir au moins l'un des caractères spéciaux spécifiés.</li>
+          <li>Sa longueur doit être d'au moins 8 caractères.</li>
+        </span>
+      </div>
+
+      <button routerLink="../register"  class="btn btn-link">S'inscrire</button>
+      <strong>
+        <a style="background-color: #eb6262" [mat-dialog-close]="true" class="btn btn-link" (submit)="false">Close</a>
+      </strong>
+
+    </form>
+  </div>
+</div>
