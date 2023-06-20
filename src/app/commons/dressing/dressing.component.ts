@@ -1,9 +1,10 @@
 import { ClotheInventoryService } from '../../services/clothe-inventory.service';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, forwardRef} from '@angular/core';
 import User from 'src/app/models/user.model';
 import Item from 'src/app/models/item.model';
 import {MatDialog} from "@angular/material/dialog";
 import {ModalComponent} from "../modal/modal.component";
+import {NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
   selector: 'app-dressing',
@@ -75,21 +76,14 @@ export class DressingComponent implements OnInit {
   selectItem(item:Item){
      this.itemSelected = item;
      this.selectedItemEvent.emit(this.itemSelected);
-
   }
 
+  /* Permet d'ouvrir la modale contenant le formulaire de saisie d'un nouvel article, avec un effet de ralentissement */
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     const dialogRef = this.dialog.open(ModalComponent, {
       enterAnimationDuration,
-      exitAnimationDuration,});
-    // const dialogRef = this.dialog.open(ModalComponent, {
-      // data: {
-      // a remplir
-      //   }
-    // });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      // à remplir/modifier this.animal = result;
+      exitAnimationDuration,
+      "width" : "80%"
     });
   }
 

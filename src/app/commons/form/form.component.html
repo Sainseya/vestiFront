@@ -1,37 +1,127 @@
-<form [formGroup]="item" (ngSubmit)="onSubmitForm()">
-  <h1 mat-dialog-title>
-    Formulaire de saisie d'articles
-  </h1>
-  <div *ngFor="let attribute of item.controls | keyvalue">
-    <ng-container *ngIf="attribute.key !='color'">
-      <mat-form-field *ngFor="let label of itemAttributsForLabel">
-        <app-label label="{{label}}" ></app-label>
-        <ng-container *ngIf="attribute.key === 'type' || attribute.key === 'size'">
-          <app-select-in-menu></app-select-in-menu>
-        </ng-container>
-        <ng-container *ngIf="attribute.key === 'season' || attribute.key === 'fit'">
-          <app-button></app-button>
-        </ng-container>
-        <ng-container *ngIf="attribute.key === 'color'">
-          <app-color-picker></app-color-picker>
-        </ng-container>
-        <ng-container *ngIf="attribute.key === 'favorite'">
-          <p>Contenu pour l'attribut 'favorite'</p>
-        </ng-container>
-        <ng-container *ngIf="attribute.key === 'label'">
-          <app-input></app-input>
-        </ng-container>
-        <ng-container *ngIf="attribute.key === 'picture'">
-          <app-upload-image></app-upload-image>
-        </ng-container>
-<!--    <mat-label>{{element}} :</mat-label>-->
-<!--    <input matInput type="text" [(ngModel)]="" name="{{element}}">-->
-<!--  </mat-form-field>-->
-<!--  <mat-form-field>-->
-<!--    <mat-label>Email :</mat-label>-->
-<!--    <input matInput type="email" [(ngModel)]="" name="email">-->
-  </mat-form-field>
-    </ng-container>
+<div class="main-frame" >
+<div >
+  <h1>Saisissez un nouvel article dans votre dressing !</h1>
+</div>
+
+<!-- Définir le dressing dans lequel ajouter l'article-->
+<div>
+<form [formGroup]="wardrobeForm">
+    <!-- Si l'utilisateur n'a pas encore de dressing, il en crée un.-->
+  <div class="wardrobe-frame" *ngIf="wardrobes" > <!-- *ngIf="(wardrobes$ | async) as wardrobes" -->
+    <mat-form-field class ="field" *ngIf="wardrobes.length === 0">
+      <mat-label>Nommez votre dressing :</mat-label>
+      <input matInput placeholder="Choisissez un nom pour votre dressing" formControlName="nameCtrlFirstCreation">
+    </mat-form-field>
+
+    <!-- Si l'utilisateur a déjà un dressing, il le sélectionne ou peut choisir d'en créer un nouveau.-->
+    <div class="wardrobe-frame" *ngIf="wardrobes.length > 0">
+      <mat-form-field class ="field" >
+        <mat-label>Sélectionnez votre dressing :</mat-label>
+        <mat-select formControlName="nameCtrlExistingWardrobes">
+            <mat-option *ngFor="let wardrobe of wardrobes" [value]="wardrobe" >{{wardrobe.name}}</mat-option>
+          </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class ="field">
+        <mat-label >Ou créez un nouveau dressing :</mat-label>
+        <input matInput placeholder="Choisissez un nom pour votre nouveau dressing" formControlName="nameCtrlNewWardrobe" >
+      </mat-form-field>
+
+    </div>
   </div>
-  <button mat-raised-button type="submit">Soumettre</button>
-</form>
+  </form>
+</div>
+
+<div class="main-frame">
+  <h1>A propos de votre article ...</h1>
+</div>
+
+<div>
+  <form [formGroup]="itemForm" >
+    <!-- Type de l'article-->
+    <mat-form-field class ="field" >
+      <mat-label>De quel type d'article s'agit-il ?</mat-label>
+      <mat-select formControlName="typeCtrl">
+        <mat-option *ngFor="let type of types" [value]="type" >{{type}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Taille de l'article, qui varie en fonction du type.-->
+    <mat-form-field class="field">
+      <mat-label>Quelle est sa taille ?</mat-label>
+      <mat-select formControlName="sizeCtrl">
+        <ng-container [ngSwitch]="itemType">
+          <ng-container *ngSwitchCase="'accessoire'">
+            <mat-option *ngFor="let size of sizes" [value]="size">{{ size }}</mat-option>
+          </ng-container>
+          <ng-container *ngSwitchCase="'haut'">
+            <mat-option *ngFor="let size of sizesClothes" [value]="size">{{ size }}</mat-option>
+          </ng-container>
+          <ng-container *ngSwitchCase="'bas'">
+            <mat-option *ngFor="let size of sizesClothes" [value]="size">{{ size }}</mat-option>
+          </ng-container>
+          <ng-container *ngSwitchCase="'chaussures'">
+            <mat-option *ngFor="let size of sizesShoes" [value]="size">{{ size }}</mat-option>
+          </ng-container>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Coupe de l'article, qui est proposé seulement si le type de l'article est "top" ou "bottom", donc un vêtement.-->
+    <mat-form-field class ="field" *ngIf="showFit">
+      <mat-label>Quelle est la coupe du vêtement ?</mat-label>
+      <mat-select formControlName="fitCtrl">
+        <mat-option *ngFor="let fit of fits" [value]="fit" >{{fit}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Saisonnalité de l'article-->
+    <mat-form-field class ="field">
+      <mat-label>En quelle(s) saison(s) se portent cet article ?</mat-label>
+      <mat-select formControlName="seasonCtrl">
+        <mat-option *ngFor="let season of seasons" [value]="season" >{{season}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+     <!--Mise en favoris de l'article-->
+    <mat-slide-toggle formControlName="isFavoriteCtrl">Est-ce que c'est un article favoris ?</mat-slide-toggle>
+    <br>
+
+    <!-- Choix de la couleur de l'article-->
+    <div class="color-picker">
+      <span>Quelle est la couleur majoritaire de votre article ?</span>
+      <ngx-colors ngx-colors-trigger formControlName="colorCtrl"></ngx-colors>
+    </div>
+
+
+    <!-- Ajout d'un label, en option en choisissant un label dans la liste ou en créant un nouveau-->
+    <mat-form-field class ="field" *ngIf="hasLabels()"> <!-- *ngIf="(wardrobes$ | async) as wardrobesOfUser" -->
+      <mat-label>Souhaitez-vous attribuer une étiquette à cet article ?</mat-label>
+      <mat-select formControlName="labelCtrlExistingLabels">
+        <mat-option *ngFor="let label of labels" [value]="label"> {{label}}</mat-option>
+<!--        <mat-option *ngFor="let wardrobe of wardrobes" [value]="wardrobe.name" >-->
+<!--            <ng-container *ngFor="let item of wardrobe.items">-->
+<!--              {{ item.label }}-->
+<!--            </ng-container>-->
+<!--        </mat-option>-->
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class ="field">
+      <mat-label>Créez une nouvelle étiquette :</mat-label>
+      <input matInput placeholder="Choisissez un nom pour votre étiquette" formControlName="labelCtrlNew">
+    </mat-form-field>
+
+    <!-- Ajout d'une photo de l'article -->
+    <app-upload-image (photoAdded)="onPhotoAdded($event)"></app-upload-image>
+
+    <!-- Bouton de validation du formulaire -->
+    <div *ngIf="wardrobeForm.valid" class="button">
+      <button mat-raised-button (click)="onSubmitForm()"> Enregistrer </button>
+    </div>
+
+  </form>
+</div>
+
+</div>
+

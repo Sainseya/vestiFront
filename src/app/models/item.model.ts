@@ -1,18 +1,16 @@
 class Item {
-  private id!: string;
-  label!: string;
-  isFavorite!: boolean;
   type!: string;
-  season!: string;
   size!: string;
   fit!: string;
-  picture!: File;
+  season!: string;
+  isFavorite?: boolean;
   color!: string;
+  label!: string;
+  picture!: File;
 
   constructor() {
     this.isFavorite = false;
   }
-
 
 }
 

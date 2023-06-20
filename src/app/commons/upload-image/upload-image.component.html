@@ -1,1 +1,64 @@
-<p>upload-image works!</p>
+<!-- Barre de progression de l'import d'image. Elle apparaît losque l'utilisation clique sur "Ajouter". -->
+<div>
+  <span>{{ progressInfo?.fileName }}</span>
+  <mat-toolbar class="progress-bar" *ngIf="progressInfo">
+    <mat-progress-bar
+      color="accent"
+      [value]="progressInfo.value"
+    ></mat-progress-bar>
+    <span class="progress">{{ progressInfo.value }}%</span>
+  </mat-toolbar>
+</div>
+
+<!--Champ d'ajout d'image pour selectionner l'image de l'article à ajouter, et son bouton pour charger l'image sélectionnée. -->
+<mat-form-field class="toolbar">
+  <div>
+    <mat-toolbar>
+      <input matInput [value]="selectedFileName ? selectedFileName : 'Ajout d\'une photo de l\'article :'" />
+      <button
+        class="button"
+        mat-flat-button
+        color="primary"
+        [disabled]="!selectedFile"
+        (click)="uploadFile()"
+      >
+        Ajouter l'image
+      </button>
+    </mat-toolbar>
+<!--    <form [formGroup]="itemForm"></form>-->
+    <input
+      type="file"
+      id="fileInput"
+      name="fileInput"
+      accept="image/*"
+      (change)="selectFile($event)"
+
+    />
+  </div>
+</mat-form-field>
+
+<!--Champ d'aperçu de l'image choisie-->
+<div>
+  <img *ngFor='let preview of previews' [src]="preview" class="preview" alt="image de votre article que vous avez choisi">
+</div>
+
+<!--Champ d'affichage d'information à l'utilisateur-->
+<div *ngIf="message.length" class="message">
+  <ul *ngFor="let msg of message; let i = index">
+    <li>{{ msg }}</li>
+  </ul>
+</div>
+
+<!--<mat-card class="list-card">-->
+<!--  <mat-card-header>-->
+<!--    <mat-card-title>List of Images</mat-card-title>-->
+<!--  </mat-card-header>-->
+<!--  <mat-card-content>-->
+<!--    <mat-list role="list">-->
+<!--      <mat-list-item role="listitem" *ngFor="let image of imageInfos | async" class="list-item">-->
+<!--        <p matLine><a href="{{ image.url }}">{{ image.name }}</a></p>-->
+<!--        <img [src]="image.url" alt="{{ image.name }}" height="50px"/>-->
+<!--      </mat-list-item>-->
+<!--    </mat-list>-->
+<!--  </mat-card-content>-->
+<!--</mat-card>-->
