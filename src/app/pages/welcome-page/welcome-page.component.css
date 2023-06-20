@@ -47,7 +47,7 @@ width: 0;
 width: 400px;
 height: 400px;
 justify-content: center;
-margin-left: 20em;
+margin-left: 10em;
 border-radius: 30px;
 padding-top: 6em;
 }
@@ -56,9 +56,10 @@ padding-top: 6em;
 width: 400px;
 height: 400px;
 justify-content: center;
-margin-left: 90em;
+margin-left: 60em;
+margin-bottom: 20em;
 border-radius: 30px;
-padding-bottom: 60em;
+/* padding-bottom: 60em; */
 }
 
 .arrow-icon{
