@@ -22,11 +22,16 @@
 
       <div class="left">
         <app-card-texte-presentation [longText]="text" *ngIf="indexOfText % 2 == 0"></app-card-texte-presentation >
+          <video class="video" width="400" controls *ngIf="indexOfText % 2 != 0">
+            <source src="../assets/welcome-page/capture-outfit.mp4" type="video/mp4">
+
+            Your browser does not support HTML video.
+          </video>
       </div>
       <div class="right">
         <app-card-texte-presentation [longText]="text" *ngIf="indexOfText % 2 != 0"></app-card-texte-presentation>
-        <video class="video" width="600" controls>
-          <source src="../assets/welcome-page/capture-dressing.mp4" type="video/mp4">
+        <video class="video" width="400" controls *ngIf="indexOfText % 2 == 0">
+          <source src="../assets/welcome-page/capture-dressing.mp4" type="video/mp4" >
 
           Your browser does not support HTML video.
         </video>

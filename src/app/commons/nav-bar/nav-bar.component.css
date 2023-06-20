@@ -15,7 +15,8 @@ body {
 }
 .logo{
     margin-top: 1rem;
-    width: 50%;
+    width: 200%;
+    margin-left: 2rem
 }
 
 .title{
