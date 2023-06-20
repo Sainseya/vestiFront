@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OfdtComponent } from './ofdt.component';
+import { SideNavComponent } from './side-nav.component';
 
-describe('OfdtComponent', () => {
-  let component: OfdtComponent;
-  let fixture: ComponentFixture<OfdtComponent>;
+describe('SideNavComponent', () => {
+  let component: SideNavComponent;
+  let fixture: ComponentFixture<SideNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OfdtComponent ]
+      declarations: [ SideNavComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OfdtComponent);
+    fixture = TestBed.createComponent(SideNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

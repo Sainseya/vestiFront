@@ -2,15 +2,19 @@
   width: 100%;
   position: relative;
   bottom: 0;
+
   height: 8em;
   background-color: black;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
   font-size: 15px;
   color: white;
   /* Style du pied de page avec fond sombre, espace entre les éléments et alignement centré */
+
 }
 
 .footer-links-horizontal {
@@ -19,7 +23,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  /* Style des liens horizontaux dans le pied de page */
+  /* Style des liens horizontaux dans le footer */
 }
 
 .footer-links-horizontal li {
@@ -29,9 +33,11 @@
 
 .footer-links-horizontal a {
   text-decoration: none;
+
   color: white;
 
   /* Supprime la décoration des liens */
+
 }
 
 .footer-links-horizontal a:hover {
@@ -40,8 +46,9 @@
 }
 
 .mentionLegale {
+  /* Style pour afficher les mentions légales */
   display: flex;
   align-self: center;
   margin-right: 10px;
-  /* Style pour afficher les mentions légales centrées */
+  margin-top: 10px;
 }

@@ -1,10 +1,17 @@
-.container{
+.container {
   background-color: rgb(255, 255, 255);
   width: 100vw;
-
 }
 
-.side-nav-link{
+.dark-theme {
+  /* utilisée pour appliquer un thème sombre */
+  background-color: #2d3436;
+  background: #2d3436;
+  color: #ffffff;
+}
+
+.side-nav-link {
+  /* permet de gerer l'affichage de la barre de navigation latérale */
   display: flex;
   align-items: center;
   margin-left: 0rem;
@@ -13,38 +20,39 @@
   cursor: pointer;
 }
 
-.side-nav-link-text{
+.side-nav-link-text {
+  /* permet de gerer l'affichage du texte dans la barre de navigation latérale */
   margin-left: 0.3rem;
   position: relative;
   top: 0.2rem;
-
 }
 
-.side-nav-link-text:hover{
+.side-nav-link-text:hover {
+  /* permet de gerer l'affichage du texte dans la barre de navigation latérale l'orsque l'on passe
+  la souris dessus grâce a : "hover" */
   color: rgb(53, 48, 86);
-
 }
 
-.inventory-and-view{
+.inventory-and-view {
+  /* l'inventaire et l'affichage */
   display: flex;
   margin-left: 2rem;
+  height: 100%;
+
+  margin-bottom:2rem;
 
 }
 
-.side-nav-container{
+.side-nav-container {
   margin-top: 2rem;
-  
 }
 
-.icon-tshirt{
+.icon-tshirt {
   width: 18%;
 }
 
-.example-container{
+.example-container {
   height: 100%;
+  background-color: #ffffff;
 }
-
-
-
-
 

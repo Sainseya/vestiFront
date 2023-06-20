@@ -1,37 +1,57 @@
-
 <div class="container-header">
   <div class="button-start">
     <!-- Bouton du menu burger -->
     <button mat-button class="burger-menu-button" (click)="drawer.toggle()">
-      <img class="burger-menu-button-image " src="../assets/home-header/button-menu.png" alt="">
+      <img
+        class="burger-menu-button-image"
+        src="../assets/home-header/button-menu.png"
+        alt=""
+      />
     </button>
     <!-- Logo du header -->
-    <img class="logo-header" alt="logo-vesti" routerLink="/home" src="../assets/home-header/vesti.png">
+    <img
+      class="logo-header"
+      alt="logo-vesti"
+      routerLink="/home"
+      src="../assets/home-header/vesti.png"
+    />
   </div>
 
   <div class="button-end">
     <!-- Champ de recherche -->
-    <input class="input-recherche" placeholder="Rechercher...">
+  
 
+    <button
+      class="button-welcome"
+      mat-raised-button
+      color="button"
+      routerLink="/home"
+    >
+      <img class="logo-home" src="../assets/icons/icons8-accueil.svg" alt="icone maison" />
+    </button>
     <!-- Bouton "Outfit of the day" -->
-    <button class="button" mat-raised-button routerLink="/welcome-page">Welcome</button>
+    <button
+      class="button-welcome"
+      mat-raised-button
+      color="button"
+      routerLink="/welcome-page"
+    >
+      Welcome
+    </button>
 
     <!-- Bouton "Dressing" avec menu déroulant -->
-    <button class="button" mat-raised-button [matMenuTriggerFor]="menu">Dressing</button>
+    <button
+      class="button-dressing"
+      color="button"
+      mat-raised-button
+      [matMenuTriggerFor]="menu"
+    >
+      Dressing
+    </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Mon Dressing</button>
-      <button mat-menu-item>Cosplay</button>
+      <button (click)="emitSwitchDressing(0)" mat-menu-item>Mon Dressing</button>
+      <button (click)="emitSwitchDressing(1)"mat-menu-item>Cosplay</button>
     </mat-menu>
 
-    <!-- Icône pour le mode sombre -->
-    <mat-icon class="mr-8">brightness_5</mat-icon>
-
-    <!-- Bouton pour activer/désactiver le mode sombre -->
-    <mat-slide-toggle (change)="toggleDarkmode()" ></mat-slide-toggle>
-
-
-    <!-- Icône pour le mode nuit -->
-    <mat-icon>bedtime</mat-icon>
-
-  </div>
+    </div>
 </div>

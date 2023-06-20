@@ -1,0 +1,77 @@
+<!-----------------------------------HEADER---------------------------------------------------------------------------------------------->
+<app-header-home [drawer]="drawer"></app-header-home>
+<hr />
+
+<!-- Un trait horizontal pour séparer l'en-tête du reste du contenu -->
+<!-----------------------------------BODY---------------------------------------------------------------------------------------------->
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-side-nav></app-side-nav>
+    <!-- Un panneau latéral de navigation -->
+  </mat-drawer>
+
+  <div class="container-ootd">
+    <div class="outfit-container mat-elevation-z3">
+      <div class="title">Voici votre outfit of the day :</div>
+      <!-- Texte affiché au-dessus de la tenue du jour -->
+
+      <button
+        class="btn-gen-outfit"
+        mat-raised-button
+        (click)="getRandomTopBottom()"
+      >
+        Générer outfit
+      </button>
+      <!-- Un bouton pour générer une tenue aléatoire -->
+
+      <div class="outfit-accesoiries">
+        <img
+          class="image-view-accesoiries"
+          *ngIf="itemOutfitAccesoiries"
+          [src]="itemOutfitAccesoiries.linkImage"
+        />
+      </div>
+
+      <div class="outfit-top">
+        <img
+          class="image-view-top"
+          *ngIf="itemOutfitTop"
+          [src]="itemOutfitTop.linkImage"
+        />
+      </div>
+
+      <!-- Cette partie correspond à l'affichage de la partie supérieure de la tenue du jour -->
+      <!-- L'image est affichée uniquement si la variable "itemOutfitTop" est définie -->
+      <!-- L'image affichée est déterminée par la propriété "linkImage" de l'objet "itemOutfitTop" -->
+
+      <div class="outfit-bottom">
+        <img
+          class="image-view-bottom"
+          *ngIf="itemOutfitBottom"
+          [src]="itemOutfitBottom.linkImage"
+        />
+      </div>
+      <!-- Cette partie correspond à l'affichage de la partie inférieure de la tenue du jour -->
+
+      <!-- L'image est affichée uniquement si la variable "itemOutfitBottom" est définie -->
+      <!-- L'image affichée est déterminée par la propriété "linkImage" de l'objet "itemOutfitBottom" -->
+
+      <div class="outfit-shoes">
+        <img
+          class="image-view-shoes"
+          *ngIf="itemOutfitShoes"
+          [src]="itemOutfitShoes.linkImage"
+        />
+      </div>
+
+      <!-- Cette partie correspond à l'affichage de la partie chaussures de la tenue du jour -->
+      <!-- L'image est affichée uniquement si la variable "itemOutfitShoes" est définie -->
+      <!-- L'image affichée est déterminée par la propriété "linkImage" de l'objet "itemOutfitShoes" -->
+    </div>
+  </div>
+</mat-drawer-container>
+<!-----------------------------------FOOTER---------------------------------------------------------------------------------------------->
+<div class="footer-ootd">
+  <app-footer-home></app-footer-home>
+  <!--Appel de la classe "Footer-Home"-->
+</div>

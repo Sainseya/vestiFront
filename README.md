@@ -1,4 +1,36 @@
-"Vesti, the connected wardrobe, allows you to organize your wardrobe and generate outfits with your own clothes according to your taste, preferences, weather, seasons, and much more ..."
+# WELCOME ON VESTI FRONT-END : 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Mi-chat/vesti/blob/dev/src/assets/img/logo/logoVestiWhiteLittle.png" width="480" height="150"/>
+
+Vesti : is a connected dressing room that allows you to organize your outfits and have ideas according to your own tastes, preferences, according to the season, the weather and more ..." 
+
+## To Run This Project : 
+## First : 
+Clone the Front-end and Back-end Repositories : 
+
++ Front-end : 
+https://github.com/Mi-chat/vesti
+
++ Back-end : 
+https://github.com/Sainseya/vestiSpringBoot
+
+## Then : 
+
++ On [Docker](https://www.docker.com/products/docker-desktop/) : 
+  link to the docker compose for mongo : [Docker compose](https://hub.docker.com/_/mongo)
+  
++ On [IntelliJ](https://www.jetbrains.com/idea/download/#section=windows) :
+  run the VestiBackApplication.java (the main class) use the link to the back-end repository.
+
++ On [VisualStudioCode](https://code.visualstudio.com/download) :
+  + Step 1 : Open the Project and a new terminal and type these commands : 
+  + Step 2 : `npm install` 
+  + Step 3 : `ng add @angular/material`
+  + Step 4 : `ng serve -o`
+	
++ If nothing happens go to your browser and type : `http://localhost:4200/`
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
@@ -25,3 +57,43 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+
+## Programming languages ?
++ Angular : HTML, CSS, TypeScript.
++ Mongodb
++ SpringBoot
+
+## Link to the Back-end :
++ https://github.com/Sainseya/vestiSpringBoot
+
+## Incoming :
+_**features**_ that will be coming soon : laundry, dress sharing, chat, dark mode etc.
+
+
+
+## Screenshots :
+
+### Welcome Page : 
+![Génération de tenues]()
+
+### Dressing : 
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/homepage.png)
+
+### Outfit Of The Day : 
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/ootdpage.png)
+
+### Events : 
+![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/eventpage.png)
+
+### Modal : 
+![Génération de tenues]()
+
+## Contributeurs :
++ https://github.com/Mi-chat
++ https://github.com/ClementVaugoyeau
++ https://github.com/Sainseya
++ https://github.com/MelanieVD

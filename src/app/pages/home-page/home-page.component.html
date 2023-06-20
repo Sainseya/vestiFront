@@ -1,33 +1,34 @@
+
 <div class="container">
-<app-header-home [drawer]="drawer"></app-header-home>
-<hr>
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
+  <!-----------------------------------HEADER---------------------------------------------------------------------------------------------->
+  <app-header-home (switchDressing)="switchDressing($event)" [drawer]="drawer"></app-header-home>
+  <hr />
+  <!-- <hr /> = trait horizontal pour séparer l'en-tête du reste du contenu -->
 
-    <div class="side-nav-container">
-      <div class="side-nav-link">
-        <img src="../assets/icons/icons8-accueil.svg" alt="icone maison">
-        <a class="side-nav-link-text">Accueil</a>
-      </div>
-      <div class="side-nav-link" routerLink="/outfit-of-the-day">
-        <img src="../assets/icons/icons-t-shirt.png" class="icon-tshirt" alt="icone t-shirt">
-        <a class="side-nav-link-text">Outfit of the day</a>
-      </div>
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <app-side-nav></app-side-nav>
+    </mat-drawer>
+
+    <div class="inventory-and-view">
+      <app-dressing
+        (seletedItemEvent)="outputItemSeleted($event)"
+      ></app-dressing>
+      <!-- affiche l'inventaire et émet un événement lorsqu'un élément est sélectionné -->
+
+      <app-view-one-item
+        [item]="itemSeletedFromOutput"
+        *ngIf="itemSeletedFromOutput"
+      ></app-view-one-item>
+      <!-- affiche les détails d'un élément sélectionné à partir de l'inventaire -->
+      <!-- L'élément est passé en tant que "item" -->
+      <!-- Il est affiché que si "itemSeletedFromOutput" est défini -->
     </div>
-  </mat-drawer>
+  </mat-drawer-container>
 
-<div class="inventory-and-view">
-  <app-dressing (seletedItemEvent)="outputItemSeleted($event)"></app-dressing>
-  <app-view-one-item  [item]="itemSeletedFromOutput" *ngIf="itemSeletedFromOutput"></app-view-one-item>
+  <!-----------------------------------FOOTER---------------------------------------------------------------------------------------------->
+
+  <app-footer-home></app-footer-home>
+  <!--Appel du composant footer-->
 </div>
-
-
-</mat-drawer-container>
-<!--
-<app-footer-home></app-footer-home>
--->
-
-
-
-
 
