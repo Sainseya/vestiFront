@@ -59,6 +59,8 @@ justify-content: center;
 margin-left: 60em;
 margin-bottom: 20em;
 border-radius: 30px;
+position: relative;
+bottom: 300px;
 /* padding-bottom: 60em; */
 }
 
