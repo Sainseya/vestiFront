@@ -1,7 +1,7 @@
 .view-container{
   margin-left: 2rem;
-  margin-top: 3rem;
-  background-color: #B2C9FF;
+  margin-top: 3.3rem;
+  background-color: #eaeaea;
   padding: 1rem;
   border-radius: 5px;
 }
@@ -11,7 +11,7 @@
   grid-template-columns: 1fr;
   align-items: center;
   align-content: center;
-  height: 400px;
+  height: 500px;
   background-color: white;
   border-radius: 5px;
 }
@@ -26,5 +26,8 @@
 .field-view{
   justify-self: left;
   margin-left: 2rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+
 

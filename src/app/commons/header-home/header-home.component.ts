@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding } from '@angular/core';
+import { Component, Input, HostBinding, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,13 @@ export class HeaderHomeComponent {
 
   @Input() drawer:any;
 
+  @Output() switchDressing = new EventEmitter<any>();
+
+
+
+  emitSwitchDressing(event:any){
+    this.switchDressing.emit(event)
+  }
 
 
 

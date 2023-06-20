@@ -1,14 +1,12 @@
-#logo-header {
+.logo-header {
   width: 15rem;
   cursor: pointer;
-  /* Style du logo dans l'en-tête avec une largeur fixe et curseur en forme de main */
 }
 
-.container {
+.container-header {
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: end;
-  /* Style du conteneur avec fond blanc et alignement à droite */
 }
 
 .button-start {
@@ -21,7 +19,7 @@
 .burger-menu-button {
   width: 3rem;
   border: none;
-  background-color: rgb(255, 255, 255);
+
   align-self: center;
   margin-left: 10px;
   /* Style du bouton de menu avec une largeur fixe et un fond blanc */
@@ -39,24 +37,18 @@
   right: 20px;
   top: 20px;
   padding: 10px;
+  margin-bottom: 1rem;
   /* Bouton de fin positionné relativement à droite avec un décalage vertical et un padding */
 }
 
-.input-recherche {
-  margin: 10px;
-  height: 30px;
-  position: relative;
-  top: -10px;
-  /* Style de l'input de recherche avec une marge, une hauteur et un décalage vertical négatif */
+
+
+.button-welcome {
+  padding: auto;
 }
 
-.button-dressing-choice {
-  background: red;
-  /* Style du bouton de choix de dressing avec un fond rouge */
-}
 
-.container.dark-mode {
-  background-color: #2d3436;
-  color: #dfe6e9;
-  /* Style du conteneur en mode sombre avec un fond gris foncé et une couleur de texte claire */
+.logo-home {
+  width: 70%;
+  margin-top: 5px;
 }

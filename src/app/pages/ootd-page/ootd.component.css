@@ -1,0 +1,70 @@
+/******************BODY***********************************/
+.container-ootd {
+  /* affiche la tenue du jour */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.outfit-container {
+  /* La classe .outfit-container englobe la tenue du jour.. */
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+.example-container {
+  /* permet de gerer la couleur de fond */
+  background-color: rgb(255, 255, 255);
+}
+.title {
+  /*permet de gerer l'affichage du titre "Voici votre outfit of the day :" */
+  font-size: large; /* permet d'agrandir la taille du texte */
+  font-weight: bolder; /* permet de mettre le texte en gras */
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.btn-gen-outfit {
+  /* bouton "Générer outfit" */
+  width: 10rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.outfit-top,
+.outfit-bottom,
+.outfit-shoes {
+  /* permet de centrer les habits (top et bottom et les shoes (chaussures) */
+  display: flex;
+  justify-content: center;
+}
+/* permet de gerer la taille des hauts */
+.image-view-top {
+  width: 25%;
+}
+/* permet de gerer la taille des bas */
+.image-view-bottom {
+  width: 29%;
+  margin-top: -1rem;
+}
+/* permet de gerer la taille des chaussures */
+.image-view-shoes {
+  width: 16%;
+  margin-top: -2.5rem;
+}
+
+.image-view-accesoiries {
+  width: 16%;
+  margin-top: -2.5rem;
+}
+
+.outfit-accesoiries {
+  position: absolute;
+  margin-left: 7rem;
+  margin-top: 10rem;
+  z-index: 100;
+}

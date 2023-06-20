@@ -1,10 +1,7 @@
-import Item from "./item.model";
 
-interface Event{
-  dateStart: Date,
-  dateEnd: Date,
-  description: string,
-  oufit: Item[]
+export interface Event{
+  title: string;
+  date: Date;
+  outfitIndex: number;
 }
 
-export default Event;

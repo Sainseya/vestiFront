@@ -1,14 +1,21 @@
+
+import { EventPageComponent } from './pages/event-page/event-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { OfdtComponent } from './commons/odtd/ofdt.component';
+import { OotdComponent } from './pages/ootd-page/ootd.component';
+import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+
 
 const routes: Routes = [
 
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+ {path: '', redirectTo: 'welcome-page', pathMatch: 'full'},
   {path: 'home', component: HomePageComponent},
-  {path: 'outfit-of-the-day', component: OfdtComponent},
-  {path: '**', redirectTo:'home'}
+  {path: 'outfit-of-the-day', component: OotdComponent},
+  {path: 'welcome-page', component: WelcomePageComponent},
+  {path: 'event', component: EventPageComponent}
+
+
 ];
 
 @NgModule({
@@ -16,3 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

@@ -1,3 +1,4 @@
+
 import Item from "./item.model";
 import Wardrobe from "./wardrobe.model";
 import Event from "./event.model";
@@ -13,5 +14,6 @@ interface User {
   wardrobes: Wardrobe[]
   events: Event[];
   outfit: Item[];
+
 }
 export default User;
