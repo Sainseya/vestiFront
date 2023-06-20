@@ -25,6 +25,11 @@
       </div>
       <div class="right">
         <app-card-texte-presentation [longText]="text" *ngIf="indexOfText % 2 != 0"></app-card-texte-presentation>
+        <video class="video" width="600" controls>
+          <source src="../assets/welcome-page/capture-dressing.mp4" type="video/mp4">
+
+          Your browser does not support HTML video.
+        </video>
       </div>
       <div class="arrow-icon-2">
         <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollDown()" >arrow_downward</mat-icon>
@@ -47,9 +52,9 @@
         <mat-icon style="font-size: 50px; width: 50px; height:50px" (click)="scrollToTop()" >arrow_upward</mat-icon>
       </div>
       <div class="arrow-upward" style="top: 12em">Sign Up</div>
+      <app-footer-home class="footer-welcome"></app-footer-home>
 
   </div>
-  <!-- <app-footer-home></app-footer-home> -->
 
 
 
