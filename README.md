@@ -77,9 +77,6 @@ _**features**_ that will be coming soon : laundry, dress sharing, chat, dark mod
 
 ## Screenshots :
 
-### Welcome Page : 
-![Génération de tenues]()
-
 ### Dressing : 
 ![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/homepage.png)
 
@@ -89,8 +86,6 @@ _**features**_ that will be coming soon : laundry, dress sharing, chat, dark mod
 ### Events : 
 ![Génération de tenues](https://github.com/Mi-chat/vesti/blob/feat-adjust-css/src/assets/img/logo/Capture%20d'ecrans/eventpage.png)
 
-### Modal : 
-![Génération de tenues]()
 
 ## Contributeurs :
 + https://github.com/Mi-chat
