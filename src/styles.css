@@ -1,3 +1,13 @@
+
+/* You can add global styles to this file, and also import other style files */
+
+body::-webkit-scrollbar {
+  width: 0px; /* width of the entire scrollbar */
+}
+
+
+
+
 /* You can add global styles to this file, and also import other style files */
 .slick-prev:before, .slick-next:before{
   color: black !important;
@@ -7,6 +17,8 @@
 html, body {
   margin: 0;
   height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding: 0;
 }
 
 .special-date {
@@ -14,5 +26,4 @@ html, body {
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

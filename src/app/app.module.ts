@@ -53,6 +53,11 @@ import { CarrouselComponent } from './commons/carrousel/carrousel.component';
     NavBarComponent,
     EventPageComponent,
     SideNavComponent,
+  
+CardPresentationTextComponent,
+    DialogContentComponent,
+    DialogSignupComponent,
+
 
 
   ],
@@ -74,7 +79,8 @@ import { CarrouselComponent } from './commons/carrousel/carrousel.component';
     MatNativeDateModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
 
 
   ],
@@ -83,3 +89,4 @@ import { CarrouselComponent } from './commons/carrousel/carrousel.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

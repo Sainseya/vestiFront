@@ -1,39 +1,43 @@
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Futura,Helvetica,Arial,sans-serif;
 }
 
-.nav-bar {
-  height: 7em;
-  padding-left: 20em;
-  padding-right: 20em;
+.nav-bar{
+    height: 7em;
+    padding-left: 20em;
+    padding-right: 20em;
+    display: flex;
+    background-color: #b09393;
+
   display: flex;
-  background-color: rgba(230, 223, 223, 0.878);
+  align-items: center;
 }
-.logo {
-  margin-top: 1rem;
-  width: 50%;
+.logo{
+    margin-top: 1rem;
+    width: 50%;
 }
 
-.title {
+.title{
   margin-top: 2rem;
   width: 50%;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   margin-right: 6rem;
 }
 
 section {
-  display: table;
-  margin: 8px 8px 8px 0;
+    display: table;
+    margin: 8px 8px 8px 0;
 }
-.button-size {
-  height: 3em;
-  width: 7em;
-  border-radius: 10px;
-  margin-right: 10px;
+.button-size{
+    height: 3em;
+    width: 7em;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
-.buttons {
+.buttons{
   margin-top: 1.3rem;
   display: flex;
 }

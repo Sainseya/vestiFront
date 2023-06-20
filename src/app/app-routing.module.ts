@@ -8,7 +8,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 
 const routes: Routes = [
 
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+ {path: '', redirectTo: 'welcome-page', pathMatch: 'full'},
   {path: 'home', component: HomePageComponent},
   {path: 'outfit-of-the-day', component: OotdComponent},
   {path: 'welcome-page', component: WelcomePageComponent},
@@ -22,3 +22,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
