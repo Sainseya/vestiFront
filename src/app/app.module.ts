@@ -20,6 +20,9 @@ import { NavBarComponent } from './commons/nav-bar/nav-bar.component';
 import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
 import { EventPageComponent } from './pages/event-page/event-page.component';
 import { CardPresentationTextComponent } from './commons/card-presentation-text/card-presentation-text.component';
+import { ModalComponent } from './commons/modal/modal.component';
+import { FormComponent } from './commons/form/form.component';
+import { UploadImageComponent } from './commons/upload-image/upload-image.component';
 
 
 //Angular Material
@@ -40,6 +43,14 @@ import { CarrouselComponent } from './commons/carrousel/carrousel.component';
 import { DialogContentComponent } from './commons/dialog-content/dialog-content.component';
 import { DialogSignupComponent } from './commons/dialog-signup/dialog-signup.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from "@angular/material/select";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {ItemFormService} from "./services/item-form.service";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatListModule} from "@angular/material/list";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatLineModule} from "@angular/material/core";
 
 
 
@@ -62,6 +73,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     CardPresentationTextComponent,
     DialogContentComponent,
     DialogSignupComponent,
+     ModalComponent,
+    FormComponent,
+    UploadImageComponent,
 
 
 
@@ -87,12 +101,23 @@ import {MatDialogModule} from '@angular/material/dialog';
     FormsModule,
     MatInputModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+     MatSelectModule,
+    NgxMatColorPickerModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatProgressBarModule,
+    MatListModule,
+    MatToolbarModule,
+    MatLineModule,
+    NgxColorsModule
 
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [DatePipe],
+  providers: [DatePipe, ItemFormService,
+    {provide:
+    MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

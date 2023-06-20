@@ -1,3 +1,4 @@
+
 interface Item {
   id: string,
   name: string,
@@ -10,8 +11,8 @@ interface Item {
   size: string,
   fit: string
 
+
+
 }
 
 export default Item;
-
-
