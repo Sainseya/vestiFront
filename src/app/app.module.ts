@@ -19,6 +19,8 @@ import { BoxComponent } from './commons/box/box.component';
 import { NavBarComponent } from './commons/nav-bar/nav-bar.component';
 import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
 import { EventPageComponent } from './pages/event-page/event-page.component';
+import { CardPresentationTextComponent } from './commons/card-presentation-text/card-presentation-text.component';
+
 
 //Angular Material
 import { MatMenuModule } from '@angular/material/menu';
@@ -33,8 +35,12 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { SideNavComponent } from './commons/side-nav/side-nav.component';
 import { ReactiveFormsModule, FormsModule, } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import {MatInputModule} from '@angular/material/input';
 import { CarrouselComponent } from './commons/carrousel/carrousel.component';
-``
+import { DialogContentComponent } from './commons/dialog-content/dialog-content.component';
+import { DialogSignupComponent } from './commons/dialog-signup/dialog-signup.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 @NgModule({
@@ -53,8 +59,7 @@ import { CarrouselComponent } from './commons/carrousel/carrousel.component';
     NavBarComponent,
     EventPageComponent,
     SideNavComponent,
-  
-CardPresentationTextComponent,
+    CardPresentationTextComponent,
     DialogContentComponent,
     DialogSignupComponent,
 
@@ -81,6 +86,8 @@ CardPresentationTextComponent,
     ReactiveFormsModule,
     FormsModule,
     MatInputModule,
+    MatMenuModule,
+    MatDialogModule
 
 
   ],
