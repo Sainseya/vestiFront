@@ -1,23 +1,23 @@
-/*
+
 body{
   margin: 0;
   padding: 0;
   font-family: Futura,Helvetica,Arial,sans-serif;
-} */
+}
 
-.container {
-  background-color: #f2f7ff;
+.container{
+  background-color: #F2F7FF;
   height: 100vh;
   width: 100%;
 }
 
-.background-QR-code {
-  position: relative;
-  bottom: 50px;
+.background-QR-code{
+position: relative;
+bottom: 50px;
   height: 400px;
   width: 25%;
   background-color: #f2f7ff;
-  background-image: url("https://st3.depositphotos.com/10614052/36191/i/450/depositphotos_361917662-stock-photo-modern-wardrobe-with-stylish-spring.jpg");
+  background-image: url('https://st3.depositphotos.com/10614052/36191/i/450/depositphotos_361917662-stock-photo-modern-wardrobe-with-stylish-spring.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -30,112 +30,125 @@ body{
 }
 
 .iphone-container {
-  position: relative;
-  bottom: 500px;
-  width: 17%;
-  left: 70%;
-  margin-bottom: 0;
+position: relative;
+bottom: 500px;
+width: 17%;
+left: 70%;
+margin-bottom: 0;
 }
 
-.card-position {
-  background-color: #e5c6c6;
-  padding-top: 100px;
-  width: 0;
+.card-position{
+background-color: #e5c6c6;
+padding-top: 100px;
+width: 0;
 }
 
-.left {
-  width: 400px;
-  height: 400px;
-  justify-content: center;
-  margin-left: 20em;
-  border-radius: 30px;
-  padding-top: 6em;
+.left{
+width: 400px;
+height: 400px;
+justify-content: center;
+margin-left: 10em;
+border-radius: 30px;
+padding-top: 6em;
 }
 
-.right {
-  width: 400px;
-  height: 400px;
-  justify-content: center;
-  margin-left: 90em;
-  border-radius: 30px;
-  padding-bottom: 60em;
+.right{
+width: 400px;
+height: 400px;
+justify-content: center;
+margin-left: 60em;
+margin-bottom: 20em;
+border-radius: 30px;
+position: relative;
+bottom: 300px;
+/* padding-bottom: 60em; */
 }
 
-.arrow-icon {
-  position: relative;
-  width: 100%;
-  display: flex;
-  bottom: 39em;
-  justify-content: center;
-  /*Bounce animation*/
-  animation-name: bounce;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+
+
+.arrow-icon{
+position: relative;
+width: 100%;
+display:flex;
+bottom: 39em;
+justify-content: center;
+/*Bounce animation*/
+animation-name: bounce;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
 }
 
 .arrow-icon-2 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  bottom: 62em;
-  /*Bounce animation*/
-  animation-name: bounce;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+position: relative;
+width: 100%;
+display:flex;
+justify-content: center;
+bottom: 62em;
+/*Bounce animation*/
+animation-name: bounce;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
 }
 
-.end-page-text {
-  width: 45%;
-  height: 40%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font: italic 1.2em "Fira Sans", serif;
-  font-size: 2em;
+.end-page-text{
+width: 45%;
+height: 40%;
+display: flex;
+align-items: center;
+text-align: center;
+font: italic 1.2em "Fira Sans", serif;
+font-size: 2em;
 }
-.container-2 {
-  background-color: #80817e;
-  height: 88vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  flex-direction: column;
+.container-2{
+background-color: #80817e;
+height: 88vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: left;
+flex-direction: column;
 }
-.arrow-upward {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  top: 10em;
-  /*Bounce animation*/
-  animation-name: bounce;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+.arrow-upward{
+position: relative;
+width: 100%;
+display:flex;
+justify-content: center;
+top: 10em;
+/*Bounce animation*/
+animation-name: bounce;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
 }
 
-.background-QR-code-2 {
-  position: relative;
-  width: 20%;
-  padding: 0;
+.background-QR-code-2{
+position: relative;
+width: 20%;
+padding: 0;
 }
 
 /*Animation*/
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-    opacity: 60%;
-  }
-  50% {
-    transform: translateY(10px);
-    opacity: 90%;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 100%;
-  }
+0% {
+  transform: translateY(0);
+  opacity: 60%;
 }
+50% {
+  transform: translateY(10px);
+  opacity: 90%;
+}
+100% {
+  transform: translateY(0);
+  opacity: 100%;
+}
+}
+
+.footer-welcome{
+  position: relative;
+  bottom: 0;
+  margin-top: 300px;
+  width: 100%;
+}
+
