@@ -51,6 +51,8 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatListModule} from "@angular/material/list";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatLineModule} from "@angular/material/core";
+import { NgxColorsModule } from 'ngx-colors';
+import { MAT_COLOR_FORMATS, NgxMatColorPickerModule, NGX_MAT_COLOR_FORMATS } from '@angular-material-components/color-picker';
 
 
 

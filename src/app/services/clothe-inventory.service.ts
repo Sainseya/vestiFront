@@ -18,8 +18,8 @@ export class ClotheInventoryService {
 
   //Appelle la liste de d'utilisateur sur le serveur Spring
 
-  getAll = (): Observable<IUsers[]> => {
-    return this.http.get<IUsers[]>(`${this.URI}/vesti`);
+  getAll = (): Observable<User[]> => {
+    return this.http.get<User[]>(`${this.URI}/vesti`);
   };
 
 

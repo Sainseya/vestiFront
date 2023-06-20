@@ -14,7 +14,7 @@ import {
   NgForm,
 } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import { Event } from 'src/app/models/event.model';
+import Event from 'src/app/models/event.model';
 import Iitem from 'src/app/models/item.model';
 import Outfit from 'src/app/models/outfit.model';
 

@@ -9,8 +9,8 @@ interface Item {
   type: string,
   color: string,
   size: string,
-  fit: string
-
+  fit: string,
+  
 
 
 }

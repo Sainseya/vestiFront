@@ -4,7 +4,7 @@ import Wardrobe from "./wardrobe.model";
 import Event from "./event.model";
 
 interface User {
-  id: string
+  userId: string
   name: string
   surname: string
   pseudo: string

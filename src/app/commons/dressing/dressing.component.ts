@@ -6,7 +6,7 @@ import Item from 'src/app/models/item.model';
 import {MatDialog} from "@angular/material/dialog";
 import {ModalComponent} from "../modal/modal.component";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import IClothe from 'src/app/models/clothes.model';
+
 import IUsers from 'src/app/models/user.model.new';
 import Iitem from 'src/app/models/item.model';
 
@@ -30,7 +30,7 @@ export class DressingComponent implements OnInit {
   itemInventoryCosplay: Iitem[] = [];
 
 
-  @Output() selectedItemEvent = new EventEmitter<Item>();
+  @Output() seletedItemEvent = new EventEmitter<Iitem>();
 
 
   constructor(private clotheInventoryService: ClotheInventoryService, public dialog: MatDialog){}
@@ -89,7 +89,7 @@ export class DressingComponent implements OnInit {
 
   selectItem(item:Item){
      this.itemSelected = item;
-     this.selectedItemEvent.emit(this.itemSelected);
+     this.seletedItemEvent.emit(this.itemSelected);
   }
 
   /* Permet d'ouvrir la modale contenant le formulaire de saisie d'un nouvel article, avec un effet de ralentissement */
