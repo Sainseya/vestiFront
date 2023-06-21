@@ -6,10 +6,7 @@ Vesti : is a connected dressing room that allows you to organize your outfits an
 
 ## To Run This Project : 
 ## First : 
-Clone the Front-end and Back-end Repositories : 
-
-+ Front-end : 
-https://github.com/Mi-chat/vesti
+Clone the Back-end Repositories : 
 
 + Back-end : 
 https://github.com/Sainseya/vestiSpringBoot
