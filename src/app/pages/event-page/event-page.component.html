@@ -55,13 +55,13 @@
 
       <!-- Partie ajouter un evenement  -->
       <div class="add-event-container ">
-        <form [formGroup]="eventForm"   class="example-form" (ngSubmit)="onSubmit()">
+        <form [formGroup]="eventForm"   class="example-form"  (ngSubmit)="onSubmit()">
           <button class="btn-ajouter-even"  mat-raised-button >
             Ajouter évenement
           </button>
           <mat-form-field class="example-full-width">
             <mat-label></mat-label>
-            <input formControlName="title" class="input-event"  matInput placeholder="Nom evenement" />
+            <input formControlName="title" matInput  class="input-event"  placeholder="Nom evenement" />
           </mat-form-field>
         </form>
         <div >

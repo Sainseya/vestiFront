@@ -1,3 +1,4 @@
+
 <div class="container">
   <!-----------------------------------HEADER---------------------------------------------------------------------------------------------->
   <app-header-home (switchDressing)="switchDressing($event)" [drawer]="drawer"></app-header-home>
@@ -11,7 +12,7 @@
 
     <div class="inventory-and-view">
       <app-dressing
-        (seletedItemEvent)="outputItemSeleted($event)"
+      (seletedItemEvent)="outputItemSeleted($event)"
       ></app-dressing>
       <!-- affiche l'inventaire et émet un événement lorsqu'un élément est sélectionné -->
 
@@ -30,3 +31,5 @@
   <app-footer-home></app-footer-home>
   <!--Appel du composant footer-->
 </div>
+
+

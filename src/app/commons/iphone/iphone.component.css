@@ -1,75 +1,75 @@
 body {
     background-color: #eee;
   }
-  
-  
+
+
   /*----------*\
      #LAYOUT
   \*----------*/
-  
-  
-  
+
+
+
   /* .temp-wrapper {
     margin: 20px;
   }
-  
+
   @media all and (min-width: 480px) {
     .temp-wrapper {
       width: 50%;
       margin: 20px auto;
     }
-  
+
     .temp-wrapper--wide {
       width: 100%;
     }
-  
+
     .temp-wrapper--wider {
       width: 100%;
     }
   }
-  
+
   @media all and (min-width: 768px) {
     .temp-wrapper {
       width: 33.33337%;
     }
-  
+
     .temp-wrapper--wide {
       width: 66.66667%;
     }
-  
+
     .temp-wrapper--wider {
       width: 100%;
     }
   }
-  
+
   @media all and (min-width: 1024px) {
     .temp-wrapper {
       width: 25%;
     }
-  
+
     .temp-wrapper--wide {
       width: 50%;
     }
-  
+
     .temp-wrapper--wider {
       width: 75%;
     }
   } */
-  
+
   /*------------*\
      #IPHONE X
   \*------------*/
-  
-  
+
+
   .px {
     position: relative;
     padding: 6% 7%;
   }
-  
+
   .px--ls {
     padding: 3.3% 3%;
   }
-  
+
     .px__body {
       position: absolute;
       top:    0;
@@ -80,7 +80,7 @@ body {
       border-radius: 14%/7%;
       box-shadow: inset 0 0 3px 1px #000
     }
-  
+
     .px--ls > .px__body {
       top:    1%;
       right:  0;
@@ -88,7 +88,7 @@ body {
       left:   0;
       border-radius: 7%/14%;
     }
-  
+
       .px__body:before {
         content: '';
         position: absolute;
@@ -100,7 +100,7 @@ body {
         border-radius: 13%/7%;
         box-shadow: 0 0 3px #000
       }
-  
+
       .px--ls > .px__body:before {
         top:    1.4%;
         right:   .7%;
@@ -108,7 +108,7 @@ body {
         left:    .7%;
         border-radius: 7%/13%;
       }
-  
+
       .px__body:after {
         content: '';
         position: absolute;
@@ -120,7 +120,7 @@ body {
         box-shadow: inset 0 0 10px 2px #fff;
         border-radius: 13%/6.5%;
       }
-  
+
       .px--ls > .px__body:after {
         top:    2.3%;
         right:  1%;
@@ -128,7 +128,7 @@ body {
         left:   1%;
         border-radius: 6.5%/13%;
       }
-  
+
       .px__body__cut {
         position: absolute;
         z-index: 2;
@@ -140,7 +140,7 @@ body {
         border-radius: 0 0 10% 10%/80%;
         transform: translate3d(-50%,0,0);
       }
-  
+
       .px--ls .px__body__cut {
         top: 50%;
         left: 3%;
@@ -149,14 +149,14 @@ body {
         border-radius: 0 80% 80% 0/10%;
         transform: translate3d(0,-50%,0);
       }
-  
+
       .px__body__speaker, .px__body__camera, .px__body__sensor {
         position: absolute;
         z-index: 2;
         background-color: #222;
         transform: translate(-50%,-50%);
       }
-  
+
       .px__body__speaker {
         top:  4%;
         left: 50%;
@@ -164,14 +164,14 @@ body {
         height:  .8%;
         border-radius: 5px;
       }
-  
+
       .px--ls .px__body__speaker {
         top:  50%;
         left: 4%;
         width:    .8%;
         height: 12%;
       }
-  
+
       .px__body__camera {
         top:   4%;
         left: 36%;
@@ -180,14 +180,14 @@ body {
         border-radius: 50%;
         box-shadow: inset 0 0 2px 1px #000;
       }
-  
+
       .px--ls .px__body__camera {
         top:  64%;
         left:  4%;
         width:  1.7%;
         height: 3.5%;
       }
-  
+
       .px__body__sensor {
         top:   4%;
         left: 61%;
@@ -197,30 +197,30 @@ body {
         background-color: #2a4a73;
         box-shadow: inset 0 0 2px 1px #000;
       }
-  
+
       .px--ls .px__body__sensor {
         top:  39%;
         left:  4%;
         width:  1.1%;
         height: 2.2%;
       }
-  
+
       .px__body__mute, .px__body__up, .px__body__down, .px__body__right {
         position: absolute;
         background-color: #b5b8ba;
         box-shadow: inset 0 5px 5px -3px rgba(0,0,0,.5), inset 0 -5px 5px -3px rgba(0,0,0,.5);
         transform: translate(0,-50%);
       }
-  
+
       .px--ls .px__body__mute, .px--ls .px__body__up, .px--ls .px__body__down, .px--ls .px__body__right {
         box-shadow: inset 5px 0 5px -3px rgba(0,0,0,.5), inset -5px 0 5px -3px rgba(0,0,0,.5);
         transform: translate(-50%,0);
       }
-  
+
       .px--ls .px__body__right {
         background-color: #f4f6f6;
       }
-  
+
       .px__body__mute {
         top: 14.7%;
         left: -.7%;
@@ -228,7 +228,7 @@ body {
         height: 4%;
         border-radius: 1px 0 0 1px;
       }
-  
+
       .px--ls .px__body__mute {
         top: auto;
         left:  14.7%;
@@ -237,39 +237,39 @@ body {
         height: .7%;
         border-radius: 0 0 1px 1px;
       }
-  
+
       .px__body__up, .px__body__down {
         left: -1%;
         width:  1%;
         height: 7.5%;
         border-radius: 2px 0 0 2px;
       }
-  
+
       .px--ls .px__body__up, .px--ls .px__body__down {
         bottom: -1%;
         width:  7.5%;
         height: 1%;
         border-radius: 0 0 2px 2px;
       }
-  
+
       .px__body__up {
         top: 25%;
       }
-  
+
       .px--ls .px__body__up {
         top: auto;
         left: 25%;
       }
-  
+
       .px__body__down {
         top: 34%;
       }
-  
+
       .px--ls .px__body__down {
         top: auto;
         left: 34%;
       }
-  
+
       .px__body__right {
         top:   25%;
         right: -1%;
@@ -277,7 +277,7 @@ body {
         height: 7.5%;
         border-radius: 0 2px 2px 0;
       }
-  
+
       .px--ls .px__body__right {
         top:  -1%;
         right: auto;
@@ -286,12 +286,12 @@ body {
         height: 1%;
         border-radius: 2px 2px 0 0;
       }
-  
+
     .px__screen {
       position: relative;
       z-index: 1;
     }
-  
+
       .px__screen__ {
         position: relative;
         padding-bottom: 218%;
@@ -299,12 +299,12 @@ body {
         border-radius: 10%/5%;
         box-shadow: 0 0 10px #000;
       }
-  
+
       .px--ls .px__screen__ {
         padding-bottom: 46%;
         border-radius: 5%/10%;
       }
-  
+
         .px__screen__frame {
           position: absolute;
           top:    0px;
@@ -316,7 +316,7 @@ body {
           background-size: contain;
           background-position: center center;
         }
-  
+
           .px__screen__frame > .fa {
             position: absolute;
             top:  50%;
@@ -324,3 +324,11 @@ body {
             font-size: 5em;
             transform: translate(-50%,-50%);
           }
+video::-moz- {
+  background-color: #ff0000; /* Couleur de fond du bouton */
+  color: #ffffff; /* Couleur du texte du bouton */
+  border-radius: 50%; /* Forme du bouton (ici, un cercle) */
+  border: none; /* Supprimer la bordure du bouton */
+  width: 50px; /* Largeur du bouton */
+  height: 50px; /* Hauteur du bouton */
+}

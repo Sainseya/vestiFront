@@ -1,8 +1,15 @@
-import { ClotheInventoryService } from './../../services/clothe-inventory.service';
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import IClothe from 'src/app/models/clothes.model';
+
+import { ClotheInventoryService } from '../../services/clothe-inventory.service';
+import {Component, OnInit, Output, EventEmitter, forwardRef, Input} from '@angular/core';
+import User from 'src/app/models/user.model';
+import Item from 'src/app/models/item.model';
+import {MatDialog} from "@angular/material/dialog";
+import {ModalComponent} from "../modal/modal.component";
+import {NG_VALUE_ACCESSOR} from "@angular/forms";
+
 import IUsers from 'src/app/models/user.model.new';
 import Iitem from 'src/app/models/item.model';
+
 
 @Component({
   selector: 'app-dressing',
@@ -13,19 +20,24 @@ export class DressingComponent implements OnInit {
   //variable pour le bouton afficher favoris
   disabledFav = true;
   //Liste des habits ou les donnes du service sont enregistrée
-  usersList: IUsers[] = [];
-  itemInventory: Iitem[] = [];
-  itemInventoryCosplay: Iitem[] = [];
+
+  usersList: User[] = [];
+  itemInventory: Item[] = [];
   //Liste des habits favoris
-  listItemFav: any[] = [];
-  itemSelected?: Iitem;
+  listItemFav: any[] = []
+  itemSelected?: Item;
   isDressingOne = true;
+  itemInventoryCosplay: Iitem[] = [];
+
 
   @Output() seletedItemEvent = new EventEmitter<Iitem>();
 
+
+  constructor(private clotheInventoryService: ClotheInventoryService, public dialog: MatDialog){}
+
   @Input() switchDressing: any;
 
-  constructor(private clotheInventoryService: ClotheInventoryService) {}
+
 
   ngOnInit(): void {
     this.sortFavElement();
@@ -35,6 +47,7 @@ export class DressingComponent implements OnInit {
   //Fonction qui recupere tous les habits et les mets dans clotheInventory
   getClotheInventory = () => {
     this.clotheInventoryService.getAll().subscribe({
+
       next: (data: any) => {
         this.usersList = data;
         this.itemInventory = this.usersList[0].wardrobes[0].items;
@@ -47,11 +60,13 @@ export class DressingComponent implements OnInit {
     });
   };
 
+
   //Fonction pour switcher entre les favoris et tous les vetements
   disabledFavFunction() {
     this.disabledFav = !this.disabledFav;
     this.sortFavElement();
   }
+
 
   /**
    * Fonction pour mettre dans une liste de favoris listItemFav les vetement avec le boolean favori
@@ -65,17 +80,34 @@ export class DressingComponent implements OnInit {
       this.listItemFav.forEach((element) => {
         if (element.favorite == false) {
           this.listItemFav.splice(element, 1);
+
         }
       });
     });
   }
 
-  selectItem(item: Iitem) {
-    this.itemSelected = item;
-    this.seletedItemEvent.emit(this.itemSelected);
+
+  selectItem(item:Item){
+     this.itemSelected = item;
+     this.seletedItemEvent.emit(this.itemSelected);
   }
+
+  /* Permet d'ouvrir la modale contenant le formulaire de saisie d'un nouvel article, avec un effet de ralentissement */
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      enterAnimationDuration,
+      exitAnimationDuration,
+      "width" : "80%"
+    });
+  }
+
+
+
+
+
 
   switchBetweenDressing(number: any) {
     this.itemInventory = this.usersList[0].wardrobes[number].items;
   }
+
 }

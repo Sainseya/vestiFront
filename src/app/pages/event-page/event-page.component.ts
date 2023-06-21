@@ -1,5 +1,6 @@
 
-import { Component, ViewChild, ViewEncapsulation} from '@angular/core';
+
+import { Component, OnChanges, SimpleChanges, ViewChild, ViewEncapsulation} from '@angular/core';
 import {MatCalendar, MatCalendarCellCssClasses, MatDatepickerModule,} from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -13,7 +14,7 @@ import {
   NgForm,
 } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import { Event } from 'src/app/models/event.model';
+import Event from 'src/app/models/event.model';
 import Iitem from 'src/app/models/item.model';
 import Outfit from 'src/app/models/outfit.model';
 
@@ -27,7 +28,7 @@ const year = today.getFullYear();
   styleUrls: ['./event-page.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class EventPageComponent {
+export class EventPageComponent  {
   @ViewChild(MatCalendar) calendar!: MatCalendar<Date>;
 
   selectedDate: Date = new Date();
@@ -158,6 +159,9 @@ export class EventPageComponent {
 
   constructor(private formBuilder: FormBuilder, private datePipe: DatePipe) {}
 
+
+
+
   // Récupère la date sélectionnée dans le calendrier et compare cette date aux autres dates du tableau des
   // Évènements events
   onSelect(event: any) {
@@ -202,6 +206,7 @@ export class EventPageComponent {
 
   // Recupere la date de l'evenement et le numero de l'outfit et le met dans le tableau des evenements
   onSubmit() {
+
     let eventTemp: Event = {
       title: '',
       date: new Date(),
@@ -212,17 +217,42 @@ export class EventPageComponent {
     this.calendar.updateTodaysDate();
     this.eventForm.value.date = new Date(this.selectedDate);
     eventTemp.date = this.eventForm.value.date;
-    eventTemp.title = this.eventForm.value.title!;
+    eventTemp.title = this.eventForm.value.title!
+
     if(this.outfitIndexChoosed != undefined){
     eventTemp.outfitIndex = this.outfitIndexChoosed
     }else{
       eventTemp.outfitIndex = 0;
     }
     this.events.push(eventTemp);
-    this.eventForm.reset();
-    
+
+
+
+    this.updateNewEventOutif();
+
+
 
   }
+  private updateNewEventOutif() {
+    let eventTempToFind = this.events.find(
+      (x) => x.date.getTime() == this.selectedDate.getTime()
+    );
+
+    this.eventTemp = eventTempToFind!;
+
+    if (eventTempToFind?.outfitIndex != undefined) {
+      this.eventTemp.outfitIndex = eventTempToFind!.outfitIndex;
+    }
+
+    if (eventTempToFind?.date.getTime() == this.selectedDate.getTime()) {
+      this.dateMatch = true;
+    } else {
+      this.dateMatch = false;
+    }
+
+    this.eventForm.reset();
+  }
+
   // recupere l'index de l'outfit pour enregistrez le bon outfit dans calendrier
   getIndexOutfitEvent(e:any)
   {1

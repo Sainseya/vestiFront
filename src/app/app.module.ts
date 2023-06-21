@@ -19,6 +19,11 @@ import { BoxComponent } from './commons/box/box.component';
 import { NavBarComponent } from './commons/nav-bar/nav-bar.component';
 import { ViewOneItemComponent } from './commons/view-one-item/view-one-item.component';
 import { EventPageComponent } from './pages/event-page/event-page.component';
+import { CardPresentationTextComponent } from './commons/card-presentation-text/card-presentation-text.component';
+import { ModalComponent } from './commons/modal/modal.component';
+import { FormComponent } from './commons/form/form.component';
+import { UploadImageComponent } from './commons/upload-image/upload-image.component';
+
 
 //Angular Material
 import { MatMenuModule } from '@angular/material/menu';
@@ -33,8 +38,22 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { SideNavComponent } from './commons/side-nav/side-nav.component';
 import { ReactiveFormsModule, FormsModule, } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import {MatInputModule} from '@angular/material/input';
 import { CarrouselComponent } from './commons/carrousel/carrousel.component';
-``
+import { DialogContentComponent } from './commons/dialog-content/dialog-content.component';
+import { DialogSignupComponent } from './commons/dialog-signup/dialog-signup.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from "@angular/material/select";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {ItemFormService} from "./services/item-form.service";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatListModule} from "@angular/material/list";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatLineModule} from "@angular/material/core";
+import { NgxColorsModule } from 'ngx-colors';
+import { MAT_COLOR_FORMATS, NgxMatColorPickerModule, NGX_MAT_COLOR_FORMATS } from '@angular-material-components/color-picker';
+
 
 
 @NgModule({
@@ -53,6 +72,13 @@ import { CarrouselComponent } from './commons/carrousel/carrousel.component';
     NavBarComponent,
     EventPageComponent,
     SideNavComponent,
+    CardPresentationTextComponent,
+    DialogContentComponent,
+    DialogSignupComponent,
+     ModalComponent,
+    FormComponent,
+    UploadImageComponent,
+
 
 
   ],
@@ -74,12 +100,27 @@ import { CarrouselComponent } from './commons/carrousel/carrousel.component';
     MatNativeDateModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
+    MatMenuModule,
+    MatDialogModule,
+     MatSelectModule,
+    NgxMatColorPickerModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatProgressBarModule,
+    MatListModule,
+    MatToolbarModule,
+    MatLineModule,
+    NgxColorsModule
 
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [DatePipe],
+  providers: [DatePipe, ItemFormService,
+    {provide:
+    MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
